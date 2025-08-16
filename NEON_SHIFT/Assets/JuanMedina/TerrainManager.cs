@@ -2,28 +2,43 @@ using UnityEngine;
 
 public class TerrainManager : MonoBehaviour
 {
-    public Transform[] terrains; // Asigna Terrain1, Terrain2, Terrain3
-    public float terrainLength = 30f; // Largo de cada bloque
-    public Transform player; // El jugador o la cámara que avanza
+    public Transform player;              // Jugador o cámara
+    public GameObject[] terrains;         // Todos los terrenos en orden (Terrain1, Terrain2, ..., TerrainN)
+    public float terrainLength = 30f;     // Largo de cada bloque
 
-    private int nextTerrainIndex = 0;
+    private int currentIndex = 0;         // El primer terreno activo
+    private int nextToActivate = 3;       // El próximo terreno que debe aparecer
+
+    void Start()
+    {
+        // Activar solo los 3 primeros
+        for (int i = 0; i < terrains.Length; i++)
+        {
+            terrains[i].SetActive(i < 3);
+        }
+    }
 
     void Update()
     {
-        Transform firstTerrain = terrains[nextTerrainIndex];
+        if (currentIndex >= terrains.Length) return; // ya no quedan más
 
-        // Detecta si el jugador ya pasó el bloque
-        if (player.position.z - firstTerrain.position.z > terrainLength)
+        Transform currentTerrain = terrains[currentIndex].transform;
+
+        // Cuando el jugador pasa la mitad del terreno actual
+        if (player.position.z - currentTerrain.position.z > terrainLength / 2)
         {
-            // Calcula la nueva posición adelante del último bloque
-            int lastTerrainIndex = (nextTerrainIndex + terrains.Length - 1) % terrains.Length;
-            float newZ = terrains[lastTerrainIndex].position.z + terrainLength;
+            // Desactivar el terreno actual
+            terrains[currentIndex].SetActive(false);
 
-            // Mueve el bloque entero con sus hijos (carriles, obstáculos, etc.)
-            firstTerrain.position = new Vector3(firstTerrain.position.x, firstTerrain.position.y, newZ);
+            // Activar el siguiente si existe
+            if (nextToActivate < terrains.Length)
+            {
+                terrains[nextToActivate].SetActive(true);
+                nextToActivate++;
+            }
 
-            // Avanza el índice para el próximo reciclaje
-            nextTerrainIndex = (nextTerrainIndex + 1) % terrains.Length;
+            // Avanzar al siguiente índice
+            currentIndex++;
         }
     }
 }
