@@ -25,7 +25,7 @@ public class TerrainManager : MonoBehaviour
         Transform currentTerrain = terrains[currentIndex].transform;
 
         // Cuando el jugador pasa la mitad del terreno actual
-        if (player.position.z - currentTerrain.position.z > terrainLength / 2)
+        if (player.position.z - currentTerrain.position.z > terrainLength)
         {
             // Desactivar el terreno actual
             terrains[currentIndex].SetActive(false);
