@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     // Input de swipes
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
+
+     // Transformaciones
+    [HideInInspector] public bool allowCustomY = false;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -45,27 +48,31 @@ public class PlayerController : MonoBehaviour
         move.x = deltaX * laneChangeSpeed;
 
         // Movimiento vertical (saltar y gravedad)
-        if (controller.isGrounded)
+        if (!allowCustomY)
         {
-            verticalVelocity = -1f;
-
-            if (swipeUp)
+            if (controller.isGrounded)
             {
-                verticalVelocity = jumpForce;
+                verticalVelocity = -1f;
+
+                if (swipeUp)
+                {
+                    verticalVelocity = jumpForce;
+                }
+
+                if (swipeDown && !isSliding)
+                {
+                    StartCoroutine(Slide());
+                }
+            }
+            else
+            {
+                verticalVelocity += gravity * Time.deltaTime;
             }
 
-            if (swipeDown && !isSliding)
-            {
-                StartCoroutine(Slide());
-            }
-        }
-        else
-        {
-            verticalVelocity += gravity * Time.deltaTime;
+            move.y = verticalVelocity;
         }
 
-        move.y = verticalVelocity;
-
+        // Aplicar movimiento
         controller.Move(move * Time.deltaTime);
     }
 
