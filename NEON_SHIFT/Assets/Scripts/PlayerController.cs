@@ -21,16 +21,22 @@ public class PlayerController : MonoBehaviour
 
     // Agacharse
     private bool isSliding = false;
+    private float originalHeight;
+    private Vector3 originalCenter;
 
     // Input de swipes
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
-
-     // Transformaciones
+    // Transformaciones
     [HideInInspector] public bool allowCustomY = false;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        // Guardar valores originales del CharacterController
+        originalHeight = controller.height;
+        originalCenter = controller.center;
     }
 
     void Update()
@@ -96,13 +102,17 @@ public class PlayerController : MonoBehaviour
     IEnumerator Slide()
     {
         isSliding = true;
-        controller.height = 1f;
-        controller.center = new Vector3(0, 0.5f, 0);
+
+        // Reducir la altura a la mitad
+        controller.height = originalHeight / 2f;
+        controller.center = new Vector3(originalCenter.x, originalCenter.y / 2f, originalCenter.z);
 
         yield return new WaitForSeconds(1.0f); // duración del slide
 
-        controller.height = 2f;
-        controller.center = new Vector3(0, 1f, 0);
+        // Restaurar los valores originales
+        controller.height = originalHeight;
+        controller.center = originalCenter;
+
         isSliding = false;
     }
 }
