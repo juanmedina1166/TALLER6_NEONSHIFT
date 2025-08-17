@@ -1668,10 +1668,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyDuration: 2
-  flyHeight: 15
-  flyCooldown: 1
-  strongDuration: 3
-  strongCooldown: 2
+  flyHeight: 10
+  flyCooldown: 0.8
+  strongDuration: 2
+  strongCooldown: 1
   flyButton: {fileID: 1081367431}
   strongButton: {fileID: 850157173}
   defaultModel: {fileID: 2014023489}
