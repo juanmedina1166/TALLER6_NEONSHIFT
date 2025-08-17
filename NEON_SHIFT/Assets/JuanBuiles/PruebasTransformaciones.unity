@@ -217,6 +217,7 @@ MonoBehaviour:
   - {fileID: 1943273353}
   - {fileID: 1290040106}
   - {fileID: 46024489}
+  - {fileID: 46024489}
   terrainLength: 200
 --- !u!1001 &215509759
 PrefabInstance:
@@ -1645,7 +1646,7 @@ Transform:
   m_GameObject: {fileID: 1940182330}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 1200.55}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1667,7 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyDuration: 2
-  flyHeight: 50
+  flyHeight: 15
   flyCooldown: 1
   strongDuration: 3
   strongCooldown: 2
@@ -1753,8 +1754,6 @@ GameObject:
   - component: {fileID: 2014023492}
   - component: {fileID: 2014023491}
   - component: {fileID: 2014023490}
-  - component: {fileID: 2014023496}
-  - component: {fileID: 2014023497}
   m_Layer: 0
   m_Name: NormalForm
   m_TagString: Player
@@ -1905,46 +1904,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1940182331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2014023496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014023489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6283dcde306a3b14da24ebf5410842c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardSpeed: 25
-  laneDistance: 10
-  laneChangeSpeed: 10
-  jumpForce: 40
-  gravity: -100
-  allowCustomY: 0
---- !u!114 &2014023497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014023489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcd780f425386ba48a9699de7838e54a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyDuration: 2
-  flyHeight: 50
-  flyCooldown: 1
-  strongDuration: 3
-  strongCooldown: 6
-  flyButton: {fileID: 1081367431}
-  strongButton: {fileID: 0}
-  defaultModel: {fileID: 0}
-  flyModel: {fileID: 0}
-  strongModel: {fileID: 0}
 --- !u!1 &2015603748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,10 +2378,6 @@ PrefabInstance:
     - target: {fileID: 7307381027644817982, guid: 2e4fcd60529b7fe4ab027fe4ddec5054, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163378574282511018, guid: 2e4fcd60529b7fe4ab027fe4ddec5054, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
