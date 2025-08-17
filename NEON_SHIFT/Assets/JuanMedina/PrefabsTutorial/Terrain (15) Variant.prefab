@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6404322418242315827}
   m_Layer: 6
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,6 +335,10 @@ PrefabInstance:
     - target: {fileID: 2840933175633880474, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
       propertyPath: m_Name
       value: Terrain (15) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840933175633880474, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6508133247433706804, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
       propertyPath: m_LocalPosition.x
