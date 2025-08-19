@@ -3725,9 +3725,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 392562603}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: LoadSceneByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5003,7 +5003,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102259780}
+      - m_Target: {fileID: 1104518243}
         m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
         m_MethodName: HideInstructions
         m_Mode: 1
@@ -5407,7 +5407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102259780}
+      - m_Target: {fileID: 1084403769}
         m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
         m_MethodName: HideInstructions
         m_Mode: 1
@@ -7029,7 +7029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyDuration: 2
-  flyHeight: 10
+  flyHeight: 15
   flyCooldown: 0.8
   strongDuration: 2
   strongCooldown: 1
