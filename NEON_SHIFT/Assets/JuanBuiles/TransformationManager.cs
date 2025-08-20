@@ -15,18 +15,26 @@ public class TransformationManager : MonoBehaviour
     public float strongDuration = 3f;
     public float strongCooldown = 6f;
 
+    [Header("Fast Settings")]
+    public float fastDuration = 4f;
+    public float fastSpeedMultiplier = 2.5f; // multiplica la velocidad del player
+    private bool hasFastPowerUp = false; // si ya recogió el objeto
+
     [Header("UI Buttons")]
     public Button flyButton;
     public Button strongButton;
+    public Button fastButton;
 
     [Header("Models")]
     public GameObject defaultModel;
     public GameObject flyModel;
     public GameObject strongModel;
+    public GameObject fastModel;
 
     // Estados
     private bool isFlying = false;
     private bool isStrong = false;
+    private bool isFast = false;
     private bool isOnCooldownFly = false;
     private bool isOnCooldownStrong = false;
 
@@ -41,6 +49,10 @@ public class TransformationManager : MonoBehaviour
         if (defaultModel != null) defaultModel.SetActive(true);
         if (flyModel != null) flyModel.SetActive(false);
         if (strongModel != null) strongModel.SetActive(false);
+        if (fastModel != null) fastModel.SetActive(false);
+
+        // Ocultar el botón rápido hasta que se consiga el objeto
+        if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
     // ---------------- FLY ----------------
@@ -60,11 +72,9 @@ public class TransformationManager : MonoBehaviour
 
         if (flyButton != null) flyButton.interactable = false;
 
-        // Cambiar modelo
         if (defaultModel != null) defaultModel.SetActive(false);
         if (flyModel != null) flyModel.SetActive(true);
 
-        // Desactiva gravedad
         player.allowCustomY = true;
 
         float timer = 0f;
@@ -78,16 +88,13 @@ public class TransformationManager : MonoBehaviour
             yield return null;
         }
 
-        // Restaurar modelo
         if (defaultModel != null) defaultModel.SetActive(true);
         if (flyModel != null) flyModel.SetActive(false);
 
-        // Restaurar físicas
         player.allowCustomY = false;
         isFlying = false;
         isTransforming = false;
 
-        // Cooldown
         yield return new WaitForSeconds(flyCooldown);
         isOnCooldownFly = false;
 
@@ -111,7 +118,6 @@ public class TransformationManager : MonoBehaviour
 
         if (strongButton != null) strongButton.interactable = false;
 
-        // Cambiar modelo
         if (defaultModel != null) defaultModel.SetActive(false);
         if (strongModel != null) strongModel.SetActive(true);
 
@@ -122,18 +128,59 @@ public class TransformationManager : MonoBehaviour
             yield return null;
         }
 
-        // Restaurar modelo
         if (defaultModel != null) defaultModel.SetActive(true);
         if (strongModel != null) strongModel.SetActive(false);
 
         isStrong = false;
         isTransforming = false;
 
-        // Cooldown
         yield return new WaitForSeconds(strongCooldown);
         isOnCooldownStrong = false;
 
         if (strongButton != null) strongButton.interactable = true;
+    }
+
+    // ---------------- FAST ----------------
+    public void ActivateFast()
+    {
+        if (hasFastPowerUp && !isFast && !isTransforming)
+        {
+            StartCoroutine(FastRoutine());
+        }
+    }
+
+    private IEnumerator FastRoutine()
+    {
+        isFast = true;
+        isTransforming = true;
+
+        if (fastButton != null) fastButton.interactable = false;
+
+        if (defaultModel != null) defaultModel.SetActive(false);
+        if (fastModel != null) fastModel.SetActive(true);
+
+        float originalSpeed = player.forwardSpeed;
+        player.forwardSpeed *= fastSpeedMultiplier;
+
+        float timer = 0f;
+        while (timer < fastDuration)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        // Restaurar
+        player.forwardSpeed = originalSpeed;
+
+        if (defaultModel != null) defaultModel.SetActive(true);
+        if (fastModel != null) fastModel.SetActive(false);
+
+        isFast = false;
+        isTransforming = false;
+
+        // Consumido el power-up, ocultar botón
+        hasFastPowerUp = false;
+        if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
     // ---------------- COLISION DESTRUIR PAREDES ----------------
@@ -141,9 +188,16 @@ public class TransformationManager : MonoBehaviour
     {
         GameObject target = hit.collider.gameObject;
 
-        if (isStrong && target.CompareTag("Wall"))
+        if ((isStrong || isFast) && target.CompareTag("Wall"))
         {
             Destroy(target);
         }
+    }
+
+    // ---------------- POWER UP FAST ----------------
+    public void UnlockFast()
+    {
+        hasFastPowerUp = true;
+        if (fastButton != null) fastButton.gameObject.SetActive(true);
     }
 }
