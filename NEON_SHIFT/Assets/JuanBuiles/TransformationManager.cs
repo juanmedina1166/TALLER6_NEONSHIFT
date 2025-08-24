@@ -46,15 +46,33 @@ public class TransformationManager : MonoBehaviour
         player = GetComponent<PlayerController>();
 
         // Modelos iniciales
-        if (defaultModel != null) defaultModel.SetActive(true);
-        if (flyModel != null) flyModel.SetActive(false);
-        if (strongModel != null) strongModel.SetActive(false);
-        if (fastModel != null) fastModel.SetActive(false);
+        ActivateModel(defaultModel);
 
         // Ocultar botones hasta que se consigan los objetos
         if (flyButton != null) flyButton.gameObject.SetActive(false);
         if (strongButton != null) strongButton.gameObject.SetActive(false);
         if (fastButton != null) fastButton.gameObject.SetActive(false);
+    }
+
+    // ---------------- CONTROL DE MODELOS Y ANIMACIONES ----------------
+    private void ActivateModel(GameObject modelToActivate)
+    {
+        if (defaultModel != null) defaultModel.SetActive(false);
+        if (flyModel != null) flyModel.SetActive(false);
+        if (strongModel != null) strongModel.SetActive(false);
+        if (fastModel != null) fastModel.SetActive(false);
+
+        if (modelToActivate != null)
+        {
+            modelToActivate.SetActive(true);
+
+            // Forzar animación de correr si hay Animator
+            Animator anim = modelToActivate.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("IsRunning", true);
+            }
+        }
     }
 
     // ---------------- FLY ----------------
@@ -73,9 +91,7 @@ public class TransformationManager : MonoBehaviour
 
         if (flyButton != null) flyButton.interactable = false;
 
-        if (defaultModel != null) defaultModel.SetActive(false);
-        if (flyModel != null) flyModel.SetActive(true);
-
+        ActivateModel(flyModel);
         player.allowCustomY = true;
 
         float timer = 0f;
@@ -89,14 +105,12 @@ public class TransformationManager : MonoBehaviour
             yield return null;
         }
 
-        if (defaultModel != null) defaultModel.SetActive(true);
-        if (flyModel != null) flyModel.SetActive(false);
-
+        ActivateModel(defaultModel);
         player.allowCustomY = false;
+
         isFlying = false;
         isTransforming = false;
 
-        // Consumido el power-up
         hasFlyPowerUp = false;
         if (flyButton != null) flyButton.gameObject.SetActive(false);
     }
@@ -117,8 +131,7 @@ public class TransformationManager : MonoBehaviour
 
         if (strongButton != null) strongButton.interactable = false;
 
-        if (defaultModel != null) defaultModel.SetActive(false);
-        if (strongModel != null) strongModel.SetActive(true);
+        ActivateModel(strongModel);
 
         float timer = 0f;
         while (timer < strongDuration)
@@ -127,13 +140,11 @@ public class TransformationManager : MonoBehaviour
             yield return null;
         }
 
-        if (defaultModel != null) defaultModel.SetActive(true);
-        if (strongModel != null) strongModel.SetActive(false);
+        ActivateModel(defaultModel);
 
         isStrong = false;
         isTransforming = false;
 
-        // Consumido el power-up
         hasStrongPowerUp = false;
         if (strongButton != null) strongButton.gameObject.SetActive(false);
     }
@@ -154,8 +165,7 @@ public class TransformationManager : MonoBehaviour
 
         if (fastButton != null) fastButton.interactable = false;
 
-        if (defaultModel != null) defaultModel.SetActive(false);
-        if (fastModel != null) fastModel.SetActive(true);
+        ActivateModel(fastModel);
 
         float originalSpeed = player.forwardSpeed;
         player.forwardSpeed *= fastSpeedMultiplier;
@@ -167,16 +177,12 @@ public class TransformationManager : MonoBehaviour
             yield return null;
         }
 
-        // Restaurar
         player.forwardSpeed = originalSpeed;
-
-        if (defaultModel != null) defaultModel.SetActive(true);
-        if (fastModel != null) fastModel.SetActive(false);
+        ActivateModel(defaultModel);
 
         isFast = false;
         isTransforming = false;
 
-        // Consumido el power-up
         hasFastPowerUp = false;
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
@@ -211,4 +217,3 @@ public class TransformationManager : MonoBehaviour
         if (strongButton != null) strongButton.gameObject.SetActive(true);
     }
 }
-

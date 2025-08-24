@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
+    private Animator animator; // ?? referencia al Animator del modelo visual
 
     // Movimiento general
     public float forwardSpeed = 10f;
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = -20f;
     private float verticalVelocity;
 
-    // Agacharse
+    // Agacharse (slide)
     private bool isSliding = false;
     private float originalHeight;
     private Vector3 originalCenter;
@@ -27,16 +28,21 @@ public class PlayerController : MonoBehaviour
     // Input de swipes
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
-    // Transformaciones
+    // Transformaciones (ej: volar)
     [HideInInspector] public bool allowCustomY = false;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>(); // busca el Animator en el modelo hijo
 
         // Guardar valores originales del CharacterController
         originalHeight = controller.height;
         originalCenter = controller.center;
+
+        // Empezar corriendo
+        if (animator != null)
+            animator.SetBool("IsRunning", true);
     }
 
     void Update()
@@ -44,11 +50,9 @@ public class PlayerController : MonoBehaviour
         HandleSwipeInput();
 
         Vector3 move = Vector3.zero;
+        move.z = forwardSpeed; // movimiento hacia adelante
 
-        // Movimiento hacia adelante
-        move.z = forwardSpeed;
-
-        // Movimiento entre carriles (suavizado con Lerp)
+        // Movimiento lateral (carriles)
         float targetX = (currentLane - 1) * laneDistance;
         float deltaX = targetX - transform.position.x;
         move.x = deltaX * laneChangeSpeed;
@@ -60,12 +64,17 @@ public class PlayerController : MonoBehaviour
             {
                 verticalVelocity = -1f;
 
-                if (swipeUp)
+                if (swipeUp) // Salto
                 {
                     verticalVelocity = jumpForce;
+                    if (animator != null)
+                    {
+                        animator.SetTrigger("Jump");
+                        animator.SetBool("IsRunning", false);
+                    }
                 }
 
-                if (swipeDown && !isSliding)
+                if (swipeDown && !isSliding) // Slide
                 {
                     StartCoroutine(Slide());
                 }
@@ -103,15 +112,24 @@ public class PlayerController : MonoBehaviour
     {
         isSliding = true;
 
-        // Reducir la altura a la mitad
+        if (animator != null)
+        {
+            animator.SetTrigger("Slide");
+            animator.SetBool("IsRunning", false);
+        }
+
+        // Reducir tamaño del CharacterController
         controller.height = originalHeight / 2f;
         controller.center = new Vector3(originalCenter.x, originalCenter.y / 2f, originalCenter.z);
 
         yield return new WaitForSeconds(1.0f); // duración del slide
 
-        // Restaurar los valores originales
+        // Restaurar CharacterController
         controller.height = originalHeight;
         controller.center = originalCenter;
+
+        if (animator != null)
+            animator.SetBool("IsRunning", true);
 
         isSliding = false;
     }
