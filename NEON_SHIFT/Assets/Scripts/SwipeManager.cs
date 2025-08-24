@@ -3,6 +3,8 @@ using UnityEngine;
 public class SwipeManager : MonoBehaviour
 {
     public static bool swipeLeft, swipeRight, swipeUp, swipeDown;
+    public static event System.Action OnTap;
+
     private Vector2 startTouch;
     private const float SWIPE_THRESHOLD = 50f;
 
@@ -23,6 +25,7 @@ public class SwipeManager : MonoBehaviour
 
                 if (delta.magnitude > SWIPE_THRESHOLD)
                 {
+                    // Esto es un swipe
                     float x = delta.x;
                     float y = delta.y;
 
@@ -36,6 +39,11 @@ public class SwipeManager : MonoBehaviour
                         if (y > 0) swipeUp = true;
                         else swipeDown = true;
                     }
+                }
+                else
+                {
+                    // Esto es un tap (toque rápido sin moverse mucho)
+                    OnTap?.Invoke();
                 }
             }
         }

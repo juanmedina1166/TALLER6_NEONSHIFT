@@ -10,15 +10,17 @@ public class TransformationManager : MonoBehaviour
     public float flyDuration = 2f;
     public float flyHeight = 5f;
     public float flyCooldown = 5f;
+    private bool hasFlyPowerUp = false;
 
     [Header("Strong Settings")]
     public float strongDuration = 3f;
     public float strongCooldown = 6f;
+    private bool hasStrongPowerUp = false;
 
     [Header("Fast Settings")]
     public float fastDuration = 4f;
-    public float fastSpeedMultiplier = 2.5f; // multiplica la velocidad del player
-    private bool hasFastPowerUp = false; // si ya recogió el objeto
+    public float fastSpeedMultiplier = 2.5f;
+    private bool hasFastPowerUp = false;
 
     [Header("UI Buttons")]
     public Button flyButton;
@@ -35,8 +37,6 @@ public class TransformationManager : MonoBehaviour
     private bool isFlying = false;
     private bool isStrong = false;
     private bool isFast = false;
-    private bool isOnCooldownFly = false;
-    private bool isOnCooldownStrong = false;
 
     // Exclusividad
     private bool isTransforming = false;
@@ -51,14 +51,16 @@ public class TransformationManager : MonoBehaviour
         if (strongModel != null) strongModel.SetActive(false);
         if (fastModel != null) fastModel.SetActive(false);
 
-        // Ocultar el botón rápido hasta que se consiga el objeto
+        // Ocultar botones hasta que se consigan los objetos
+        if (flyButton != null) flyButton.gameObject.SetActive(false);
+        if (strongButton != null) strongButton.gameObject.SetActive(false);
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
     // ---------------- FLY ----------------
     public void ActivateFly()
     {
-        if (!isFlying && !isOnCooldownFly && !isTransforming)
+        if (hasFlyPowerUp && !isFlying && !isTransforming)
         {
             StartCoroutine(FlyRoutine());
         }
@@ -68,7 +70,6 @@ public class TransformationManager : MonoBehaviour
     {
         isFlying = true;
         isTransforming = true;
-        isOnCooldownFly = true;
 
         if (flyButton != null) flyButton.interactable = false;
 
@@ -95,16 +96,15 @@ public class TransformationManager : MonoBehaviour
         isFlying = false;
         isTransforming = false;
 
-        yield return new WaitForSeconds(flyCooldown);
-        isOnCooldownFly = false;
-
-        if (flyButton != null) flyButton.interactable = true;
+        // Consumido el power-up
+        hasFlyPowerUp = false;
+        if (flyButton != null) flyButton.gameObject.SetActive(false);
     }
 
     // ---------------- STRONG ----------------
     public void ActivateStrong()
     {
-        if (!isStrong && !isOnCooldownStrong && !isTransforming)
+        if (hasStrongPowerUp && !isStrong && !isTransforming)
         {
             StartCoroutine(StrongRoutine());
         }
@@ -114,7 +114,6 @@ public class TransformationManager : MonoBehaviour
     {
         isStrong = true;
         isTransforming = true;
-        isOnCooldownStrong = true;
 
         if (strongButton != null) strongButton.interactable = false;
 
@@ -134,10 +133,9 @@ public class TransformationManager : MonoBehaviour
         isStrong = false;
         isTransforming = false;
 
-        yield return new WaitForSeconds(strongCooldown);
-        isOnCooldownStrong = false;
-
-        if (strongButton != null) strongButton.interactable = true;
+        // Consumido el power-up
+        hasStrongPowerUp = false;
+        if (strongButton != null) strongButton.gameObject.SetActive(false);
     }
 
     // ---------------- FAST ----------------
@@ -178,7 +176,7 @@ public class TransformationManager : MonoBehaviour
         isFast = false;
         isTransforming = false;
 
-        // Consumido el power-up, ocultar botón
+        // Consumido el power-up
         hasFastPowerUp = false;
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
@@ -194,10 +192,23 @@ public class TransformationManager : MonoBehaviour
         }
     }
 
-    // ---------------- POWER UP FAST ----------------
+    // ---------------- DESBLOQUEOS ----------------
     public void UnlockFast()
     {
         hasFastPowerUp = true;
         if (fastButton != null) fastButton.gameObject.SetActive(true);
     }
+
+    public void UnlockFly()
+    {
+        hasFlyPowerUp = true;
+        if (flyButton != null) flyButton.gameObject.SetActive(true);
+    }
+
+    public void UnlockStrong()
+    {
+        hasStrongPowerUp = true;
+        if (strongButton != null) strongButton.gameObject.SetActive(true);
+    }
 }
+

@@ -4,19 +4,13 @@ public class InstructionTrigger : MonoBehaviour
 {
     [Header("UI de instrucciones")]
     public GameObject instructionPanel; // Panel de instrucciones en el Canvas
-    [Header("Botón/UI a mostrar")]
-    public GameObject buttonToShow;     // Cualquier botón u objeto oculto en el Canvas
 
     private bool isActive = false;
 
-  
     private void Start()
     {
         if (instructionPanel != null)
             instructionPanel.SetActive(false); // arranca oculto
-
-        if (buttonToShow != null)
-            buttonToShow.SetActive(false); // arranca oculto
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,12 +19,8 @@ public class InstructionTrigger : MonoBehaviour
         {
             ShowInstructions();
         }
-
-      
     }
-   
 
-    
     public void ShowInstructions()
     {
         if (instructionPanel != null)
@@ -39,11 +29,21 @@ public class InstructionTrigger : MonoBehaviour
             Time.timeScale = 0f; // pausa el juego
             isActive = true;
         }
+    }
+    private void OnEnable()
+    {
+        SwipeManager.OnTap += HandleTap;
+    }
 
-        if (buttonToShow != null)
-        {
-            buttonToShow.SetActive(true); // mostrar el botón u objeto UI
-        }
+    private void OnDisable()
+    {
+        SwipeManager.OnTap -= HandleTap;
+    }
+
+    private void HandleTap()
+    {
+        if (isActive)
+            HideInstructions();
     }
 
     public void HideInstructions()

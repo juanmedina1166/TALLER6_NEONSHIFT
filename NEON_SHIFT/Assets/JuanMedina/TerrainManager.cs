@@ -7,14 +7,14 @@ public class TerrainManager : MonoBehaviour
     public float terrainLength = 30f;     // Largo de cada bloque
 
     private int currentIndex = 0;         // El primer terreno activo
-    private int nextToActivate = 3;       // El próximo terreno que debe aparecer
+    private int nextToActivate = 4;       // El próximo terreno que debe aparecer
 
     void Start()
     {
         // Activar solo los 3 primeros
         for (int i = 0; i < terrains.Length; i++)
         {
-            terrains[i].SetActive(i < 3);
+            terrains[i].SetActive(i < 4);
         }
     }
 
