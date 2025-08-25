@@ -216,4 +216,15 @@ public class TransformationManager : MonoBehaviour
         hasStrongPowerUp = true;
         if (strongButton != null) strongButton.gameObject.SetActive(true);
     }
+
+    // ---------------- CONSULTAS DE ESTADO ----------------
+    public bool IsFast()
+    {
+        return isFast;
+    }
+
+    public bool IsStrong()
+    {
+        return isStrong;
+    }
 }

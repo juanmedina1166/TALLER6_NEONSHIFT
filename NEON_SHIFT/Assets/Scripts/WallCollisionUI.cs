@@ -17,11 +17,21 @@ public class WallCollisionUI : MonoBehaviour
         // Verifica si el objeto pertenece al layer "Wall"
         if (hit.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            if (wallPanel != null)
+            TransformationManager tm = GetComponent<TransformationManager>();
+
+            if (tm != null && (tm.IsStrong() || tm.IsFast()))
             {
-                wallPanel.SetActive(true);
-                Time.timeScale = 0f; // opcional: pausar el juego
+                Destroy(hit.gameObject);
             }
+            else 
+            {
+                if (wallPanel != null)
+                {
+                    wallPanel.SetActive(true);
+                    Time.timeScale = 0f; // opcional: pausar el juego
+                }
+            }
+            
         }
     }
 
