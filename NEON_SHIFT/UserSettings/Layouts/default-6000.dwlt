@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 41
+  controlID: 42
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 42
+  controlID: 43
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 43
+  controlID: 44
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6c900000
-      m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff0283000050840000
+      m_SelectedIDs: f8faffff
+      m_LastClickedID: -1288
+      m_ExpandedIDs: f8fafffffafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -733,10 +733,10 @@ MonoBehaviour:
       displayed: 1
       id: unity-scene-view-camera-mode-toolbar
       index: 0
-      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":true,"m_FloatingSnapOffset":{"x":-172.0,"y":0.0010000000474974514},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":true,"m_FloatingSnapOffset":{"x":24.0,"y":0.0010000000474974514},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 1
       collapsed: 0
-      snapOffset: {x: -172, y: 0.001}
+      snapOffset: {x: 24, y: 0.001}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       layout: 1
@@ -1088,7 +1088,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 5854551684151854741, guid: e9c9d78edb77e20408890d3d212de693, type: 2}
+    - {fileID: 7054440889316196133, guid: 4c062378d4b0efc4c8a04dffe1d61338, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -1169,7 +1169,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PlayerPrefans
+    - Assets/Art/Models/soldier/source
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1179,16 +1179,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/PlayerPrefans
+  - Assets/Art/Models/soldier/source
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Documents\GitHub\TALLER6_NEONSHIFT\NEON_SHIFT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 64}
-    m_SelectedIDs: 64900000
-    m_LastClickedID: 36964
-    m_ExpandedIDs: 00000000988c00009a8c00009c8c00009e8c00000a8d000000ca9a3b
+    m_SelectedIDs: 88920000
+    m_LastClickedID: 37512
+    m_ExpandedIDs: 00000000b2910000b4910000b6910000b8910000269200008a92000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1217,7 +1217,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000988c00009a8c00009c8c00009e8c0000
+    m_ExpandedIDs: 00000000b2910000b4910000b6910000b8910000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1246,7 +1246,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000c08d000030890000fe9e0000f6c00000c0b00000b4e80000809e0000ba9d000028ad000076b40000449b0000ea9c00003c9d0000369d0000c2990000d8960000549a0000d49600006c9c0000309a0000e8a1000080ea0000d40a010056470100285c010054630100226b0100a28f01002295000000000000f4010000ce8400002c850000f8840000
+    m_ExpandedInstanceIDs: c6230000c08d000030890000fe9e0000f6c00000c0b00000b4e80000809e0000ba9d000028ad000076b40000449b0000ea9c00003c9d0000369d0000c2990000d8960000549a0000d49600006c9c0000309a0000e8a1000080ea0000d40a010056470100285c010054630100226b0100a28f01002295000000000000f4010000ce8400002c850000f884000046850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
