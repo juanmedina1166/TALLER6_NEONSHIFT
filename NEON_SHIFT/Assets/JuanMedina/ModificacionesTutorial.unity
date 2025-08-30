@@ -21023,7 +21023,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 246012889587029758, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 631082140753844897, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901839680478600606, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21077,6 +21081,10 @@ PrefabInstance:
       propertyPath: strongButton
       value: 
       objectReference: {fileID: 850157173}
+    - target: {fileID: 2491779207414421320, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4135384156170520488, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: wallPanel
       value: 

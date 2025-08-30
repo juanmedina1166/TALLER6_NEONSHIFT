@@ -219,8 +219,8 @@ MonoBehaviour:
     y: 0
     width: 284
     height: 551
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 552
     height: 551
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3a48fcffa248fcff2e52fcff4e52fcff80e2fcfff898fdff3abdfdffb8d1fdff18e1fdff9403feff0c38feffa2d0feff48e0fffff8fafffffafaffff50820000608200006e8200007a820000ec8200000c830000108300001e8300003283000092830000a4830000
+      m_SelectedIDs: c4f5ffff
+      m_LastClickedID: -2620
+      m_ExpandedIDs: fafaffff5c850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -965,9 +965,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 26.577717, y: 74.31012, z: 1512.9421}
+    m_Target: {x: 0.33573774, y: 12.124987, z: 3.7950854}
     speed: 2
-    m_Value: {x: 26.577717, y: 74.31012, z: 1512.9421}
+    m_Value: {x: 0.33573774, y: 12.124987, z: 3.7950854}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1015,11 +1015,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.17140129, y: -0.7537422, z: 0.21665771, w: 0.5962923}
     speed: 2
-    m_Value: {x: 0.17140037, y: -0.75373816, z: 0.21665655, w: 0.5962891}
+    m_Value: {x: -0.17140037, y: 0.75373816, z: -0.21665655, w: -0.5962891}
   m_Size:
-    m_Target: 94.04358
+    m_Target: 12.208134
     speed: 2
-    m_Value: 94.04358
+    m_Value: 12.208134
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1169,7 +1169,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/PlayerPrefans
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1179,16 +1179,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/PlayerPrefans
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Documents\GitHub\TALLER6_NEONSHIFT\NEON_SHIFT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 144}
-    m_SelectedIDs: 38920000
-    m_LastClickedID: 37432
-    m_ExpandedIDs: 00000000b0910000b2910000b4910000b6910000249200004092000000ca9a3b
+    scrollPos: {x: 0, y: 68}
+    m_SelectedIDs: ea970000
+    m_LastClickedID: 38890
+    m_ExpandedIDs: 000000006497000066970000689700006a97000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1217,7 +1217,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0910000b2910000b4910000b6910000
+    m_ExpandedIDs: 000000006497000066970000689700006a970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c08d000030890000fe9e0000f6c00000c0b00000b4e80000809e0000ba9d000028ad000076b40000449b0000ea9c00003c9d0000369d0000c2990000d8960000549a0000d49600006c9c0000309a0000e8a1000080ea0000d40a010056470100285c010054630100226b0100a28f01002295000000000000f4010000ce8400002c850000f88400004685000062920000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
