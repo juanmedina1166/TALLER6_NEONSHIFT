@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0821d05e3f328224d90dce78b3c49942, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cb8e3ae25aec7e845b9fb57119528c66, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1916,6 +1916,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2349,6 +2353,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4616089922158908182, guid: 8cff2fab7ead0bd4290b200b2426a25a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5399e3037cbfaa4a888c36996f6db0a, type: 2}
+    - target: {fileID: 7845634571134916213, guid: 8cff2fab7ead0bd4290b200b2426a25a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5399e3037cbfaa4a888c36996f6db0a, type: 2}
+    - target: {fileID: 8308007527006117671, guid: 8cff2fab7ead0bd4290b200b2426a25a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5399e3037cbfaa4a888c36996f6db0a, type: 2}
+    - target: {fileID: 9210055579095594991, guid: 8cff2fab7ead0bd4290b200b2426a25a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5399e3037cbfaa4a888c36996f6db0a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2406,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2463,6 +2487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3971,7 +3999,9 @@ GameObject:
   - component: {fileID: 337865677}
   - component: {fileID: 337865676}
   - component: {fileID: 337865679}
-  m_Layer: 0
+  - component: {fileID: 337865681}
+  - component: {fileID: 337865680}
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4067,6 +4097,83 @@ MonoBehaviour:
   target: {fileID: 1940182331}
   offset: {x: 0, y: 20, z: -20}
   smoothSpeed: 10
+--- !u!114 &337865680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337865675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 1132be24211f3c24e812b5e5f05db151, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &337865681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337865675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 337865678}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &338403553
 GameObject:
   m_ObjectHideFlags: 0
@@ -13945,6 +14052,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -17785,6 +17896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -23183,6 +23298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8389411786132625105, guid: faae4e31627605f43bf63f9f6862917f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -28979,6 +29098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7032223999631097550, guid: 12985b681731e324f9db1519a1df0409, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -28999,6 +29122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4155971189378894514, guid: 38d22b6a7230b2b44b1bee8b4cf47c46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 6985787571559709021, guid: 38d22b6a7230b2b44b1bee8b4cf47c46, type: 3}
       propertyPath: m_LocalPosition.x
       value: -200
@@ -29055,6 +29182,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 209801088}
     m_Modifications:
+    - target: {fileID: 3361439913622064669, guid: fb5c19bbc228bb540ac62d3b2366ce6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 6916178658730737725, guid: fb5c19bbc228bb540ac62d3b2366ce6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -400
@@ -29155,6 +29286,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7532666572093406052, guid: f348cadd5b9b50b41af9d492af463a88, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 8146547992335059628, guid: f348cadd5b9b50b41af9d492af463a88, type: 3}
       propertyPath: m_Name
       value: Terrain (5)
@@ -29187,6 +29322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5642772550512444321, guid: 2e4fcd60529b7fe4ab027fe4ddec5054, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 6378299958783395322, guid: 2e4fcd60529b7fe4ab027fe4ddec5054, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -29383,6 +29522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8603992086796559460, guid: 032ebbe8cf3ac1841bd1e849b22e0890, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 8735631252060624380, guid: 032ebbe8cf3ac1841bd1e849b22e0890, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100
@@ -29569,6 +29712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 5520542474101272828, guid: 11e73d278ac28bf418b9a56b78cd9a49, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 7095117091667178069, guid: 11e73d278ac28bf418b9a56b78cd9a49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29626,6 +29773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6659377873845849326, guid: 9f4b961435b7b514897f9d3358605011, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 8426450675005180127, guid: 9f4b961435b7b514897f9d3358605011, type: 3}
       propertyPath: m_LocalPosition.x
       value: -300
@@ -29686,6 +29837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5355193720951072174, guid: 21c297c2787e4f246bad7b46fb01af9f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 7236683675237875275, guid: 21c297c2787e4f246bad7b46fb01af9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1800
@@ -29815,6 +29970,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7466558693256098767, guid: 197494495927b4d4da0cadd9774b4dd4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dafc82c8a74add5479fcaf31a5f8f3bf, type: 2}
     - target: {fileID: 8825251320373446622, guid: 197494495927b4d4da0cadd9774b4dd4, type: 3}
       propertyPath: m_Name
       value: Terrain (6)

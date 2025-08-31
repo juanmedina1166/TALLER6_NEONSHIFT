@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638918979677555018
-    m_Hash: 1800326366
+      ticks: 638922083810036020
+    m_Hash: 2978829637
   m_LockFileStatus:
     m_FilePath: C:/Users/USUARIO/Documents/GitHub/TALLER6_NEONSHIFT/NEON_SHIFT/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638918979677791378
-    m_Hash: 1883358179
+      ticks: 638922083810281532
+    m_Hash: 2354622506
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
