@@ -33,6 +33,13 @@ public class TransformationManager : MonoBehaviour
     public GameObject strongModel;
     public GameObject fastModel;
 
+    [Header("Audio")]
+    public AudioSource audioSource; // asigna un AudioSource en el Player
+    public AudioClip flySound;
+    public AudioClip strongSound;
+    public AudioClip fastSound;
+    public AudioClip wallBreakSound; // ?? sonido al destruir paredes
+
     // Estados
     private bool isFlying = false;
     private bool isStrong = false;
@@ -45,16 +52,13 @@ public class TransformationManager : MonoBehaviour
     {
         player = GetComponent<PlayerController>();
 
-        // Modelos iniciales
         ActivateModel(defaultModel);
 
-        // Ocultar botones hasta que se consigan los objetos
         if (flyButton != null) flyButton.gameObject.SetActive(false);
         if (strongButton != null) strongButton.gameObject.SetActive(false);
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
-    // ---------------- CONTROL DE MODELOS Y ANIMACIONES ----------------
     private void ActivateModel(GameObject modelToActivate)
     {
         if (defaultModel != null) defaultModel.SetActive(false);
@@ -66,7 +70,6 @@ public class TransformationManager : MonoBehaviour
         {
             modelToActivate.SetActive(true);
 
-            // Forzar animación de correr si hay Animator
             Animator anim = modelToActivate.GetComponent<Animator>();
             if (anim != null)
             {
@@ -75,11 +78,20 @@ public class TransformationManager : MonoBehaviour
         }
     }
 
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
     // ---------------- FLY ----------------
     public void ActivateFly()
     {
         if (hasFlyPowerUp && !isFlying && !isTransforming)
         {
+            PlaySound(flySound);
             StartCoroutine(FlyRoutine());
         }
     }
@@ -120,6 +132,7 @@ public class TransformationManager : MonoBehaviour
     {
         if (hasStrongPowerUp && !isStrong && !isTransforming)
         {
+            PlaySound(strongSound);
             StartCoroutine(StrongRoutine());
         }
     }
@@ -133,12 +146,7 @@ public class TransformationManager : MonoBehaviour
 
         ActivateModel(strongModel);
 
-        float timer = 0f;
-        while (timer < strongDuration)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSeconds(strongDuration);
 
         ActivateModel(defaultModel);
 
@@ -154,6 +162,7 @@ public class TransformationManager : MonoBehaviour
     {
         if (hasFastPowerUp && !isFast && !isTransforming)
         {
+            PlaySound(fastSound);
             StartCoroutine(FastRoutine());
         }
     }
@@ -170,12 +179,7 @@ public class TransformationManager : MonoBehaviour
         float originalSpeed = player.forwardSpeed;
         player.forwardSpeed *= fastSpeedMultiplier;
 
-        float timer = 0f;
-        while (timer < fastDuration)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSeconds(fastDuration);
 
         player.forwardSpeed = originalSpeed;
         ActivateModel(defaultModel);
@@ -194,6 +198,9 @@ public class TransformationManager : MonoBehaviour
 
         if ((isStrong || isFast) && target.CompareTag("Wall"))
         {
+            if (wallBreakSound != null && audioSource != null)
+                audioSource.PlayOneShot(wallBreakSound); // ?? Sonido al romper
+
             Destroy(target);
         }
     }
@@ -217,14 +224,6 @@ public class TransformationManager : MonoBehaviour
         if (strongButton != null) strongButton.gameObject.SetActive(true);
     }
 
-    // ---------------- CONSULTAS DE ESTADO ----------------
-    public bool IsFast()
-    {
-        return isFast;
-    }
-
-    public bool IsStrong()
-    {
-        return isStrong;
-    }
+    public bool IsFast() => isFast;
+    public bool IsStrong() => isStrong;
 }
