@@ -12,6 +12,10 @@ public class PowerUp : MonoBehaviour
     [Header("Configuración del Power Up")]
     public PowerUpType type; // Seleccionas en el Inspector el tipo de power up
 
+    [Header("Audio")]
+    public AudioClip pickupSound; // Sonido al recoger
+    public float volume = 1f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -47,6 +51,18 @@ public class PowerUp : MonoBehaviour
             else
             {
                 Debug.LogWarning("⚠️ No encontré TransformationManager en el Player ni en su jerarquía");
+            }
+
+            // 🎵 Reproducir sonido en la posición del power up
+            if (pickupSound != null)
+            {
+                GameObject tempAudio = new GameObject("TempPowerUpAudio");
+                AudioSource tempSource = tempAudio.AddComponent<AudioSource>();
+                tempSource.clip = pickupSound;
+                tempSource.volume = volume;
+                tempSource.spatialBlend = 0f; // 2D (para que siempre se escuche)
+                tempSource.Play();
+                Destroy(tempAudio, pickupSound.length);
             }
 
             // Destruir el objeto para que no se recoja de nuevo
