@@ -34,18 +34,17 @@ public class TransformationManager : MonoBehaviour
     public GameObject fastModel;
 
     [Header("Audio")]
-    public AudioSource audioSource; // asigna un AudioSource en el Player
+    public AudioSource audioSource;
     public AudioClip flySound;
     public AudioClip strongSound;
     public AudioClip fastSound;
-    public AudioClip wallBreakSound; // ?? sonido al destruir paredes
+    public AudioClip wallBreakSound;
 
     // Estados
     private bool isFlying = false;
     private bool isStrong = false;
     private bool isFast = false;
 
-    // Exclusividad
     private bool isTransforming = false;
 
     void Start()
@@ -101,14 +100,17 @@ public class TransformationManager : MonoBehaviour
         isFlying = true;
         isTransforming = true;
 
-        if (flyButton != null) flyButton.interactable = false;
-
         ActivateModel(flyModel);
         player.allowCustomY = true;
 
         float timer = 0f;
+        Image fill = flyButton?.GetComponent<Image>();
+
         while (timer < flyDuration)
         {
+            if (fill != null)
+                fill.fillAmount = 1 - (timer / flyDuration);
+
             Vector3 pos = player.transform.position;
             pos.y = flyHeight;
             player.transform.position = pos;
@@ -142,11 +144,19 @@ public class TransformationManager : MonoBehaviour
         isStrong = true;
         isTransforming = true;
 
-        if (strongButton != null) strongButton.interactable = false;
-
         ActivateModel(strongModel);
 
-        yield return new WaitForSeconds(strongDuration);
+        float timer = 0f;
+        Image fill = strongButton?.GetComponent<Image>();
+
+        while (timer < strongDuration)
+        {
+            if (fill != null)
+                fill.fillAmount = 1 - (timer / strongDuration);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
 
         ActivateModel(defaultModel);
 
@@ -172,14 +182,22 @@ public class TransformationManager : MonoBehaviour
         isFast = true;
         isTransforming = true;
 
-        if (fastButton != null) fastButton.interactable = false;
-
         ActivateModel(fastModel);
 
         float originalSpeed = player.forwardSpeed;
         player.forwardSpeed *= fastSpeedMultiplier;
 
-        yield return new WaitForSeconds(fastDuration);
+        float timer = 0f;
+        Image fill = fastButton?.GetComponent<Image>();
+
+        while (timer < fastDuration)
+        {
+            if (fill != null)
+                fill.fillAmount = 1 - (timer / fastDuration);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
 
         player.forwardSpeed = originalSpeed;
         ActivateModel(defaultModel);
@@ -199,7 +217,7 @@ public class TransformationManager : MonoBehaviour
         if ((isStrong || isFast) && target.CompareTag("Wall"))
         {
             if (wallBreakSound != null && audioSource != null)
-                audioSource.PlayOneShot(wallBreakSound); // ?? Sonido al romper
+                audioSource.PlayOneShot(wallBreakSound);
 
             Destroy(target);
         }
@@ -209,19 +227,31 @@ public class TransformationManager : MonoBehaviour
     public void UnlockFast()
     {
         hasFastPowerUp = true;
-        if (fastButton != null) fastButton.gameObject.SetActive(true);
+        if (fastButton != null)
+        {
+            fastButton.gameObject.SetActive(true);
+            fastButton.GetComponent<Image>().fillAmount = 1f; // reset
+        }
     }
 
     public void UnlockFly()
     {
         hasFlyPowerUp = true;
-        if (flyButton != null) flyButton.gameObject.SetActive(true);
+        if (flyButton != null)
+        {
+            flyButton.gameObject.SetActive(true);
+            flyButton.GetComponent<Image>().fillAmount = 1f; // reset
+        }
     }
 
     public void UnlockStrong()
     {
         hasStrongPowerUp = true;
-        if (strongButton != null) strongButton.gameObject.SetActive(true);
+        if (strongButton != null)
+        {
+            strongButton.gameObject.SetActive(true);
+            strongButton.GetComponent<Image>().fillAmount = 1f; // reset
+        }
     }
 
     public bool IsFast() => isFast;
