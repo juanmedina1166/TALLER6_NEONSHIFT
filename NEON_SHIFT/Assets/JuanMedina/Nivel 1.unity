@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &18240495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5490051283042414498, guid: b7d62fd5fd726d74cafbc54b474489ec, type: 3}
+  m_PrefabInstance: {fileID: 514298771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &44953014
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,8 +793,8 @@ MonoBehaviour:
   - {fileID: 8825251319930505441}
   - {fileID: 5762013148390567734}
   - {fileID: 1303284007}
-  - {fileID: 1303284007}
-  - {fileID: 1303284007}
+  - {fileID: 18240495}
+  - {fileID: 356415253}
   terrainLength: 200
 --- !u!4 &246050547 stripped
 Transform:
@@ -1058,6 +1063,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &356415253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7939529381377344435, guid: 7593217d28300974cbe3ccd07c435be2, type: 3}
+  m_PrefabInstance: {fileID: 8465825693979935098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &361547162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,7 +5203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1886609016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6177,7 +6187,7 @@ Transform:
   m_GameObject: {fileID: 2057682229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 14.4, z: 1613}
+  m_LocalPosition: {x: -0.06, y: 14.4, z: 1815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
