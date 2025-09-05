@@ -1,3 +1,4 @@
+// PlayerController.cs
 using System.Collections;
 using UnityEngine;
 
@@ -7,31 +8,31 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Animator animator;
 
-    // Movimiento general
+    [Header("Movimiento general")]
     public float forwardSpeed = 10f;
     public float laneDistance = 2f;
     public float laneChangeSpeed = 10f;
 
-    // Control de carriles
     private int currentLane = 1;
 
-    // Saltar
+    [Header("Saltar")]
     public float jumpForce = 10f;
     public float gravity = -20f;
     private float verticalVelocity;
 
-    // Slide
+    [Header("Slide")]
     private bool isSliding = false;
     private float originalHeight;
     private Vector3 originalCenter;
 
-    // Input
+    // Buffer de input para que no se pierda el swipe
+    private float jumpBufferTime = 0.1f;
+    private float jumpBufferCounter = 0f;
+
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
-    // Transformaciones
     [HideInInspector] public bool allowCustomY = false;
 
-    // ?? Audio
     [Header("Audio Clips")]
     public AudioClip jumpClip;
     public AudioClip slideClip;
@@ -52,10 +53,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         HandleSwipeInput();
 
+        // Buffer para que el salto no se pierda
+        if (swipeUp) jumpBufferCounter = jumpBufferTime;
+        if (jumpBufferCounter > 0) jumpBufferCounter -= Time.deltaTime;
+
         Vector3 move = Vector3.zero;
-        move.z = forwardSpeed;
+        move.z = forwardSpeed; // ? Sin deltaTime aquí
 
         float targetX = (currentLane - 1) * laneDistance;
         float deltaX = targetX - transform.position.x;
@@ -67,20 +74,20 @@ public class PlayerController : MonoBehaviour
             {
                 verticalVelocity = -1f;
 
-                if (swipeUp) // ?? Jump
+                if (jumpBufferCounter > 0)
                 {
                     verticalVelocity = jumpForce;
+                    jumpBufferCounter = 0f;
 
                     if (animator != null)
                     {
                         animator.SetTrigger("Jump");
                         animator.SetBool("IsRunning", false);
                     }
-
                     PlaySound(jumpClip);
                 }
 
-                if (swipeDown && !isSliding) // ?? Slide
+                if (swipeDown && !isSliding)
                 {
                     StartCoroutine(Slide());
                     PlaySound(slideClip);
@@ -105,19 +112,14 @@ public class PlayerController : MonoBehaviour
         swipeDown = SwipeManager.swipeDown;
 
         if (swipeRight && currentLane < 2)
-        {
             currentLane++;
-        }
         else if (swipeLeft && currentLane > 0)
-        {
             currentLane--;
-        }
     }
 
     IEnumerator Slide()
     {
         isSliding = true;
-
         if (animator != null)
         {
             animator.SetTrigger("Slide");
@@ -138,12 +140,9 @@ public class PlayerController : MonoBehaviour
         isSliding = false;
     }
 
-    // ?? Reproducir sonido seguro
     private void PlaySound(AudioClip clip)
     {
         if (clip != null && audioSource != null)
-        {
             audioSource.PlayOneShot(clip);
-        }
     }
 }

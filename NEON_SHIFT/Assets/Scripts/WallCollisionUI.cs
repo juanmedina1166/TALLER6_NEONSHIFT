@@ -14,28 +14,34 @@ public class WallCollisionUI : MonoBehaviour
     // Este se usa con CharacterController
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // Verifica si el objeto pertenece al layer "Wall"
         if (hit.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             TransformationManager tm = GetComponent<TransformationManager>();
 
-            if (tm != null && (tm.IsStrong() || tm.IsFast()))
+            bool isStrongOrFast = tm != null && (tm.IsStrong() || tm.IsFast());
+            bool hasWallTag = hit.gameObject.CompareTag("Wall");
+
+            if (hasWallTag && isStrongOrFast)
             {
+                // Solo destruye si cumple ambas condiciones
                 Destroy(hit.gameObject);
             }
-            else 
+            else
             {
+                // ? Siempre mostrar panel si no se destruye el objeto
                 if (wallPanel != null)
                 {
                     wallPanel.SetActive(true);
-                    Time.timeScale = 0f; // opcional: pausar el juego
+                    Time.timeScale = 0f;
                 }
             }
-            
         }
-    }
+    
 
-    public void HideWallPanel()
+
+}
+
+public void HideWallPanel()
     {
         if (wallPanel != null)
         {

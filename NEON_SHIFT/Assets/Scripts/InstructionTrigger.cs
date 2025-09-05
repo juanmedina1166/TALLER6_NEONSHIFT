@@ -21,6 +21,14 @@ public class InstructionTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isActive = false; // Ahora solo se puede volver a mostrar si el jugador salió
+        }
+    }
+
     public void ShowInstructions()
     {
         if (instructionPanel != null)
@@ -51,7 +59,18 @@ public class InstructionTrigger : MonoBehaviour
         if (instructionPanel != null)
         {
             instructionPanel.SetActive(false);
-            Time.timeScale = 1f; // reanuda el juego
+
+            // Solo reanuda si no está el panel de pausa activo
+            PauseManager pauseManager = Object.FindFirstObjectByType<PauseManager>();
+            bool isPauseActive = (pauseManager != null && pauseManager.pausePanel.activeSelf);
+
+            if (!isPauseActive)
+            {
+                Time.timeScale = 1f;
+            }
         }
+
+    
     }
+
 }

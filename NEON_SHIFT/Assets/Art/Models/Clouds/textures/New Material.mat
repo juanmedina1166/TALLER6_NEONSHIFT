@@ -7,14 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Neon
+  m_Name: New Material
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
+  - _ALPHABLEND_ON
+  - _DETAIL_MULX2
   - _EMISSION
-  - _GLOSSYREFLECTIONS_OFF
+  - _METALLICGLOSSMAP
+  - _NORMALMAP
+  - _PARALLAXMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -28,15 +31,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fdac486d6f4775246a5af81bccff417f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
@@ -44,23 +47,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 70e61c4d15b22c2489713f4bee0c0a82, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fdac486d6f4775246a5af81bccff417f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a6b8e38db694f6f40a62fe8d30ea02df, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -70,19 +73,19 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 0
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 3
+    - _Mode: 2
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.08
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.35671708, g: 0.41509426, b: 0.3465645, a: 0}
-    - _EmissionColor: {r: 0.17327733, g: 1.0767807, b: 0.13713716, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
