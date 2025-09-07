@@ -5,6 +5,10 @@ public class InstructionTrigger : MonoBehaviour
     [Header("UI de instrucciones")]
     public GameObject instructionPanel; // Panel de instrucciones en el Canvas
 
+
+    [Header("Opciones del Trigger")]
+    public bool isEndTrigger = false;
+
     private bool isActive = false;
 
     private void Start()
@@ -18,6 +22,10 @@ public class InstructionTrigger : MonoBehaviour
         if (other.CompareTag("Player") && !isActive)
         {
             ShowInstructions();
+            if (isEndTrigger)
+            {
+                FindObjectOfType<PauseManager>().EndGame();
+            }
         }
     }
 
