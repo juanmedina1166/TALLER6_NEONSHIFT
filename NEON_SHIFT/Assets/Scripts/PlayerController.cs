@@ -96,6 +96,12 @@ public class PlayerController : MonoBehaviour
             else
             {
                 verticalVelocity += gravity * Time.deltaTime;
+
+                // Fast fall: swipe hacia abajo en el aire
+                if (swipeDown)
+                {
+                    verticalVelocity = gravity * 2f; // ajusta el multiplicador a tu gusto
+                }
             }
 
             move.y = verticalVelocity;
