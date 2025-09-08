@@ -2053,7 +2053,7 @@ Transform:
   m_GameObject: {fileID: 130707332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0000017881391, y: 6.03, z: 923}
+  m_LocalPosition: {x: 0.000020742413, y: 6.03, z: 1112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3001,7 +3001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b46040f0bdc674181418b271bfaee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinIndex: 0
+  coinIndex: 2
   pickupSound: {fileID: 8300000, guid: d800af9ba03c3014db47c07f70b7ca16, type: 3}
   volume: 1
 --- !u!1 &202836977
@@ -6901,9 +6901,9 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
-        m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
-        m_MethodName: HideInstructions
+      - m_Target: {fileID: 2057682233}
+        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
+        m_MethodName: HideVictoryPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13216,9 +13216,9 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
-        m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
-        m_MethodName: HideInstructions
+      - m_Target: {fileID: 2057682233}
+        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
+        m_MethodName: HideVictoryPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14469,7 +14469,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: coinIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
@@ -19443,7 +19443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: coinIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
@@ -22650,9 +22650,9 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
-        m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
-        m_MethodName: HideInstructions
+      - m_Target: {fileID: 2057682233}
+        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
+        m_MethodName: HideVictoryPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23122,7 +23122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057682232}
   - component: {fileID: 2057682231}
-  - component: {fileID: 2057682230}
+  - component: {fileID: 2057682233}
   m_Layer: 0
   m_Name: ColliderWin
   m_TagString: Finish
@@ -23130,20 +23130,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2057682230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057682229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19141e7f58f2d6e4a881fb2784295052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instructionPanel: {fileID: 1886609015}
-  isEndTrigger: 1
 --- !u!65 &2057682231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23180,6 +23166,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057682233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057682229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryPanel: {fileID: 1886609015}
 --- !u!4 &2073879670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7307381027644817982, guid: 2e4fcd60529b7fe4ab027fe4ddec5054, type: 3}
