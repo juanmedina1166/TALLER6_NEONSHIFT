@@ -21640,7 +21640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -233.4
+      value: -239.6
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24955,7 +24955,7 @@ Transform:
   m_GameObject: {fileID: 2057682229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 14.4, z: 1815}
+  m_LocalPosition: {x: -0.06, y: 14.4, z: 2114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26308,7 +26308,7 @@ PrefabInstance:
       objectReference: {fileID: 1940182342}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: flyDuration
-      value: 13.5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: strongSound

@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 587
     height: 564
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -344,10 +344,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 72d30100
-      m_LastClickedID: 119666
-      m_ExpandedIDs: dc8ff6ffa6aaf6ff74d0f6ff66eff6ff4003f7ff5a3ff7ffb44bf7ffb64bf7ff4a5af7ff207af7ffee52f8ffb2f7f8ff9231f9ffca33f9ff3c35f9ff7a3df9ffb03ff9ff7a40f9ff8051f9ff0c63f9ff4277f9ff5ce5f9ff30edf9ff32edf9fff000faff7a12fafffe1cfaff9c38faffde4cfafff66bfaff946ffaff2a71faff1272faff0886faff7c94faffcedcfaffccf7faffcef7fafff8f7fafffaf7faff221cfbff0222fbff740efcff163efcff1a3efcff8664fcff8a64fcffc0c1fcfffec1fcff4ac3fcff4cc3fcffdac4fcff38cdfcff62cdfcff16cefcff9ce4fcffd2fdfcffde95fdff0cc1fdff0ec1fdff68c3fdff86d9fdff96f0fdff9e15feff32b0feff36b0feff7ce1ffff5cf0ffff5ef0fffff8fafffffafafffff6bc0000bad90000e8da0000eef00000e4f600003efa0000f6160100c6190100581d010042250100ce26010012280100a42b01001a330100a63401007c3901000e4201009a43010070480100006201003c690100886c0100
+      scrollPos: {x: 0, y: 235}
+      m_SelectedIDs: 30cd0000
+      m_LastClickedID: 52528
+      m_ExpandedIDs: 2e9cffff969cffffa4aeffff7ebfffff50ceffff6ecefffffafaffffcac30000c6cb0000bed20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -965,9 +965,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -16.356228, y: 47.32813, z: 1963.4917}
+    m_Target: {x: -4.3708134, y: 6.93947, z: 1311.8574}
     speed: 2
-    m_Value: {x: -16.356228, y: 47.32813, z: 1963.4917}
+    m_Value: {x: -4.3708134, y: 6.93947, z: 1311.8574}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1013,13 +1013,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.13238838, y: -0.6158471, z: 0.10596679, w: 0.7694004}
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: 0.13238837, y: -0.61584705, z: 0.10596678, w: 0.7694003}
+    m_Value: {x: 0.7071068, y: -0.000000041902457, z: 0.000000007210018, w: 0.7071069}
   m_Size:
-    m_Target: 83.18219
+    m_Target: 56.184967
     speed: 2
-    m_Value: 83.18219
+    m_Value: 56.184967
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1203,7 +1203,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/JuanMedina
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1213,16 +1213,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/JuanMedina
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Documents\GitHub\TALLER6_NEONSHIFT\NEON_SHIFT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: 30980000
-    m_LastClickedID: 38960
-    m_ExpandedIDs: 00000000b89700003098000000ca9a3b
+    m_SelectedIDs: 249f0000
+    m_LastClickedID: 40740
+    m_ExpandedIDs: 00000000249f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1251,7 +1251,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8970000
+    m_ExpandedIDs: 00000000249f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1388,7 +1388,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 54
+  m_LastVerticalScrollValue: 162
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
