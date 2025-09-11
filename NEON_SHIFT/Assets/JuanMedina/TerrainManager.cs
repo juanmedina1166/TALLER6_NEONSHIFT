@@ -4,14 +4,14 @@ public class TerrainManager : MonoBehaviour
 {
     public Transform player;              // Jugador o cámara
     public GameObject[] terrains;         // Todos los terrenos en orden (Terrain1, Terrain2, ..., TerrainN)
-    public float terrainLength = 30f;     // Largo de cada bloque
+    public float terrainLength = 100f; // Largo de cada bloque
 
     private int currentIndex = 0;         // El primer terreno activo
     private int nextToActivate = 4;       // El próximo terreno que debe aparecer
 
     void Start()
     {
-        // Activar solo los 3 primeros
+        // Activar solo los 3 primeros (o 4 en este caso)
         for (int i = 0; i < terrains.Length; i++)
         {
             terrains[i].SetActive(i < 4);
@@ -24,7 +24,7 @@ public class TerrainManager : MonoBehaviour
 
         Transform currentTerrain = terrains[currentIndex].transform;
 
-        // Cuando el jugador pasa la mitad del terreno actual
+        // Cuando el jugador pasa más allá del largo del terreno actual
         if (player.position.z - currentTerrain.position.z > terrainLength)
         {
             // Desactivar el terreno actual
