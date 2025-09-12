@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JuanMedina/Nivel 2.unity
     guid: f2d14b9529eed15488458872d2ad02f1
+  - enabled: 1
+    path: Assets/JuanMedina/Nivel 3.unity
+    guid: d2308425b829e8f47b225911f5013c4e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f3bd9ba940e59354b93a54f25342a3a0, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
