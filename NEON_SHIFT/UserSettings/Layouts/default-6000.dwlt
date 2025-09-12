@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 82
+  controlID: 53
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 83
+  controlID: 54
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 84
+  controlID: 55
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -345,23 +345,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c89e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5876efffea8eefff2847f0ff3e65f0ff22bdf0ffe2c4f1ff0acbf1ffd4e7f1ff8068f2ff3681f2ff3ea0f2ff20b8f2fff6d8f2ff0206f3ffae46f3ff8c5df3ffb477f3ff6e8ef3ffb6b2f3fff8cbf3ff78eef3ffe810f4ffb8a5f4ffd2bff4ffbea1f6ffc4a1f6ffc8a1f6ffdea1f6ffe4a1f6ff0ca9f6ff10a9f6ffa4acf6ff32b5f6ffc2ecf6ff3620f7ffe033f7ffcce7fffffafaffff7aa0000088a0000092a0000006a1000050a10000c8a20000c6a30000e0a30000e2a40000f0a500009ea600009eac010016b90100c8b90100d6be010014f6010062810200ecc70200f0e70200c8fe0200802d0300582e0300ac3403007c370300a83e030020a9030018d104002ad10400
+      m_ExpandedIDs: 2cc7ebff94c7ebffcedbebffacecebff82fbebffa6fbebfffe3cecffb859ecff2a71ecff868cecfff09becff14aaecff7caaecffb6beecff94cfecff6adeecff8edeecff74f7ecff980eedff6826edffbe43edfff46dedff708bedffc497edff2c98edff90acedff6ebdedff44ccedff68ccedff5a15eeff6275eeffd895eeffecd6eeff1e06efffd034efff4676efff7692efffdeacefff8a00f0ffdc1ef0ff667ef0ff72aef0ff5244f2ff386bf2ff5ab2f2ff18daf2ff4c0df7ff5e28f7ffb24bf7ffd864f7ff6c0af8ffb22bf8ff8072f8ff1899f8ff5ecef8ffaaedf8ffe25af9ffda9cf9ff44adf9ffb8d5f9ff3af0f9ff2002faff261afaffec34faffe246faff0c5afaff0a6afaff147cfaff409efaffaaaefaff18c3faffa208fbff1028fbff623afbfff44efbff165ffbff7876fbffde87fbff749bfbffbaabfbff7abefbffc0cefbffeee0fbffb007fcffb222fcff7882fcffa6a8fcffba37fdff504ffdff7ca4fdff9ac1fdff2c12feff3225feffbe42feff547cfeff3e93feffaea7feffb4bafeff48cffeffb8e2feffdcfcfeffbe0fffffbc39ffff207dffff849dffffaeb0ffff18c1ffff1ed4ffff40e4fffffafaffff74cb000046d10000cee20000d6050100f20b01006e1901008a1f01006830010092390100343a0100a44701000e560100b0560100e26901000c6b0100b26d0100546e010028990100a0af0100c8b5010004cd01005ce6010084ec010050f60100d4fc0100d00902009a120200aa280200b82e0200dc2e0200b24102002e4302005c4602008046020056590200d25a0200d85f0200e0600200046102008c62020096620200327c0200847f0200da8c02008c8d0200908f02002c900200f2900200be910200e0040300120b03000a0d0300420e03006c10030084110300d8120300d6140300ba97030036990300d2b30300e0e903009eed030036ee030010f00300be120400164604006e53040046590400d28004000aaa040012ac040096e20400cae20400b2e404004e2605004629050098300500243f0500e44405003448050074a005004ea205002ca30500
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Coin (24)
-        m_OriginalName: Coin (24)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 240394
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 9}
@@ -965,9 +965,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -700.7004, y: -166.39926, z: 810.2364}
+    m_Target: {x: -178.43736, y: -287.4299, z: 1135.5103}
     speed: 2
-    m_Value: {x: -700.7004, y: -166.39926, z: 810.2364}
+    m_Value: {x: -178.43736, y: -287.4299, z: 1135.5103}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1013,13 +1013,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15563951, y: 0.7217567, z: -0.17227894, w: -0.65204656}
+    m_Target: {x: -0.077440396, y: 0.92256004, z: -0.26759475, w: -0.26698393}
     speed: 2
-    m_Value: {x: -0.15563942, y: 0.7217563, z: -0.17227884, w: -0.65204614}
+    m_Value: {x: -0.077440344, y: 0.9225594, z: -0.26759458, w: -0.26698375}
   m_Size:
-    m_Target: 725.55084
+    m_Target: 582.98694
     speed: 2
-    m_Value: 694.307
+    m_Value: 582.98694
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.15563951, y: 0.7217567, z: -0.17227894, w: -0.65204656}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 14}
@@ -1220,9 +1220,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: b69f0000
-    m_LastClickedID: 40886
-    m_ExpandedIDs: 000000002c9f0000a89f0000aa9f000000ca9a3b
+    m_SelectedIDs: 749c0000
+    m_LastClickedID: 40052
+    m_ExpandedIDs: 00000000f69b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1251,7 +1251,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c9f0000
+    m_ExpandedIDs: 00000000f69b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1388,7 +1388,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 283
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1200, y: 2640}
+  m_TargetSize: {x: 1080, y: 2280}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Huawei P40 Pro
+    friendlyName: Samsung Galaxy S10e
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10
