@@ -6,13 +6,13 @@ public class RespawnManager : MonoBehaviour
     private CharacterController controller;
 
     [Header("UI")]
-    public GameObject fallPanel; // arrastra aquí el panel del Canvas
+    public GameObject fallPanel; 
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
 
-        // Busca el primer checkpoint en la escena
+        // primer checkpoint en la escena
         GameObject checkpoint = GameObject.FindGameObjectWithTag("Checkpoint");
         if (checkpoint != null)
         {
