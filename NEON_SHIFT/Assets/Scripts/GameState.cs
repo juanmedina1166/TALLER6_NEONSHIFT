@@ -16,12 +16,14 @@ public class GameState : MonoBehaviour
     [Header("Objetos destruidos")]
     public HashSet<string> destroyedObjects = new HashSet<string>();
 
+    [Header("Objetos recogidos/destruidos desde el último checkpoint")]
+    public List<GameObject> collectedSinceCheckpoint = new List<GameObject>();
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

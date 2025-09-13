@@ -66,7 +66,13 @@ public class PowerUp : MonoBehaviour
             }
 
             // Destruir el objeto para que no se recoja de nuevo
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+
+            // Guardar referencia directa del power up desactivado
+            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(gameObject))
+            {
+                GameState.Instance.collectedSinceCheckpoint.Add(gameObject);
+            }
         }
     }
 }

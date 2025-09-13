@@ -42,28 +42,44 @@ public class RespawnManager : MonoBehaviour
 
     public void Respawn()
     {
-        Time.timeScale = 1f; // por si estaba pausado
+        Time.timeScale = 1f;
 
-        // ?? Cerrar panel de muerte si estaba abierto
+        // Cerrar panel de muerte
         WallCollisionUI wallUI = FindObjectOfType<WallCollisionUI>();
         if (wallUI != null)
-        {
-            wallUI.HidePanel(); // <-- nuevo método de Opción A
-        }
+            wallUI.HidePanel();
 
         if (GameState.Instance != null && GameState.Instance.checkpointReached)
         {
-            // ? Teletransportar al checkpoint
             Debug.Log("Respawn en checkpoint");
+
+            // ?? Reactivar solo los power ups recogidos después del checkpoint
+            foreach (GameObject obj in GameState.Instance.collectedSinceCheckpoint)
+            {
+                if (obj != null)
+                    obj.SetActive(true);
+            }
+
+            // ?? Limpiar la lista para la próxima vida
+            GameState.Instance.collectedSinceCheckpoint.Clear();
+
+            // Teletransportar al checkpoint
             CharacterController cc = GetComponent<CharacterController>();
             if (cc != null) cc.enabled = false;
             transform.position = GameState.Instance.lastCheckpoint;
             if (cc != null) cc.enabled = true;
+
+            // ?? Resetear poderes del jugador
+            TransformationManager tm = GetComponent<TransformationManager>();
+            if (tm != null)
+            {
+                tm.ResetPowers();
+            }
         }
         else
         {
-            // ? Reiniciar escena si NO hay checkpoint
             Debug.Log("No hay checkpoint ? reiniciando nivel");
+
             if (GameState.Instance != null)
             {
                 GameState.Instance.coins = 0;

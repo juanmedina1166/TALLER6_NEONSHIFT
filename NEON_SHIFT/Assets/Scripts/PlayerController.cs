@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movimiento general")]
     public float forwardSpeed = 10f;
+    [HideInInspector] public float defaultForwardSpeed; // <-- nuevo
     public float laneDistance = 2f;
     public float laneChangeSpeed = 10f;
 
@@ -46,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
         originalHeight = controller.height;
         originalCenter = controller.center;
+
+        defaultForwardSpeed = forwardSpeed; // <-- guardar velocidad base
 
         if (animator != null)
             animator.SetBool("IsRunning", true);

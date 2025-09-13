@@ -26,7 +26,12 @@ public class WallCollisionUI : MonoBehaviour
             if (tm != null && (tm.IsStrong() || tm.IsFast()))
             {
                 // En formas especiales destruye la pared
-                Destroy(hit.gameObject);
+                hit.gameObject.SetActive(false);
+
+                if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
+                {
+                    GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
+                }
             }
             else
             {

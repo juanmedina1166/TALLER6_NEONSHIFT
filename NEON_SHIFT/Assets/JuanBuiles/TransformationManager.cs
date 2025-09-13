@@ -254,6 +254,43 @@ public class TransformationManager : MonoBehaviour
         }
     }
 
+    // ---------------- RESET GENERAL ----------------
+    public void ResetPowers()
+    {
+        StopAllCoroutines();
+
+        isFlying = false;
+        isStrong = false;
+        isFast = false;
+        isTransforming = false;
+
+        hasFlyPowerUp = false;
+        hasStrongPowerUp = false;
+        hasFastPowerUp = false;
+
+        if (player != null)
+        {
+            // ?? Quitar vuelo
+            player.allowCustomY = false;
+
+            // ?? Reposicionar exactamente en el checkpoint (incluyendo altura)
+            if (GameState.Instance != null && GameState.Instance.checkpointReached)
+            {
+                Vector3 pos = GameState.Instance.lastCheckpoint;
+                player.transform.position = pos;
+            }
+
+            // ?? Restaurar velocidad base
+            player.forwardSpeed = player.defaultForwardSpeed;
+        }
+
+        ActivateModel(defaultModel);
+
+        if (flyButton != null) flyButton.gameObject.SetActive(false);
+        if (strongButton != null) strongButton.gameObject.SetActive(false);
+        if (fastButton != null) fastButton.gameObject.SetActive(false);
+    }
+
     public bool IsFast() => isFast;
     public bool IsStrong() => isStrong;
 }
