@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int coinValue = 1; // valor de la moneda
-    [Header("Audio")]
-    public AudioClip pickupSound; // Sonido de recoger moneda
-    public float volume = 1f;
+    public int coinValue = 1;
+    public AudioClip pickupSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,30 +11,14 @@ public class Coin : MonoBehaviour
         {
             PlayerCoins player = other.GetComponentInParent<PlayerCoins>();
             if (player != null)
-            {
                 player.AddCoins(coinValue);
-            }
-
-            // ?? Reproducir sonido desde el AudioSource del Player
-            AudioSource audioSource = other.GetComponentInParent<AudioSource>();
 
             if (pickupSound != null)
-            {
-                GameObject tempAudio = new GameObject("TempCoinAudio");
-                AudioSource tempSource = tempAudio.AddComponent<AudioSource>();
+                AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position, 1f);
 
-                tempSource.clip = pickupSound;
-                tempSource.volume = volume;
-                tempSource.spatialBlend = 0f; // 2D, siempre suena igual
-                tempSource.loop = false;
-                tempSource.Play();
+            // ? Guardar como destruida
+            GameState.Instance.destroyedObjects.Add(gameObject.name);
 
-                Destroy(tempAudio, pickupSound.length); // destruir cuando acabe
-            }
-
-
-            // Destruir moneda
-            GetComponent<Collider>().enabled = false;
             Destroy(gameObject);
         }
     }

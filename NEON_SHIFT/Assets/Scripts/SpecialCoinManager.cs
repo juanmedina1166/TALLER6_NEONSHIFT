@@ -5,33 +5,27 @@ public class SpecialCoinManager : MonoBehaviour
 {
     public static SpecialCoinManager Instance;
 
-    [Header("UI de Monedas Especiales")]
-    public Image[] coinIcons; // Asigna las 3 imágenes desde el inspector
-    public Sprite filledSprite; // Sprite lleno que se muestra al recoger
+    [Header("UI")]
+    public Image[] coinIcons;
+    public Sprite filledSprite;
 
-    private bool[] collected = new bool[3];
+    private bool[] collected;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        Instance = this;
+        collected = new bool[coinIcons.Length];
     }
 
     public void CollectCoin(int index)
     {
         if (index < 0 || index >= coinIcons.Length) return;
-        if (collected[index]) return; // ya fue recogida
+        if (collected[index]) return;
 
         collected[index] = true;
-        coinIcons[index].sprite = filledSprite;
-        coinIcons[index].color = Color.white; // ponerlo brillante
-    }
+        GameState.Instance.specialCoins[index] = true; // ? guardar en GameState
 
-    public int GetCollectedCount()
-    {
-        int count = 0;
-        foreach (var c in collected)
-            if (c) count++;
-        return count;
+        coinIcons[index].sprite = filledSprite;
+        coinIcons[index].color = Color.white;
     }
 }

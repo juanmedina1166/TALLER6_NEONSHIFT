@@ -418,7 +418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &15631389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -654,7 +653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &30727988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1130,7 +1128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &50476345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1613,7 +1610,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &91364383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1919,7 +1915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &96981831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2160,7 +2155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &126149000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2528,7 +2522,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &136281647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2998,7 +2991,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &194381859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3239,7 +3231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &203141155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4384,7 +4375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &261176882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4620,7 +4610,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &268085692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5172,7 +5161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &318587839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5408,7 +5396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &331318605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5572,7 +5559,7 @@ Transform:
   m_GameObject: {fileID: 337865675}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: 11, z: -100}
+  m_LocalPosition: {x: 0, y: 11.5, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6140,7 +6127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &416650434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6376,7 +6362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &452483450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6612,7 +6597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &458290655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6848,7 +6832,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &477483302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6923,6 +6906,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477483297}
   m_Mesh: {fileID: -5216581434543980006, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
+--- !u!1 &502418392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502418395}
+  - component: {fileID: 502418394}
+  - component: {fileID: 502418393}
+  m_Layer: 0
+  m_Name: Checkpoint (1)
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &502418393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502418392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f5e1027fb9452478ceffd17e815603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &502418394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502418392}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 22.99999, y: 22, z: 28.99999}
+  m_Center: {x: -4.000002, y: 4.5, z: 4.065758e-20}
+--- !u!4 &502418395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502418392}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.000027418126, y: 6.03, z: 1168}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &506500874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7312,7 +7361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &532036608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7784,7 +7832,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &541011536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8020,7 +8067,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &574855234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8299,7 +8345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &607972325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8535,7 +8580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &633395938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8771,7 +8815,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &644216900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9051,7 +9094,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &672602538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9447,7 +9489,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &720884624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10353,7 +10394,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &757303400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10594,7 +10634,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &775974309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11347,7 +11386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &815522306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11583,7 +11621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &834750013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11886,7 +11923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &872737079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12483,7 +12519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &937604410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12964,7 +12999,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &986019918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13358,7 +13392,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &996193101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13594,7 +13627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1005398371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13911,7 +13943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1076771224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14147,7 +14178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1077525627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14857,7 +14887,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1117651267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15564,7 +15593,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1181475050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15880,7 +15908,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1208258894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16116,7 +16143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1210103251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16352,7 +16378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1212738704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16725,7 +16750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1231170837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16961,7 +16985,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1250224917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17197,7 +17220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1270869851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17433,7 +17455,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1272204173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17518,9 +17539,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1274579082}
   - component: {fileID: 1274579081}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CollisionAbismo
-  m_TagString: Abismo
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17540,7 +17561,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -17722,7 +17743,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1317058171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18704,7 +18724,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1396498312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18940,7 +18959,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1404359493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19176,7 +19194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1438376450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19690,7 +19707,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1460631992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19926,7 +19942,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1461219154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20162,7 +20177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1481089620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20408,7 +20422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1520282907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21405,7 +21418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1584563983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21651,7 +21663,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1624141454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21887,7 +21898,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1632789957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22485,7 +22495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1679858226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22818,7 +22827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1733371912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23086,6 +23094,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1778174229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778174232}
+  - component: {fileID: 1778174231}
+  - component: {fileID: 1778174230}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1778174230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778174229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f5e1027fb9452478ceffd17e815603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1778174231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778174229}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 22.99999, y: 22, z: 28.99999}
+  m_Center: {x: -4.000002, y: 4.5, z: 4.065758e-20}
+--- !u!4 &1778174232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778174229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0000050067833, y: 6.03, z: 980}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1786368672
 GameObject:
   m_ObjectHideFlags: 0
@@ -23247,7 +23321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1786368677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23483,7 +23556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1787317310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23719,7 +23791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1787399364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23955,7 +24026,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1796057292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24336,7 +24406,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1800596665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24572,7 +24641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1803751271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24808,7 +24876,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1808776045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25044,7 +25111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1818881496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25495,7 +25561,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1848311376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25663,6 +25728,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3fadb562438e9458a80fd447feaafa, type: 3}
+--- !u!1 &1857202864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857202866}
+  - component: {fileID: 1857202865}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1857202865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857202864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438770f1ab5de034787551938d6ed6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
+  specialCoins: 000000
+  lastCheckpoint: {x: 0, y: 0, z: 0}
+  checkpointReached: 0
+--- !u!4 &1857202866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857202864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000020742413, y: 6.03, z: 1112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868675369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 455182936855773948, guid: 1fafa38f1329a76468cbdc73c4b2a933, type: 3}
@@ -25867,7 +25980,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1886045320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26103,7 +26215,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1891080871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26743,7 +26854,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1915839800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26979,7 +27089,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1920674455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27287,7 +27396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1934621091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27668,7 +27776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1939314139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27881,7 +27988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fb2ee1a41b0a64091756831475fae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallPanel: {fileID: 667422684}
 --- !u!1 &1977191636
 GameObject:
   m_ObjectHideFlags: 0
@@ -28179,7 +28285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1977376681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28415,7 +28520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1977949693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28651,7 +28755,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &1980562494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29528,7 +29631,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &2069342029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30040,7 +30142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!65 &2089611232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31074,3 +31175,6 @@ SceneRoots:
   - {fileID: 1891324942}
   - {fileID: 1559834126}
   - {fileID: 207595751}
+  - {fileID: 1857202866}
+  - {fileID: 1778174232}
+  - {fileID: 502418395}

@@ -7,17 +7,17 @@ public class PlayerCoins : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        Instance = this;
     }
 
     public void AddCoins(int amount)
     {
         coins += amount;
+        GameState.Instance.coins = coins; // ? guardar en GameState
+
         Debug.Log("Monedas: " + coins);
 
         // Actualizar UI
         UICoinManager.Instance.UpdateCoins(coins);
     }
 }
-

@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
@@ -48,6 +48,19 @@ public class PauseManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+
+        // ?? Resetear datos del GameState antes de recargar escena
+        GameState.Instance.coins = 0;
+        GameState.Instance.checkpointReached = false;
+        GameState.Instance.lastCheckpoint = Vector3.zero;
+
+        for (int i = 0; i < GameState.Instance.specialCoins.Length; i++)
+        {
+            GameState.Instance.specialCoins[i] = false;
+        }
+        GameState.Instance.destroyedObjects.Clear();
+
+        // Cargar desde el inicio
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
