@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 569
     height: 666
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -219,8 +219,8 @@ MonoBehaviour:
     y: 0
     width: 365
     height: 666
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 546
     height: 666
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -299,8 +299,8 @@ MonoBehaviour:
     y: 0
     width: 440
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 364
     height: 640
   m_SerializedDataModeController:
@@ -350,18 +350,18 @@ MonoBehaviour:
       m_ExpandedIDs: e8bdf6ff50bef6ff52e7f6ff5efbf6ff6a0ef7ffee1ff7ff0e20f7ffc437f7ffe04ef7ffac68f7ff0e95f7ffd2cbf7ff42eaf7ff56fff7ffbefff7ffee28f8fffe3cf8ff0e50f8ff9661f8ffba61f8ff148ef8ff568cfaff5ae8faff1cfafaff8622fbff144bfbff887afbff2497fbff460efcff3a61feffa66cfeff8ee6feffe60dfffffa2fffff6230ffff5859ffff466dffff5680ffffb891ffffdc91ffff3cbeffff80f1ffff308f01006abb03009ec40300de36040050620400406504003668040098690400646a0400
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: ColliderWin
-        m_OriginalName: ColliderWin
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 489770
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 9}
@@ -393,8 +393,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 365
-    y: 79
+    x: 366
+    y: 24
     width: 544
     height: 640
   m_SerializedDataModeController:
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -0.06000042, y: 14.4, z: 2784.8}
     speed: 2
-    m_Value: {x: -0.060002033, y: 14.400005, z: 2784.8}
+    m_Value: {x: -0.06000042, y: 14.4, z: 2784.8}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1015,11 +1015,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.026510905, y: -0.7227193, z: 0.027764935, w: 0.69007474}
     speed: 2
-    m_Value: {x: 0.026510905, y: -0.7227193, z: 0.027764935, w: 0.69007474}
+    m_Value: {x: -0.026510905, y: 0.7227193, z: -0.027764935, w: -0.6900748}
   m_Size:
     m_Target: 25.980762
     speed: 2
-    m_Value: 25.98077
+    m_Value: 25.980762
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 745
+    y: 690
     width: 1479
     height: 241
   m_SerializedDataModeController:
@@ -1222,7 +1222,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: d6c90000
     m_LastClickedID: 51670
-    m_ExpandedIDs: 000000005ec9000000ca9a3b
+    m_ExpandedIDs: 00000000329c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1251,7 +1251,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ec90000
+    m_ExpandedIDs: 00000000329c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1366,8 +1366,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1480
-    y: 79
+    x: 1481
+    y: 24
     width: 439
     height: 907
   m_SerializedDataModeController:
@@ -1415,8 +1415,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Simulator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 911
-    y: 79
+    x: 912
+    y: 24
     width: 567
     height: 640
   m_SerializedDataModeController:
@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: 0
+    controlPanelWidth: NaN
     controlPanelFoldoutKeys:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     controlPanelFoldoutValues: 00
