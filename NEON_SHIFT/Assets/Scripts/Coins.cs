@@ -16,10 +16,14 @@ public class Coin : MonoBehaviour
             if (pickupSound != null)
                 AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position, 1f);
 
-            // ? Guardar como destruida
-            GameState.Instance.destroyedObjects.Add(gameObject.name);
+            // ? Desactivar en vez de destruir
+            gameObject.SetActive(false);
 
-            Destroy(gameObject);
+            // ? Registrar en la lista de objetos "recogidos desde checkpoint"
+            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(gameObject))
+            {
+                GameState.Instance.collectedSinceCheckpoint.Add(gameObject);
+            }
         }
     }
 }

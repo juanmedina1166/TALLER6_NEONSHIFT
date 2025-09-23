@@ -5,7 +5,7 @@ public class RespawnManager : MonoBehaviour
 {
     void Start()
     {
-        // ? Restaurar monedas normales
+        // ? Restaurar monedas normales desde GameState
         if (PlayerCoins.Instance != null)
         {
             PlayerCoins.Instance.coins = GameState.Instance.coins;
@@ -57,6 +57,14 @@ public class RespawnManager : MonoBehaviour
         if (GameState.Instance != null && GameState.Instance.checkpointReached)
         {
             Debug.Log("Respawn en checkpoint");
+
+            // ? Restaurar monedas guardadas en el checkpoint
+            if (PlayerCoins.Instance != null)
+            {
+                PlayerCoins.Instance.coins = GameState.Instance.coins;
+                UICoinManager.Instance.UpdateCoins(GameState.Instance.coins);
+                Debug.Log("?? Monedas restauradas al valor del checkpoint: " + GameState.Instance.coins);
+            }
 
             // ? Reactivar objetos recogidos desde el checkpoint
             foreach (GameObject obj in GameState.Instance.collectedSinceCheckpoint)

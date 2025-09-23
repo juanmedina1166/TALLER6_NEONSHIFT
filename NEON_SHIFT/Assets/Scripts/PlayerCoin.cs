@@ -13,11 +13,19 @@ public class PlayerCoins : MonoBehaviour
     public void AddCoins(int amount)
     {
         coins += amount;
-        GameState.Instance.coins = coins; // ? guardar en GameState
-
+        // ?? Ya NO actualizamos GameState aquí
         Debug.Log("Monedas: " + coins);
+        UICoinManager.Instance.UpdateCoins(coins);
+    }
 
-        // Actualizar UI
+    public void SaveCheckpointCoins()
+    {
+        GameState.Instance.coins = coins;
+    }
+
+    public void RestoreCheckpointCoins()
+    {
+        coins = GameState.Instance.coins;
         UICoinManager.Instance.UpdateCoins(coins);
     }
 }
