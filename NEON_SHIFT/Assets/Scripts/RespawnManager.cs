@@ -24,7 +24,7 @@ public class RespawnManager : MonoBehaviour
             }
         }
 
-        // ? Respawn en el checkpoint (si existe)
+        // ? Respawn en el checkpoint
         if (GameState.Instance.checkpointReached)
         {
             transform.position = GameState.Instance.lastCheckpoint;
@@ -44,23 +44,26 @@ public class RespawnManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        // Cerrar panel de muerte
+        // ? Cerrar panel de muerte
         WallCollisionUI wallUI = FindObjectOfType<WallCollisionUI>();
         if (wallUI != null)
             wallUI.HidePanel();
+
+        // ? Resetear poderes ANTES de reposicionar
+        TransformationManager tm = GetComponent<TransformationManager>();
+        if (tm != null)
+            tm.ResetPowers();
 
         if (GameState.Instance != null && GameState.Instance.checkpointReached)
         {
             Debug.Log("Respawn en checkpoint");
 
-            // ?? Reactivar solo los power ups recogidos después del checkpoint
+            // Reactivar objetos recogidos desde el checkpoint
             foreach (GameObject obj in GameState.Instance.collectedSinceCheckpoint)
             {
                 if (obj != null)
                     obj.SetActive(true);
             }
-
-            // ?? Limpiar la lista para la próxima vida
             GameState.Instance.collectedSinceCheckpoint.Clear();
 
             // Teletransportar al checkpoint
@@ -69,12 +72,9 @@ public class RespawnManager : MonoBehaviour
             transform.position = GameState.Instance.lastCheckpoint;
             if (cc != null) cc.enabled = true;
 
-            // ?? Resetear poderes del jugador
-            TransformationManager tm = GetComponent<TransformationManager>();
-            if (tm != null)
-            {
-                tm.ResetPowers();
-            }
+            // Restaurar movimiento del jugador
+            PlayerController pc = GetComponent<PlayerController>();
+            if (pc != null) pc.RestoreMovement();
         }
         else
         {

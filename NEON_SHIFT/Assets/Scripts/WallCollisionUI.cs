@@ -3,7 +3,7 @@ using UnityEngine;
 public class WallCollisionUI : MonoBehaviour
 {
     [Header("UI al chocar con muro")]
-    public GameObject wallPanel; // Panel que se mostrará al chocar con un muro
+    public GameObject wallPanel;
 
     private RespawnManager respawnManager;
     private PlayerController player;
@@ -21,44 +21,55 @@ public class WallCollisionUI : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        // Asegurarse que chequeamos el layer correcto
+        if (hit.gameObject.layer != LayerMask.NameToLayer("Wall"))
+            return;
+
+        // Si la forma es Strong/Fast y quieres destruir la pared:
+        if (tm != null && (tm.IsStrong() || tm.IsFast()))
         {
-            if (tm != null && (tm.IsStrong() || tm.IsFast()))
-            {
-                // Destruye la pared si es fuerte/rápido
-                hit.gameObject.SetActive(false);
-                if (GameState.Instance != null &&
-                    !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
-                {
-                    GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
-                }
-            }
-            else
-            {
-                // ?? Detenemos transformaciones activas
-                tm?.ResetPowers();
+            // Si usas el sistema de respawn para restaurar muros, registra en lugar de destruir:
+            // RespawnManager.RegisterDestroyedObject(hit.gameObject);
+            hit.gameObject.SetActive(false);
+            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
+                GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
 
-                // ?? Ejecutamos animación de muerte y mostramos panel al terminar
-                if (player != null)
-                {
-                    player.Die(() =>
-                    {
-                        if (wallPanel != null)
-                            wallPanel.SetActive(true);
-
-                        Time.timeScale = 0f; // pausa el juego SOLO después de la animación
-                    });
-                }
-                else
-                {
-                    // Si no hay PlayerController, mostrar panel inmediato
-                    if (wallPanel != null)
-                        wallPanel.SetActive(true);
-
-                    Time.timeScale = 0f;
-                }
-            }
+            return;
         }
+
+        // Si está transformado (por ejemplo volando), NO reproducir animación de muerte.
+        if (tm != null && tm.IsTransformed())
+        {
+            // Solo ocultar botones para que no se spamee la transformación mientras está el panel
+            tm.DisablePowerButtons();
+
+            ShowPanelImmediate();
+            return;
+        }
+
+        // Si NO está transformado => reproducir animación de muerte y luego mostrar panel
+        // (si quieres que los botones también se oculten antes de morir, lo haces en ResetPowers)
+        tm?.ResetPowers();
+
+        if (player != null)
+        {
+            player.Die(() =>
+            {
+                ShowPanelImmediate();
+            });
+        }
+        else
+        {
+            ShowPanelImmediate();
+        }
+    }
+
+    private void ShowPanelImmediate()
+    {
+        if (wallPanel != null)
+            wallPanel.SetActive(true);
+
+        Time.timeScale = 0f;
     }
 
     public void HidePanel()

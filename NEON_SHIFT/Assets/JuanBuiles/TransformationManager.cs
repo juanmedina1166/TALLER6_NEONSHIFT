@@ -76,10 +76,25 @@ public class TransformationManager : MonoBehaviour
             audioSource.PlayOneShot(clip);
     }
 
-    // ---------------- NUEVO ----------------
+    // ----- NUEVOS MÉTODOS -----
+    public bool IsTransformed()
+    {
+        return isFlying || isStrong || isFast;
+    }
+
+    public void DisablePowerButtons()
+    {
+        if (flyButton != null) flyButton.gameObject.SetActive(false);
+        if (strongButton != null) strongButton.gameObject.SetActive(false);
+        if (fastButton != null) fastButton.gameObject.SetActive(false);
+    }
+    // -------------------------
+
     public void ResetPowers()
     {
-        // Desactivar efectos
+        StopAllCoroutines();
+
+        // ?? Desactivar efectos y resetear flags
         isFlying = false;
         isStrong = false;
         isFast = false;
@@ -89,7 +104,7 @@ public class TransformationManager : MonoBehaviour
         hasStrongPowerUp = false;
         hasFastPowerUp = false;
 
-        // Restaurar modelo y velocidad
+        // ?? Restaurar modelo y velocidad
         ActivateModel(defaultModel);
         if (player != null)
         {
@@ -97,7 +112,7 @@ public class TransformationManager : MonoBehaviour
             player.forwardSpeed = player.defaultForwardSpeed;
         }
 
-        // Ocultar botones
+        // ?? Ocultar botones
         if (flyButton != null) flyButton.gameObject.SetActive(false);
         if (strongButton != null) strongButton.gameObject.SetActive(false);
         if (fastButton != null) fastButton.gameObject.SetActive(false);
