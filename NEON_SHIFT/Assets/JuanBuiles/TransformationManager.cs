@@ -241,7 +241,17 @@ public class TransformationManager : MonoBehaviour
             if (wallBreakSound != null && audioSource != null)
                 audioSource.PlayOneShot(wallBreakSound);
 
-            Destroy(hit.collider.gameObject);
+            GameObject wall = hit.collider.gameObject;
+
+            // 1) Desactivar en vez de destruir
+            wall.SetActive(false);
+
+            // 2) Registrar para que RespawnManager lo reactive al reaparecer
+            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(wall))
+            {
+                GameState.Instance.collectedSinceCheckpoint.Add(wall);
+            }
+
         }
     }
 

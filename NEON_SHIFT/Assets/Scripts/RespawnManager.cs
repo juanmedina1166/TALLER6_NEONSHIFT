@@ -58,12 +58,14 @@ public class RespawnManager : MonoBehaviour
         {
             Debug.Log("Respawn en checkpoint");
 
-            // Reactivar objetos recogidos desde el checkpoint
+            // ? Reactivar objetos recogidos desde el checkpoint
             foreach (GameObject obj in GameState.Instance.collectedSinceCheckpoint)
             {
                 if (obj != null)
                     obj.SetActive(true);
             }
+
+            // ? Limpiar la lista después de reactivarlos
             GameState.Instance.collectedSinceCheckpoint.Clear();
 
             // Teletransportar al checkpoint

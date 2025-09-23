@@ -28,12 +28,13 @@ public class WallCollisionUI : MonoBehaviour
         // Si la forma es Strong/Fast y quieres destruir la pared:
         if (tm != null && (tm.IsStrong() || tm.IsFast()))
         {
-            // Si usas el sistema de respawn para restaurar muros, registra en lugar de destruir:
-            // RespawnManager.RegisterDestroyedObject(hit.gameObject);
             hit.gameObject.SetActive(false);
-            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
-                GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
 
+            // ? Guardar en GameState para reactivarlo en el respawn
+            if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
+            {
+                GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
+            }
             return;
         }
 
