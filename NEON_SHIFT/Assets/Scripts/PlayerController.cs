@@ -32,11 +32,13 @@ public class PlayerController : MonoBehaviour
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
     [HideInInspector] public bool allowCustomY = false;
-    private bool isDead = false; // ?? nuevo
+    private bool isDead = false;
 
     [Header("Audio Clips")]
     public AudioClip jumpClip;
     public AudioClip slideClip;
+    public AudioClip wallHitClip;  
+
     private AudioSource audioSource;
 
     void Start()
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0f || isDead) return; // ?? Bloquea Update si está muerto
+        if (Time.timeScale == 0f || isDead) return;
 
         HandleSwipeInput();
 
@@ -150,10 +152,22 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(clip);
     }
 
+    //  Detecta choque con paredes
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        //  Detecta si el objeto está en el layer "Wall"
+        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            // Reproducir sonido solo si el jugador no está muerto (evita spam tras morir)
+            if (!isDead)
+                PlaySound(wallHitClip);
+        }
+    }
+
     // -------------------- MUERTE --------------------
     public void Die(Action onDeathComplete)
     {
-        isDead = true; // ?? Bloquea movimiento e input
+        isDead = true;
         forwardSpeed = 0f;
 
         if (animator != null)
@@ -188,7 +202,7 @@ public class PlayerController : MonoBehaviour
     // -------------------- REAPARECER --------------------
     public void RestoreMovement()
     {
-        isDead = false; // ?? Vuelve a permitir movimiento e input
+        isDead = false;
         forwardSpeed = defaultForwardSpeed;
 
         if (animator != null)
