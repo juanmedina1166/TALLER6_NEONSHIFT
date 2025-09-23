@@ -40,17 +40,14 @@ public class TransformationManager : MonoBehaviour
     public AudioClip fastSound;
     public AudioClip wallBreakSound;
 
-    // Estados
     private bool isFlying = false;
     private bool isStrong = false;
     private bool isFast = false;
-
     private bool isTransforming = false;
 
     void Start()
     {
         player = GetComponent<PlayerController>();
-
         ActivateModel(defaultModel);
 
         if (flyButton != null) flyButton.gameObject.SetActive(false);
@@ -68,24 +65,45 @@ public class TransformationManager : MonoBehaviour
         if (modelToActivate != null)
         {
             modelToActivate.SetActive(true);
-
             Animator anim = modelToActivate.GetComponent<Animator>();
-            if (anim != null)
-            {
-                anim.SetBool("IsRunning", true);
-            }
+            if (anim != null) anim.SetBool("IsRunning", true);
         }
     }
 
     private void PlaySound(AudioClip clip)
     {
         if (audioSource != null && clip != null)
-        {
             audioSource.PlayOneShot(clip);
-        }
     }
 
-    // ---------------- FLY ----------------
+    // ---------------- NUEVO ----------------
+    public void ResetPowers()
+    {
+        // Desactivar efectos
+        isFlying = false;
+        isStrong = false;
+        isFast = false;
+        isTransforming = false;
+
+        hasFlyPowerUp = false;
+        hasStrongPowerUp = false;
+        hasFastPowerUp = false;
+
+        // Restaurar modelo y velocidad
+        ActivateModel(defaultModel);
+        if (player != null)
+        {
+            player.allowCustomY = false;
+            player.forwardSpeed = player.defaultForwardSpeed;
+        }
+
+        // Ocultar botones
+        if (flyButton != null) flyButton.gameObject.SetActive(false);
+        if (strongButton != null) strongButton.gameObject.SetActive(false);
+        if (fastButton != null) fastButton.gameObject.SetActive(false);
+    }
+
+    // ---- FLY ----
     public void ActivateFly()
     {
         if (hasFlyPowerUp && !isFlying && !isTransforming)
@@ -99,7 +117,6 @@ public class TransformationManager : MonoBehaviour
     {
         isFlying = true;
         isTransforming = true;
-
         ActivateModel(flyModel);
         player.allowCustomY = true;
 
@@ -108,8 +125,7 @@ public class TransformationManager : MonoBehaviour
 
         while (timer < flyDuration)
         {
-            if (fill != null)
-                fill.fillAmount = 1 - (timer / flyDuration);
+            if (fill != null) fill.fillAmount = 1 - (timer / flyDuration);
 
             Vector3 pos = player.transform.position;
             pos.y = flyHeight;
@@ -129,7 +145,7 @@ public class TransformationManager : MonoBehaviour
         if (flyButton != null) flyButton.gameObject.SetActive(false);
     }
 
-    // ---------------- STRONG ----------------
+    // ---- STRONG ----
     public void ActivateStrong()
     {
         if (hasStrongPowerUp && !isStrong && !isTransforming)
@@ -143,7 +159,6 @@ public class TransformationManager : MonoBehaviour
     {
         isStrong = true;
         isTransforming = true;
-
         ActivateModel(strongModel);
 
         float timer = 0f;
@@ -151,9 +166,7 @@ public class TransformationManager : MonoBehaviour
 
         while (timer < strongDuration)
         {
-            if (fill != null)
-                fill.fillAmount = 1 - (timer / strongDuration);
-
+            if (fill != null) fill.fillAmount = 1 - (timer / strongDuration);
             timer += Time.deltaTime;
             yield return null;
         }
@@ -167,7 +180,7 @@ public class TransformationManager : MonoBehaviour
         if (strongButton != null) strongButton.gameObject.SetActive(false);
     }
 
-    // ---------------- FAST ----------------
+    // ---- FAST ----
     public void ActivateFast()
     {
         if (hasFastPowerUp && !isFast && !isTransforming)
@@ -181,7 +194,6 @@ public class TransformationManager : MonoBehaviour
     {
         isFast = true;
         isTransforming = true;
-
         ActivateModel(fastModel);
 
         float originalSpeed = player.forwardSpeed;
@@ -192,9 +204,7 @@ public class TransformationManager : MonoBehaviour
 
         while (timer < fastDuration)
         {
-            if (fill != null)
-                fill.fillAmount = 1 - (timer / fastDuration);
-
+            if (fill != null) fill.fillAmount = 1 - (timer / fastDuration);
             timer += Time.deltaTime;
             yield return null;
         }
@@ -209,28 +219,24 @@ public class TransformationManager : MonoBehaviour
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
-    // ---------------- COLISION DESTRUIR PAREDES ----------------
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        GameObject target = hit.collider.gameObject;
-
-        if ((isStrong || isFast) && target.CompareTag("Wall"))
+        if ((isStrong || isFast) && hit.collider.CompareTag("Wall"))
         {
             if (wallBreakSound != null && audioSource != null)
                 audioSource.PlayOneShot(wallBreakSound);
 
-            Destroy(target);
+            Destroy(hit.collider.gameObject);
         }
     }
 
-    // ---------------- DESBLOQUEOS ----------------
     public void UnlockFast()
     {
         hasFastPowerUp = true;
         if (fastButton != null)
         {
             fastButton.gameObject.SetActive(true);
-            fastButton.GetComponent<Image>().fillAmount = 1f; // reset
+            fastButton.GetComponent<Image>().fillAmount = 1f;
         }
     }
 
@@ -240,7 +246,7 @@ public class TransformationManager : MonoBehaviour
         if (flyButton != null)
         {
             flyButton.gameObject.SetActive(true);
-            flyButton.GetComponent<Image>().fillAmount = 1f; // reset
+            flyButton.GetComponent<Image>().fillAmount = 1f;
         }
     }
 
@@ -250,45 +256,8 @@ public class TransformationManager : MonoBehaviour
         if (strongButton != null)
         {
             strongButton.gameObject.SetActive(true);
-            strongButton.GetComponent<Image>().fillAmount = 1f; // reset
+            strongButton.GetComponent<Image>().fillAmount = 1f;
         }
-    }
-
-    // ---------------- RESET GENERAL ----------------
-    public void ResetPowers()
-    {
-        StopAllCoroutines();
-
-        isFlying = false;
-        isStrong = false;
-        isFast = false;
-        isTransforming = false;
-
-        hasFlyPowerUp = false;
-        hasStrongPowerUp = false;
-        hasFastPowerUp = false;
-
-        if (player != null)
-        {
-            // ?? Quitar vuelo
-            player.allowCustomY = false;
-
-            // ?? Reposicionar exactamente en el checkpoint (incluyendo altura)
-            if (GameState.Instance != null && GameState.Instance.checkpointReached)
-            {
-                Vector3 pos = GameState.Instance.lastCheckpoint;
-                player.transform.position = pos;
-            }
-
-            // ?? Restaurar velocidad base
-            player.forwardSpeed = player.defaultForwardSpeed;
-        }
-
-        ActivateModel(defaultModel);
-
-        if (flyButton != null) flyButton.gameObject.SetActive(false);
-        if (strongButton != null) strongButton.gameObject.SetActive(false);
-        if (fastButton != null) fastButton.gameObject.SetActive(false);
     }
 
     public bool IsFast() => isFast;

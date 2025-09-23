@@ -1,4 +1,4 @@
-// PlayerController.cs
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movimiento general")]
     public float forwardSpeed = 10f;
-    [HideInInspector] public float defaultForwardSpeed; // <-- nuevo
+    [HideInInspector] public float defaultForwardSpeed;
     public float laneDistance = 2f;
     public float laneChangeSpeed = 10f;
 
@@ -26,13 +26,13 @@ public class PlayerController : MonoBehaviour
     private float originalHeight;
     private Vector3 originalCenter;
 
-    // Buffer de input para que no se pierda el swipe
     private float jumpBufferTime = 0.1f;
     private float jumpBufferCounter = 0f;
 
     private bool swipeLeft, swipeRight, swipeUp, swipeDown;
 
     [HideInInspector] public bool allowCustomY = false;
+    private bool isDead = false; // ?? nuevo
 
     [Header("Audio Clips")]
     public AudioClip jumpClip;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         originalHeight = controller.height;
         originalCenter = controller.center;
 
-        defaultForwardSpeed = forwardSpeed; // <-- guardar velocidad base
+        defaultForwardSpeed = forwardSpeed;
 
         if (animator != null)
             animator.SetBool("IsRunning", true);
@@ -56,16 +56,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0f) return;
+        if (Time.timeScale == 0f || isDead) return; // ?? Bloquea Update si está muerto
 
         HandleSwipeInput();
 
-        // Buffer para que el salto no se pierda
         if (swipeUp) jumpBufferCounter = jumpBufferTime;
         if (jumpBufferCounter > 0) jumpBufferCounter -= Time.deltaTime;
 
         Vector3 move = Vector3.zero;
-        move.z = forwardSpeed; // ? Sin deltaTime aquí
+        move.z = forwardSpeed;
 
         float targetX = (currentLane - 1) * laneDistance;
         float deltaX = targetX - transform.position.x;
@@ -99,12 +98,8 @@ public class PlayerController : MonoBehaviour
             else
             {
                 verticalVelocity += gravity * Time.deltaTime;
-
-                // Fast fall: swipe hacia abajo en el aire
                 if (swipeDown)
-                {
-                    verticalVelocity = gravity * 2f; // ajusta el multiplicador a tu gusto
-                }
+                    verticalVelocity = gravity * 2f;
             }
 
             move.y = verticalVelocity;
@@ -153,5 +148,50 @@ public class PlayerController : MonoBehaviour
     {
         if (clip != null && audioSource != null)
             audioSource.PlayOneShot(clip);
+    }
+
+    // -------------------- MUERTE --------------------
+    public void Die(Action onDeathComplete)
+    {
+        isDead = true; // ?? Bloquea movimiento e input
+        forwardSpeed = 0f;
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Die");
+            StartCoroutine(WaitForDeathAnimation(onDeathComplete));
+        }
+        else
+        {
+            onDeathComplete?.Invoke();
+        }
+    }
+
+    private IEnumerator WaitForDeathAnimation(Action onComplete)
+    {
+        bool enteredDie = false;
+        while (!enteredDie)
+        {
+            AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+            if (state.IsName("Die"))
+            {
+                enteredDie = true;
+                yield return new WaitForSeconds(state.length);
+                break;
+            }
+            yield return null;
+        }
+
+        onComplete?.Invoke();
+    }
+
+    // -------------------- REAPARECER --------------------
+    public void RestoreMovement()
+    {
+        isDead = false; // ?? Vuelve a permitir movimiento e input
+        forwardSpeed = defaultForwardSpeed;
+
+        if (animator != null)
+            animator.SetBool("IsRunning", true);
     }
 }

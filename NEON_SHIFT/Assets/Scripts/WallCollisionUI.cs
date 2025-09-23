@@ -6,45 +6,61 @@ public class WallCollisionUI : MonoBehaviour
     public GameObject wallPanel; // Panel que se mostrará al chocar con un muro
 
     private RespawnManager respawnManager;
+    private PlayerController player;
+    private TransformationManager tm;
 
     private void Start()
     {
         if (wallPanel != null)
-            wallPanel.SetActive(false); // arranca oculto
+            wallPanel.SetActive(false);
 
         respawnManager = GetComponent<RespawnManager>();
+        player = GetComponent<PlayerController>();
+        tm = GetComponent<TransformationManager>();
     }
 
-    // Este se usa con CharacterController
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // Verifica si el objeto pertenece al layer "Wall"
         if (hit.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            TransformationManager tm = GetComponent<TransformationManager>();
-
             if (tm != null && (tm.IsStrong() || tm.IsFast()))
             {
-                // En formas especiales destruye la pared
+                // Destruye la pared si es fuerte/rápido
                 hit.gameObject.SetActive(false);
-
-                if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
+                if (GameState.Instance != null &&
+                    !GameState.Instance.collectedSinceCheckpoint.Contains(hit.gameObject))
                 {
                     GameState.Instance.collectedSinceCheckpoint.Add(hit.gameObject);
                 }
             }
             else
             {
-                // Mostrar panel de muerte y pausar
-                if (wallPanel != null)
-                    wallPanel.SetActive(true);
+                // ?? Detenemos transformaciones activas
+                tm?.ResetPowers();
 
-                Time.timeScale = 0f; // pausa el juego
+                // ?? Ejecutamos animación de muerte y mostramos panel al terminar
+                if (player != null)
+                {
+                    player.Die(() =>
+                    {
+                        if (wallPanel != null)
+                            wallPanel.SetActive(true);
+
+                        Time.timeScale = 0f; // pausa el juego SOLO después de la animación
+                    });
+                }
+                else
+                {
+                    // Si no hay PlayerController, mostrar panel inmediato
+                    if (wallPanel != null)
+                        wallPanel.SetActive(true);
+
+                    Time.timeScale = 0f;
+                }
             }
         }
     }
 
-    // Método para cerrar el panel y reanudar el juego
     public void HidePanel()
     {
         if (wallPanel != null)
@@ -53,17 +69,12 @@ public class WallCollisionUI : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Este método lo conectas al botón "Reintentar" del panel
     public void OnRetryButton()
     {
         if (respawnManager != null)
-        {
             respawnManager.Respawn();
-        }
         else
-        {
             Debug.LogWarning("RespawnManager no encontrado en el jugador.");
-        }
 
         HidePanel();
     }

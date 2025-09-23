@@ -63,7 +63,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 2, z: 4.3}
 --- !u!114 &8229984241786893157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,11 +77,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 45
+  defaultForwardSpeed: 0
   laneDistance: 10
   laneChangeSpeed: 10
   jumpForce: 40
   gravity: -100
   allowCustomY: 0
+  jumpClip: {fileID: 0}
+  slideClip: {fileID: 0}
 --- !u!114 &1960492887987290888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +111,11 @@ MonoBehaviour:
   flyModel: {fileID: 2491779207414421320}
   strongModel: {fileID: 631082140753844897}
   fastModel: {fileID: 3180072047321830163}
+  audioSource: {fileID: 0}
+  flySound: {fileID: 0}
+  strongSound: {fileID: 0}
+  fastSound: {fileID: 0}
+  wallBreakSound: {fileID: 0}
 --- !u!114 &4135384156170520488
 MonoBehaviour:
   m_ObjectHideFlags: 0
