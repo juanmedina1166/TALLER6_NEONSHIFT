@@ -1519,6 +1519,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4723214102128385263, guid: 26671c4cba872044aacf3531b783165d, type: 3}
   m_PrefabInstance: {fileID: 2259879854751698023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &181347011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1981435522}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 452.00024
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 452.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 452.00012
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.49999967
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5000003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 053a7dd270679c34e8d193a9926c2d37, type: 2}
+    - target: {fileID: 919132149155446097, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+      propertyPath: m_Name
+      value: flagg
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+--- !u!4 &181347012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1a8f86a21af936d4aae21ef40505c471, type: 3}
+  m_PrefabInstance: {fileID: 181347011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &209079083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5080,7 +5158,7 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
         m_MethodName: HideInstructions
         m_Mode: 1
@@ -9510,7 +9588,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
         m_MethodName: HideInstructions
         m_Mode: 1
@@ -10398,6 +10476,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2057682233}
+        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
+        m_MethodName: HideVictoryPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 392562603}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: LoadSceneByIndex
@@ -10408,18 +10498,6 @@ MonoBehaviour:
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: MainMenu
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2057682230}
-        m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
-        m_MethodName: HideInstructions
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1362066685
@@ -15763,6 +15841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f5e1027fb9452478ceffd17e815603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointSound: {fileID: 8300000, guid: ce14e264270b6b64ea0e7fcc718d2dd0, type: 3}
+  volume: 1
 --- !u!65 &1981435521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15796,7 +15876,8 @@ Transform:
   m_LocalPosition: {x: -0.0000021457731, y: 6.03, z: 920}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 181347012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2002186430
@@ -16546,7 +16627,7 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682230}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstructionTrigger, Assembly-CSharp
         m_MethodName: HideInstructions
         m_Mode: 1
@@ -16606,7 +16687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057682232}
   - component: {fileID: 2057682231}
-  - component: {fileID: 2057682230}
+  - component: {fileID: 2057682233}
   m_Layer: 0
   m_Name: ColliderWin
   m_TagString: Untagged
@@ -16614,20 +16695,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2057682230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057682229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19141e7f58f2d6e4a881fb2784295052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instructionPanel: {fileID: 1152603598}
-  isEndTrigger: 1
 --- !u!65 &2057682231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16664,6 +16731,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057682233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057682229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryPanel: {fileID: 1152603598}
 --- !u!1 &2071835409
 GameObject:
   m_ObjectHideFlags: 0
