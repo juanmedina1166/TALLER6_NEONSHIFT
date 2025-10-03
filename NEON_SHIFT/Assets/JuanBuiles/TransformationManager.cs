@@ -36,8 +36,11 @@ public class TransformationManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip flySound;
+    public AudioClip EagleSound;
     public AudioClip strongSound;
+    public AudioClip GorillaSound;
     public AudioClip fastSound;
+    public AudioClip CheetahSound;
     public AudioClip wallBreakSound;
 
     private bool isFlying = false;
@@ -124,6 +127,14 @@ public class TransformationManager : MonoBehaviour
         if (hasFlyPowerUp && !isFlying && !isTransforming)
         {
             PlaySound(flySound);
+
+            if (audioSource != null && EagleSound != null)
+            {
+                audioSource.clip = EagleSound;
+                audioSource.loop = true;
+                audioSource.volume = 2f;
+                audioSource.Play();
+            }
             StartCoroutine(FlyRoutine());
         }
     }
@@ -156,6 +167,13 @@ public class TransformationManager : MonoBehaviour
         isFlying = false;
         isTransforming = false;
 
+        if (audioSource != null && audioSource.clip == EagleSound)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            audioSource.loop = false;
+            audioSource.volume = 1f;
+        }
         hasFlyPowerUp = false;
         if (flyButton != null) flyButton.gameObject.SetActive(false);
     }
@@ -166,6 +184,14 @@ public class TransformationManager : MonoBehaviour
         if (hasStrongPowerUp && !isStrong && !isTransforming)
         {
             PlaySound(strongSound);
+
+            if (audioSource != null && GorillaSound != null)
+            {
+                audioSource.clip = GorillaSound;
+                audioSource.loop = true;
+                audioSource.volume = 2f;
+                audioSource.Play();
+            }
             StartCoroutine(StrongRoutine());
         }
     }
@@ -191,6 +217,14 @@ public class TransformationManager : MonoBehaviour
         isStrong = false;
         isTransforming = false;
 
+        if (audioSource != null && audioSource.clip == GorillaSound)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            audioSource.loop = false;
+            audioSource.volume = 1f;
+        }
+
         hasStrongPowerUp = false;
         if (strongButton != null) strongButton.gameObject.SetActive(false);
     }
@@ -201,6 +235,12 @@ public class TransformationManager : MonoBehaviour
         if (hasFastPowerUp && !isFast && !isTransforming)
         {
             PlaySound(fastSound);
+            if (audioSource != null && CheetahSound != null)
+            {
+                audioSource.clip = CheetahSound;
+                audioSource.volume = 5f;
+                audioSource.Play();
+            }
             StartCoroutine(FastRoutine());
         }
     }
@@ -230,6 +270,12 @@ public class TransformationManager : MonoBehaviour
         isFast = false;
         isTransforming = false;
 
+        if (audioSource != null && audioSource.clip == CheetahSound)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            audioSource.volume = 1f;
+        }
         hasFastPowerUp = false;
         if (fastButton != null) fastButton.gameObject.SetActive(false);
     }

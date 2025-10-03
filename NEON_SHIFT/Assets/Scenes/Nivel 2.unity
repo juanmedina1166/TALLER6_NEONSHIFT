@@ -30887,6 +30887,10 @@ PrefabInstance:
       value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: EagleSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 82ab6e96a1b806140940d50dddd6d6ea, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: fastButton
       value: 
       objectReference: {fileID: 224796041}
@@ -30902,6 +30906,14 @@ PrefabInstance:
       propertyPath: strongSound
       value: 
       objectReference: {fileID: 8300000, guid: fa11ce70c5d72f04398fd9fdfce934dc, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: CheetahSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 13d28fb595df9a344933107c530313f8, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: GorillaSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 957dc0e5260eddc408bc47a39db31454, type: 3}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: strongButton
       value: 

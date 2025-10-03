@@ -5,8 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+
+    
     private CharacterController controller;
     private Animator animator;
+    private TransformationManager transformationManager;
 
     [Header("Movimiento general")]
     public float forwardSpeed = 10f;
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        transformationManager =GetComponent<TransformationManager>();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -159,8 +163,10 @@ public class PlayerController : MonoBehaviour
         if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             // Reproducir sonido solo si el jugador no está muerto (evita spam tras morir)
-            if (!isDead)
+            if (!isDead && transformationManager != null && !transformationManager.IsTransformed())
+            {
                 PlaySound(wallHitClip);
+            }
         }
     }
 
