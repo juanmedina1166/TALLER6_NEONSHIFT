@@ -82,6 +82,12 @@ public class RespawnManager : MonoBehaviour
             transform.position = GameState.Instance.lastCheckpoint;
             if (cc != null) cc.enabled = true;
 
+            // --- INICIO DE LA MODIFICACIÓN ---
+            // AVISAMOS AL TERRAIN MANAGER QUE ACTUALICE EL TERRENO AHORA MISMO
+            if (TerrainManager.Instance != null)
+                TerrainManager.Instance.UpdateTerrainsOnRespawn(GameState.Instance.lastCheckpoint);
+            // --- FIN DE LA MODIFICACIÓN ---
+
             // Restaurar movimiento del jugador
             PlayerController pc = GetComponent<PlayerController>();
             if (pc != null) pc.RestoreMovement();

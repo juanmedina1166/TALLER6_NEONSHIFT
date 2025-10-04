@@ -1,44 +1,115 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TerrainManager : MonoBehaviour
 {
+    // Hacemos que sea un Singleton para accederlo fácilmente desde otros scripts.
+    public static TerrainManager Instance;
+
     public Transform player;              // Jugador o cámara
     public GameObject[] terrains;         // Todos los terrenos en orden (Terrain1, Terrain2, ..., TerrainN)
-    public float terrainLength = 100f; // Largo de cada bloque
+    public List<float> terrainLengths = new List<float>();
 
-    private int currentIndex = 0;         // El primer terreno activo
-    private int nextToActivate = 4;       // El próximo terreno que debe aparecer
+    [Header("Configuración de la Ventana")]
+    public int chunksBehind = 1; // Cuántos terrenos mantener activos DETRÁS del jugador.
+    public int chunksAhead = 2;  // Cuántos terrenos mantener activos DELANTE del jugador.
+
+    private int lastPlayerChunk = -1; // Para no recalcular en cada frame.
+    private List<float> chunkEndPositions = new List<float>();
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
-        // Activar solo los 3 primeros (o 4 en este caso)
-        for (int i = 0; i < terrains.Length; i++)
+        // Pre-calculamos las posiciones donde termina cada chunk
+        float cumulativePosition = 0;
+        for (int i = 0; i < terrainLengths.Count; i++)
         {
-            terrains[i].SetActive(i < 4);
+            cumulativePosition += terrainLengths[i];
+            chunkEndPositions.Add(cumulativePosition);
         }
+
+        UpdateVisibleChunksBasedOnPosition(player.position);
     }
 
     void Update()
     {
-        if (currentIndex >= terrains.Length) return; // ya no quedan más
+        int currentPlayerChunk = GetPlayerCurrentChunk();
 
-        Transform currentTerrain = terrains[currentIndex].transform;
-
-        // Cuando el jugador pasa más allá del largo del terreno actual
-        if (player.position.z - currentTerrain.position.z > terrainLength)
+        if (currentPlayerChunk != lastPlayerChunk)
         {
-            // Desactivar el terreno actual
-            terrains[currentIndex].SetActive(false);
-
-            // Activar el siguiente si existe
-            if (nextToActivate < terrains.Length)
-            {
-                terrains[nextToActivate].SetActive(true);
-                nextToActivate++;
-            }
-
-            // Avanzar al siguiente índice
-            currentIndex++;
+            lastPlayerChunk = currentPlayerChunk;
+            UpdateVisibleChunks();
         }
+    }
+    // Nueva función para encontrar el chunk actual
+    private int GetPlayerCurrentChunk()
+    {
+        float playerZ = player.position.z;
+        // Buscamos en qué rango de posiciones se encuentra el jugador
+        for (int i = 0; i < chunkEndPositions.Count; i++)
+        {
+            if (playerZ < chunkEndPositions[i])
+            {
+                return i;
+            }
+        }
+        return chunkEndPositions.Count - 1; // Si está más allá del último
+    }
+
+    // --- ESTA ES LA FUNCIÓN CLAVE ---
+    // Activa y desactiva los terrenos según la posición actual del jugador.
+    private void UpdateVisibleChunks()
+    {
+        // Calculamos el rango de chunks que deben estar visibles.
+        int minChunk = lastPlayerChunk - chunksBehind;
+        int maxChunk = lastPlayerChunk + chunksAhead;
+
+        // Recorremos la lista de TODOS los terrenos.
+        for (int i = 0; i < terrains.Length; i++)
+        {
+            // Si el terreno 'i' está dentro de nuestra ventana, lo activamos.
+            if (i >= minChunk && i <= maxChunk)
+            {
+                terrains[i].SetActive(true);
+            }
+            else // Si está fuera, lo desactivamos.
+            {
+                terrains[i].SetActive(false);
+            }
+        }
+    }
+    // La función de respawn ahora sí puede usar la posición
+    public void UpdateTerrainsOnRespawn(Vector3 respawnPosition)
+    {
+        UpdateVisibleChunksBasedOnPosition(respawnPosition);
+    }
+
+    private void UpdateVisibleChunksBasedOnPosition(Vector3 position)
+    {
+        float playerZ = position.z;
+        int respawnChunk = 0;
+        for (int i = 0; i < chunkEndPositions.Count; i++)
+        {
+            if (playerZ < chunkEndPositions[i])
+            {
+                respawnChunk = i;
+                break;
+            }
+        }
+
+        lastPlayerChunk = respawnChunk;
+        UpdateVisibleChunks();
     }
 }
