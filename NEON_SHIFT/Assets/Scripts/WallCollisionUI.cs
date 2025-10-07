@@ -41,6 +41,7 @@ public class WallCollisionUI : MonoBehaviour
         // Si está transformado (por ejemplo volando), NO reproducir animación de muerte.
         if (tm != null && tm.IsTransformed())
         {
+            tm.StopEagleSound();
             // Solo ocultar botones para que no se spamee la transformación mientras está el panel
             tm.DisablePowerButtons();
 
@@ -63,6 +64,9 @@ public class WallCollisionUI : MonoBehaviour
         {
             ShowPanelImmediate();
         }
+
+       
+
     }
 
     private void ShowPanelImmediate()

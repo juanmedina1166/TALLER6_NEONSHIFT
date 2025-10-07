@@ -333,4 +333,16 @@ public class TransformationManager : MonoBehaviour
 
     public bool IsFast() => isFast;
     public bool IsStrong() => isStrong;
+
+    public void StopEagleSound()
+    {
+        if (audioSource != null && audioSource.clip == EagleSound)
+        {
+            audioSource.Stop();
+            audioSource.clip = null;
+            audioSource.loop = false;
+            audioSource.volume = 1f;
+        }
+    }
+
 }

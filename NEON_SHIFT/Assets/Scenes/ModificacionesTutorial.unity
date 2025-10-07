@@ -393,7 +393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 56}
+  m_AnchoredPosition: {x: 0, y: 44.917667}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23676115
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2287cb37ccccf04428ae607c0ff7fa14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdeead5ec6451a0459aea3b1c925e646, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1494,14 +1494,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6916034, g: 0.8773585, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.2459553, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22521fc4ae5e03e4f8ff736169c305f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48d0b11d2604d3b45ba4be06b5ee812f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2420,7 +2420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.999986, y: 406}
+  m_AnchoredPosition: {x: 6.999986, y: 329.11615}
   m_SizeDelta: {x: 454.4, y: 89.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138058324
@@ -2443,11 +2443,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recoge las tres monedas\n del nivel para completar\n la simulacion\n al
-    100%.\n\n"
+  m_text: "Recoge las tres monedas para obtener un mayor puntaje en\n la simulacion.\n\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
+  m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2471,8 +2470,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.5
-  m_fontSizeBase: 26.5
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6238,7 +6237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: -24}
+  m_AnchoredPosition: {x: 20, y: 50.805893}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361547164
@@ -7936,7 +7935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567903716
@@ -7955,7 +7954,7 @@ MonoBehaviour:
   - {fileID: 1897635875}
   - {fileID: 1724610820}
   - {fileID: 1653192558}
-  filledSprite: {fileID: 21300000, guid: 2287cb37ccccf04428ae607c0ff7fa14, type: 3}
+  filledSprite: {fileID: 21300000, guid: 96a7fdb6462215442a6496481c6c29d7, type: 3}
 --- !u!1 &578083038
 GameObject:
   m_ObjectHideFlags: 0
@@ -9535,7 +9534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 639edb90150e45c498cc5ef339da93ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48d0b11d2604d3b45ba4be06b5ee812f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11028,7 +11027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 255}
+  m_AnchoredPosition: {x: -8, y: 205.12941}
   m_SizeDelta: {x: 454.4, y: 89.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803076804
@@ -11052,10 +11051,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Al recoger esta esfera de energia, podras transformarte y poder romper
-    paredes.\n\n\n\n\n\nPresiona el bot\xF3n: \n"
+    paredes.\n\nPresiona el bot\xF3n: \n\n\n\n\nDespues de haber\n recogido la esfera.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
+  m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11079,14 +11078,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -13037,7 +13036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -30}
+  m_AnchoredPosition: {x: 20, y: 41.34266}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947632321
@@ -15117,7 +15116,7 @@ Transform:
   m_GameObject: {fileID: 1159436578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -17.3, z: 1332}
+  m_LocalPosition: {x: 0, y: -17, z: 1332}
   m_LocalScale: {x: 96.005936, y: 1, z: 2843.5176}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15293,7 +15292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22521fc4ae5e03e4f8ff736169c305f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48d0b11d2604d3b45ba4be06b5ee812f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15731,7 +15730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 286.6}
+  m_AnchoredPosition: {x: -8, y: 206.25293}
   m_SizeDelta: {x: 454.4, y: 89.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1230248959
@@ -15755,10 +15754,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Al recoger esta esfera de energia, podras transformarte y tener un boost
-    e invulnerabilidad momentaneos.\n\n\n\n\n\nPresiona el bot\xF3n:"
+    e invulnerabilidad momentaneos.\n\nPresiona el bot\xF3n:\n\n\n\n\nDespues de
+    haber\n recogido la esfera."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
+  m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15782,14 +15782,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -18333,7 +18333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2287cb37ccccf04428ae607c0ff7fa14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdeead5ec6451a0459aea3b1c925e646, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18878,7 +18878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8533a9d766b7d94e951ee3463714659, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48d0b11d2604d3b45ba4be06b5ee812f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19684,7 +19684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2287cb37ccccf04428ae607c0ff7fa14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdeead5ec6451a0459aea3b1c925e646, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -21620,7 +21620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2287cb37ccccf04428ae607c0ff7fa14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdeead5ec6451a0459aea3b1c925e646, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -22035,7 +22035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -35}
+  m_AnchoredPosition: {x: 20, y: 25.95295}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927504113
@@ -22846,7 +22846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 258}
+  m_AnchoredPosition: {x: -8, y: 215.05588}
   m_SizeDelta: {x: 454.4, y: 89.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084894318
@@ -22869,11 +22869,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Al recoger esta esfera de energia, podras transformarte y poder volar.\n\n\n\n\n\nPresiona
-    el bot\xF3n: "
+  m_text: "Al recoger esta esfera de energia, podras transformarte y poder volar.\n\nPresiona
+    el bot\xF3n: \n\n\n\n\n\nDespues de haber\n recogido la esfera."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
+  m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22897,14 +22897,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
