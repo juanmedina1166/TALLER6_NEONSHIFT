@@ -18,9 +18,6 @@ public class Checkpoint : MonoBehaviour
             if (PlayerCoins.Instance != null)
                 PlayerCoins.Instance.SaveCheckpointCoins();
 
-            Debug.Log(" Checkpoint alcanzado en " + transform.position +
-                      " | Monedas guardadas: " + GameState.Instance.coins);
-
             // ?? Reproducir sonido
             if (checkpointSound != null)
             {

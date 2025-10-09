@@ -14,7 +14,6 @@ public class PlayerCoins : MonoBehaviour
     {
         coins += amount;
         // ?? Ya NO actualizamos GameState aquí
-        Debug.Log("Monedas: " + coins);
         UICoinManager.Instance.UpdateCoins(coins);
     }
 

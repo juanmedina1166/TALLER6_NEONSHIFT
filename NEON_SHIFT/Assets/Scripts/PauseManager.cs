@@ -22,7 +22,6 @@ public class PauseManager : MonoBehaviour
             pausePanel.SetActive(true);
 
         Time.timeScale = 0f;
-        Debug.Log("Juego pausado");
 
         // Pausar todos los animators
         Animator[] animators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);

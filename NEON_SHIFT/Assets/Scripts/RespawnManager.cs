@@ -56,7 +56,6 @@ public class RespawnManager : MonoBehaviour
 
         if (GameState.Instance != null && GameState.Instance.checkpointReached)
         {
-            Debug.Log("Respawn en checkpoint");
 
             // ? Restaurar monedas guardadas en el checkpoint
             if (PlayerCoins.Instance != null)
@@ -94,7 +93,6 @@ public class RespawnManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No hay checkpoint ? reiniciando nivel");
 
             if (GameState.Instance != null)
             {
