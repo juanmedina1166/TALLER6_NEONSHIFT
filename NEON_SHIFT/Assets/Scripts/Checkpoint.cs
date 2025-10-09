@@ -28,7 +28,8 @@ public class Checkpoint : MonoBehaviour
                 if (playerAudio != null)
                     playerAudio.PlayOneShot(checkpointSound, volume);
             }
-               
+            if (CheckpointUI.Instance != null)
+                CheckpointUI.Instance.ShowCheckpointIcon(2f);
         }
     }
 }
