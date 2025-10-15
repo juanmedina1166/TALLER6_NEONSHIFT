@@ -10,8 +10,18 @@ public class SpecialCoin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Actualizar UI
-            SpecialCoinManager.Instance.CollectCoin(coinIndex);
+            if (SpecialCoinTracker.Instance != null)
+                SpecialCoinTracker.Instance.MarkCoinAsCollected(coinIndex);
+
+            // Mostrar popup visual
+            if (SpecialCoinTracker.Instance != null && SpecialCoinPopup.Instance != null)
+            {
+                int collectedCount = 0;
+                foreach (bool collected in SpecialCoinTracker.Instance.collectedCoins)
+                    if (collected) collectedCount++;
+
+                SpecialCoinPopup.Instance.ShowPopup(collectedCount);
+            }
 
             // Reproducir sonido
             if (pickupSound != null)

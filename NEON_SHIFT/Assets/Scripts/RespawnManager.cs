@@ -13,13 +13,13 @@ public class RespawnManager : MonoBehaviour
         }
 
         // ? Restaurar monedas especiales en la UI
-        if (SpecialCoinManager.Instance != null)
+        if (SpecialCoinTracker.Instance != null)
         {
             for (int i = 0; i < GameState.Instance.specialCoins.Length; i++)
             {
                 if (GameState.Instance.specialCoins[i])
                 {
-                    SpecialCoinManager.Instance.CollectCoin(i);
+                    SpecialCoinTracker.Instance.collectedCoins[i] = true;
                 }
             }
         }

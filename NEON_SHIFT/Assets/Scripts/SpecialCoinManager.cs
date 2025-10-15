@@ -8,24 +8,22 @@ public class SpecialCoinManager : MonoBehaviour
     [Header("UI")]
     public Image[] coinIcons;
     public Sprite filledSprite;
-
-    private bool[] collected;
+    public Sprite emptySprite;
 
     private void Awake()
     {
         Instance = this;
-        collected = new bool[coinIcons.Length];
     }
 
-    public void CollectCoin(int index)
+    public void UpdateUI()
     {
-        if (index < 0 || index >= coinIcons.Length) return;
-        if (collected[index]) return;
+        if (SpecialCoinTracker.Instance == null) return;
 
-        collected[index] = true;
-        GameState.Instance.specialCoins[index] = true; // ? guardar en GameState
-
-        coinIcons[index].sprite = filledSprite;
-        coinIcons[index].color = Color.white;
+        for (int i = 0; i < coinIcons.Length; i++)
+        {
+            bool collected = SpecialCoinTracker.Instance.IsCoinCollected(i);
+            coinIcons[i].sprite = collected ? filledSprite : emptySprite;
+            coinIcons[i].color = Color.white;
+        }
     }
 }

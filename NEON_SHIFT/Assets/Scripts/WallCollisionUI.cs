@@ -8,6 +8,8 @@ public class WallCollisionUI : MonoBehaviour
     private RespawnManager respawnManager;
     private PlayerController player;
     private TransformationManager tm;
+    private PauseManager pauseManager;
+    
 
     private void Start()
     {
@@ -17,6 +19,7 @@ public class WallCollisionUI : MonoBehaviour
         respawnManager = GetComponent<RespawnManager>();
         player = GetComponent<PlayerController>();
         tm = GetComponent<TransformationManager>();
+        pauseManager = FindAnyObjectByType<PauseManager>();
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -74,6 +77,9 @@ public class WallCollisionUI : MonoBehaviour
         if (wallPanel != null)
             wallPanel.SetActive(true);
 
+        if (pauseManager != null && pauseManager.pauseButton != null)
+            pauseManager.pauseButton.SetActive(false);
+
         Time.timeScale = 0f;
     }
 
@@ -81,6 +87,9 @@ public class WallCollisionUI : MonoBehaviour
     {
         if (wallPanel != null)
             wallPanel.SetActive(false);
+
+        if (pauseManager != null && pauseManager.pauseButton != null)
+            pauseManager.pauseButton.SetActive(true);
 
         Time.timeScale = 1f;
     }

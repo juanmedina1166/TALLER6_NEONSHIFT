@@ -4,6 +4,7 @@ public class VictoryTrigger : MonoBehaviour
 {
     [Header("UI de Victoria")]
     public GameObject victoryPanel; // Panel de victoria en el Canvas
+    public SpecialCoinManager coinManager;
 
     private bool isActive = false;
 
@@ -24,11 +25,14 @@ public class VictoryTrigger : MonoBehaviour
     private void ShowVictoryPanel()
     {
         if (victoryPanel != null)
-        {
             victoryPanel.SetActive(true);
-            Time.timeScale = 0f; // Pausa el juego
+
+        if (coinManager != null)
+            coinManager.UpdateUI(); // actualizar las monedas recogidas
+
+        Time.timeScale = 0f; // Pausa el juego
             isActive = true;
-        }
+        
     }
 
     public void HideVictoryPanel()
