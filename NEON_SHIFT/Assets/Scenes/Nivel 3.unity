@@ -7375,7 +7375,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: MainMenu
           m_BoolArgument: 0
@@ -11381,7 +11381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volver al menu
+  m_text: Siguiente Nivel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -11408,7 +11408,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.8
+  m_fontSize: 27.05
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17539,8 +17539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 212.61552}
-  m_SizeDelta: {x: 324.3589, y: 68.8727}
+  m_AnchoredPosition: {x: -9.4702, y: 212.61552}
+  m_SizeDelta: {x: 305.4186, y: 68.8727}
   m_Pivot: {x: 0.49999994, y: 0.49999994}
 --- !u!114 &802842063
 MonoBehaviour:
@@ -17562,8 +17562,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Esta pista es la m\xE1s dif\xEDcil del simulador.\nSuperarla significa
-    que est\xE1s listo para el despliegue."
+  m_text: 'Pon a prueba tu coordinacion y agilidad.
+
+    Superarla esto significa
+    que estaras listo para la fase final.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -17628,7 +17630,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.18327333, w: 0}
+  m_margin: {x: 9.712997, y: 0, z: 5.887375, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -36712,7 +36714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Prueba final iniciada
+  m_text: Tercera Fase del Entrenamiento
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -44269,7 +44271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 161}
+  m_AnchoredPosition: {x: 0, y: 105}
   m_SizeDelta: {x: 365, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977191638
@@ -44292,7 +44294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Simulaci\xF3n completada!"
+  m_text: "\xA1Vas muy bien!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -44319,7 +44321,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.85
+  m_fontSize: 39.4
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -44357,7 +44359,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -5.517, z: 0, w: 55.477882}
+  m_margin: {x: 3.965271, y: -5.517, z: 10.574036, w: 88.52177}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -45632,7 +45634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 45.96901}
+  m_AnchoredPosition: {x: -0.000012398, y: 34}
   m_SizeDelta: {x: 324.3589, y: 68.8727}
   m_Pivot: {x: 0.49999994, y: 0.49999994}
 --- !u!114 &2025792812
@@ -45720,7 +45722,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.18327333, w: 0}
+  m_margin: {x: 13.355377, y: 0, z: 19.242722, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
