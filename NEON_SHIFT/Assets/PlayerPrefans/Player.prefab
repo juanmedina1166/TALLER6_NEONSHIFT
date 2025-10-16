@@ -85,6 +85,7 @@ MonoBehaviour:
   allowCustomY: 0
   jumpClip: {fileID: 0}
   slideClip: {fileID: 0}
+  wallHitClip: {fileID: 0}
 --- !u!114 &1960492887987290888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +114,11 @@ MonoBehaviour:
   fastModel: {fileID: 3180072047321830163}
   audioSource: {fileID: 0}
   flySound: {fileID: 0}
+  EagleSound: {fileID: 0}
   strongSound: {fileID: 0}
+  GorillaSound: {fileID: 0}
   fastSound: {fileID: 0}
+  CheetahSound: {fileID: 0}
   wallBreakSound: {fileID: 0}
 --- !u!114 &4135384156170520488
 MonoBehaviour:
@@ -322,16 +326,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f97b610b0109434c935d845e092486a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f97b610b0109434c935d845e092486a, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5687532686936308657, guid: 4f97b610b0109434c935d845e092486a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5729862395533324235, guid: 4f97b610b0109434c935d845e092486a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 28cb2d2a0faf0e044ad1fe7dbb28c2c4, type: 2}
+      objectReference: {fileID: 2100000, guid: a0b419056afe1ec40bed02b17efa9ab0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -463,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 2542846455154849453, guid: e94d7a998f1e3f746905ba33fa755781, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 28cb2d2a0faf0e044ad1fe7dbb28c2c4, type: 2}
+      objectReference: {fileID: 2100000, guid: a28683015aefe664eb4dac4d43093577, type: 2}
     - target: {fileID: 5866666021909216657, guid: e94d7a998f1e3f746905ba33fa755781, type: 3}
       propertyPath: m_Controller
       value: 
@@ -571,6 +579,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 169737868550677956, guid: f570fd499bdcbfc46b4b1cff1ff76de6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b76cc9e5f36149f4fb6ee09a328d163c, type: 2}
     - target: {fileID: 919132149155446097, guid: f570fd499bdcbfc46b4b1cff1ff76de6, type: 3}
       propertyPath: m_Name
       value: DefaultForm
