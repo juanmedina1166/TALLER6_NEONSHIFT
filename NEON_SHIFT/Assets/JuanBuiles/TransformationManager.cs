@@ -286,6 +286,9 @@ public class TransformationManager : MonoBehaviour
         {
             if (wallBreakSound != null && audioSource != null)
                 audioSource.PlayOneShot(wallBreakSound);
+            // Sacudir cámara al romper el muro
+            if (CameraShake.Instance != null)
+                CameraShake.Instance.Shake(1.5f);
 
             GameObject wall = hit.collider.gameObject;
 
