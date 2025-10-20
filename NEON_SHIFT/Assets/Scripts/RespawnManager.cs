@@ -90,6 +90,13 @@ public class RespawnManager : MonoBehaviour
             // Restaurar movimiento del jugador
             PlayerController pc = GetComponent<PlayerController>();
             if (pc != null) pc.RestoreMovement();
+
+            CameraFlyBob flyBob = FindObjectOfType<CameraFlyBob>();
+            if (flyBob != null)
+            {
+                flyBob.SetFlying(false); // vuelve al estado base
+                Debug.Log("?? Cámara restaurada tras respawn.");
+            }
         }
         else
         {

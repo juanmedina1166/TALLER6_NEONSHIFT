@@ -135,6 +135,9 @@ public class TransformationManager : MonoBehaviour
                 audioSource.volume = 2f;
                 audioSource.Play();
             }
+            CameraFlyBob bob = Object.FindFirstObjectByType<CameraFlyBob>();
+            if (bob != null) bob.SetFlying(true);
+
             StartCoroutine(FlyRoutine());
         }
     }
@@ -166,6 +169,9 @@ public class TransformationManager : MonoBehaviour
 
         isFlying = false;
         isTransforming = false;
+
+        CameraFlyBob bob = Object.FindFirstObjectByType<CameraFlyBob>();
+        if (bob != null) bob.SetFlying(false);
 
         if (audioSource != null && audioSource.clip == EagleSound)
         {
