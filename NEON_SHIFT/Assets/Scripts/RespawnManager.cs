@@ -115,5 +115,8 @@ public class RespawnManager : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        if (LevelProgressUI.Instance != null)
+            LevelProgressUI.Instance.ResetAllCheckpointIcons();
+
     }
 }

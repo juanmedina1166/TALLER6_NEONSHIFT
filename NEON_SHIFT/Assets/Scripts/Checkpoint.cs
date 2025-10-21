@@ -27,6 +27,18 @@ public class Checkpoint : MonoBehaviour
             }
             if (CheckpointUI.Instance != null)
                 CheckpointUI.Instance.ShowCheckpointIcon(2f);
+
+            if (LevelProgressUI.Instance != null)
+            {
+                for (int i = 0; i < LevelProgressUI.Instance.checkpoints.Length; i++)
+                {
+                    if (LevelProgressUI.Instance.checkpoints[i] == transform)
+                    {
+                        LevelProgressUI.Instance.UpdateCheckpointIcon(i);
+                        break;
+                    }
+                }
+            }
         }
     }
 }

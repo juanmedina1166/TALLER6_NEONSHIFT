@@ -31,7 +31,7 @@ public class PowerUp : MonoBehaviour
 
             if (tm != null)
             {
-                Debug.Log($"✅ PowerUp recogido: {type}");
+                
 
                 switch (type)
                 {
