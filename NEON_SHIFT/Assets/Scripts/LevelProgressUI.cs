@@ -57,7 +57,7 @@ public class LevelProgressUI : MonoBehaviour
         if (progressText != null)
             progressText.text = $"{Mathf.RoundToInt(progress * 100)}%";
 
-        // --- ?? Movimiento vertical del icono del jugador corregido ---
+        // --- Movimiento vertical del icono del jugador corregido ---
         if (playerIcon != null && checkpointContainer != null)
         {
             float containerHeight = checkpointContainer.rect.height;
