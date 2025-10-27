@@ -33,6 +33,9 @@ public class TransformationManager : MonoBehaviour
     public GameObject strongModel;
     public GameObject fastModel;
 
+    [Header("VFX")]
+    public GameObject speedLines;
+
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip flySound;
@@ -56,6 +59,9 @@ public class TransformationManager : MonoBehaviour
         if (flyButton != null) flyButton.gameObject.SetActive(false);
         if (strongButton != null) strongButton.gameObject.SetActive(false);
         if (fastButton != null) fastButton.gameObject.SetActive(false);
+
+        if (speedLines != null)
+            speedLines.SetActive(false);
     }
 
     private void ActivateModel(GameObject modelToActivate)
@@ -247,6 +253,11 @@ public class TransformationManager : MonoBehaviour
                 audioSource.volume = 5f;
                 audioSource.Play();
             }
+
+            if (speedLines != null) 
+            speedLines.SetActive(true);
+
+            
             StartCoroutine(FastRoutine());
         }
     }
@@ -275,6 +286,9 @@ public class TransformationManager : MonoBehaviour
 
         isFast = false;
         isTransforming = false;
+
+        if (speedLines != null)
+            speedLines.SetActive(false);
 
         if (audioSource != null && audioSource.clip == CheetahSound)
         {
