@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryTrigger : MonoBehaviour
 {
+    public int currentLevelIndex;
     [Header("UI de Victoria")]
     public GameObject victoryPanel; // Panel de victoria en el Canvas
     public SpecialCoinManager coinManager;
@@ -16,8 +18,25 @@ public class VictoryTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isActive)
+        PlayerController player = other.GetComponentInParent<PlayerController>();
+        if (player != null && !isActive)
         {
+            isActive = true; // Muévelo aquí para evitar doble trigger
+
+            // --- ¡LÓGICA DE GUARDADO AL GANAR! ---
+            if (SaveManager.Instance != null)
+            {
+                // 1. (¡RESTAURADO!) Guarda las monedas de esta sesión
+                if (PlayerCoins.Instance != null)
+                {
+                    SaveManager.Instance.AddNormalCoins(PlayerCoins.Instance.coins);
+                }
+
+                // 2. Desbloquea el SIGUIENTE nivel
+                SaveManager.Instance.UnlockLevel(currentLevelIndex + 1);
+            }
+            // -------------------------------------
+
             ShowVictoryPanel();
         }
     }
@@ -44,6 +63,10 @@ public class VictoryTrigger : MonoBehaviour
             isActive = false;
         }
     }
-
-
+    public void LoadNextLevel()
+    {
+        Time.timeScale = 1f; // Asegúrate de reanudar el tiempo
+        // Carga la siguiente escena basada en el índice actual + 1
+        SceneManager.LoadScene(currentLevelIndex + 1);
+    }
 }

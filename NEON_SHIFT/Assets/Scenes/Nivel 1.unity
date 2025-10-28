@@ -29653,6 +29653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelIndex: 2
   victoryPanel: {fileID: 1152603598}
   coinManager: {fileID: 507203365}
 --- !u!1 &2068694890 stripped
@@ -31837,6 +31838,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2828490498325393622, guid: c29902df8da8bcf4295e7945f3429c95, type: 3}
+      propertyPath: levelIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3448964884888186781, guid: c29902df8da8bcf4295e7945f3429c95, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -32931,6 +32936,10 @@ PrefabInstance:
       propertyPath: coinIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5466217029084673493, guid: 7897f00ec0fe6504987269a48a0f13a3, type: 3}
+      propertyPath: levelIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5943889086375376652, guid: 7897f00ec0fe6504987269a48a0f13a3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -32996,6 +33005,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 622260946522665281, guid: 7593217d28300974cbe3ccd07c435be2, type: 3}
       propertyPath: coinIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 622260946522665281, guid: 7593217d28300974cbe3ccd07c435be2, type: 3}
+      propertyPath: levelIndex
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1124431943282685129, guid: 7593217d28300974cbe3ccd07c435be2, type: 3}

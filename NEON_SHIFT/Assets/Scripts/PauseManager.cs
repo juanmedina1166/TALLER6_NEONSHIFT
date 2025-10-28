@@ -47,17 +47,14 @@ public class PauseManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-
-        // ?? Resetear datos del GameState antes de recargar escena
-        GameState.Instance.coins = 0;
-        GameState.Instance.checkpointReached = false;
-        GameState.Instance.lastCheckpoint = Vector3.zero;
-
-        for (int i = 0; i < GameState.Instance.specialCoins.Length; i++)
+        if (GameState.Instance != null)
         {
-            GameState.Instance.specialCoins[i] = false;
+            GameState.Instance.coins = 0;
+            GameState.Instance.checkpointReached = false;
+            GameState.Instance.lastCheckpoint = Vector3.zero;
+            GameState.Instance.destroyedObjects.Clear();
+            GameState.Instance.collectedSinceCheckpoint.Clear(); // Asegúrate de limpiar esto también
         }
-        GameState.Instance.destroyedObjects.Clear();
 
         // Cargar desde el inicio
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -66,6 +63,10 @@ public class PauseManager : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+        if (SaveManager.Instance != null && PlayerCoins.Instance != null)
+        {
+            SaveManager.Instance.AddNormalCoins(PlayerCoins.Instance.coins);
+        }
         SceneManager.LoadScene("MainMenu");
     }
     public void EndGame()

@@ -7,7 +7,17 @@ public class PlayerCoins : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            // Si ya existe una instancia (por ejemplo, en el jugador)
+            // y este script está en otro objeto (como RespawnManager),
+            // destruye este componente para evitar duplicados.
+            Destroy(this);
+        }
     }
 
     public void AddCoins(int amount)

@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class SpecialCoin : MonoBehaviour
 {
+    public int levelIndex;
     public int coinIndex; // 0, 1, 2 según el orden de la moneda en el nivel
     public AudioClip pickupSound;
     public float volume = 1f;
+
+    private void Start()
+    {
+        if (SaveManager.Instance != null &&
+            SaveManager.Instance.IsSpecialCoinCollected(levelIndex, coinIndex))
+        {
+            gameObject.SetActive(false); // Ya la tienes, ocúltala
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +23,13 @@ public class SpecialCoin : MonoBehaviour
 
         if (player != null)
         {
+            if (SaveManager.Instance != null)
+            {
+                // CollectSpecialCoin devuelve 'true' si es la primera vez que se recoge
+                bool isNewCoin = SaveManager.Instance.CollectSpecialCoin(levelIndex, coinIndex);
+                // (Puedes usar 'isNewCoin' para mostrar un VFX especial si quieres)
+            }
+
             if (SpecialCoinTracker.Instance != null)
                 SpecialCoinTracker.Instance.MarkCoinAsCollected(coinIndex);
 

@@ -3540,31 +3540,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173973040}
   m_Mesh: {fileID: -5216581434543980006, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
---- !u!1 &178781466 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
-  m_PrefabInstance: {fileID: 858713032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &178781467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
   m_PrefabInstance: {fileID: 858713032}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &178781468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178781466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b46040f0bdc674181418b271bfaee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinIndex: 2
-  pickupSound: {fileID: 8300000, guid: d800af9ba03c3014db47c07f70b7ca16, type: 3}
-  volume: 1
 --- !u!4 &188002926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2421956800474102671, guid: 032ebbe8cf3ac1841bd1e849b22e0890, type: 3}
@@ -17539,6 +17519,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 57299336}
     m_Modifications:
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: coinIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
       value: 5189.6133
@@ -17598,10 +17586,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 178781468}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
 --- !u!4 &868320328 stripped
 Transform:
@@ -21423,10 +21408,10 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 392562603}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: LoadSceneByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 2057682233}
+        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -23063,6 +23048,10 @@ PrefabInstance:
     - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: coinIndex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
@@ -26326,6 +26315,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: coinIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
@@ -29684,6 +29677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelIndex: 1
   victoryPanel: {fileID: 1526475884}
   coinManager: {fileID: 0}
 --- !u!1 &2059997373 stripped

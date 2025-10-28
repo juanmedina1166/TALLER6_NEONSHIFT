@@ -3,6 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class RespawnManager : MonoBehaviour
 {
+    public static RespawnManager Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            // Si ya existe una instancia (por ejemplo, en el jugador)
+            // y este script está en otro objeto (como RespawnManager),
+            // destruye este componente para evitar duplicados.
+            Destroy(this);
+        }
+    }
     void Start()
     {
         // ? Restaurar monedas normales desde GameState

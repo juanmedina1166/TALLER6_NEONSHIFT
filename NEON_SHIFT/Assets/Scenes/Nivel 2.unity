@@ -1720,6 +1720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1321051656}
     m_Modifications:
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
       value: 5189.6133
@@ -29564,6 +29568,10 @@ PrefabInstance:
       propertyPath: coinIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
       value: 5189.613
@@ -37815,6 +37823,10 @@ PrefabInstance:
       propertyPath: coinIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6586770359344388696, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
+      propertyPath: levelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3774815583560236389, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_LocalScale.x
       value: 5189.613
@@ -42956,6 +42968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevelIndex: 3
   victoryPanel: {fileID: 1158082565}
   coinManager: {fileID: 763720817}
 --- !u!1 &2060839803
