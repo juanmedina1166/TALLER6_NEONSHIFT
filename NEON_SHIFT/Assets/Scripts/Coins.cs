@@ -7,11 +7,13 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        // Buscamos el script PlayerCoins en el objeto que colisionó O en sus padres.
+        PlayerCoins player = other.GetComponentInParent<PlayerCoins>();
+
+        // Si 'player' no es null, significa que lo que tocó la moneda es parte del jugador.
+        if (player != null)
         {
-            PlayerCoins player = other.GetComponentInParent<PlayerCoins>();
-            if (player != null)
-                player.AddCoins(coinValue);
+            player.AddCoins(coinValue);
 
             if (pickupSound != null)
                 AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position, 1f);

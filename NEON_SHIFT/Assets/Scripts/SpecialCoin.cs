@@ -8,7 +8,10 @@ public class SpecialCoin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        // Comprueba si el objeto que colisionó (o su padre) tiene el script PlayerController
+        PlayerController player = other.GetComponentInParent<PlayerController>();
+
+        if (player != null)
         {
             if (SpecialCoinTracker.Instance != null)
                 SpecialCoinTracker.Instance.MarkCoinAsCollected(coinIndex);

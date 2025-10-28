@@ -114,6 +114,7 @@ MonoBehaviour:
   flyModel: {fileID: 2491779207414421320}
   strongModel: {fileID: 631082140753844897}
   fastModel: {fileID: 3180072047321830163}
+  speedLines: {fileID: 0}
   audioSource: {fileID: 0}
   flySound: {fileID: 0}
   EagleSound: {fileID: 0}
@@ -333,7 +334,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -465,7 +466,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -529,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e94d7a998f1e3f746905ba33fa755781, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e94d7a998f1e3f746905ba33fa755781, type: 3}
       propertyPath: m_TagString
@@ -571,12 +572,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.59962, y: 1.8732662, z: 4.590256}
-  m_Center: {x: 0.09811306, y: 0.4366331, z: 0.47370034}
+  m_Size: {x: 15.536786, y: 1.8732662, z: 5.495635}
+  m_Center: {x: -0.44636202, y: 0.73, z: -5.07}
 --- !u!4 &3017204287011048946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e94d7a998f1e3f746905ba33fa755781, type: 3}
@@ -756,12 +757,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5008047, y: 2, z: 1}
+  m_Center: {x: 0.028358608, y: 0, z: 0}
 --- !u!4 &9066165523662137554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f570fd499bdcbfc46b4b1cff1ff76de6, type: 3}

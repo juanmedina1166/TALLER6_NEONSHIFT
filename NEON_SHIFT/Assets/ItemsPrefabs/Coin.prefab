@@ -120,9 +120,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 902113962541771135}
-    - targetCorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4992840481662671239}
     - targetCorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
       insertIndex: -1
@@ -130,33 +127,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6711215251243252122}
+    - targetCorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 737431782776023662}
   m_SourcePrefab: {fileID: 100100000, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
 --- !u!1 &1493540616338038361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8698281318067790720, guid: 4ed1ec305972302439939cfc4433638c, type: 3}
   m_PrefabInstance: {fileID: 1437598796288967385}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &902113962541771135
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493540616338038361}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00047552824, y: 0.0005, z: 0.00009999999}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4992840481662671239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 1
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
-  volume: 2087.6
 --- !u!114 &6067308593199528907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,3 +260,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &737431782776023662
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493540616338038361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.00033299503
+  m_Center: {x: 0.00000060620533, y: 0, z: 0}
