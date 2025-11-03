@@ -15,7 +15,7 @@ public class LevelButton : MonoBehaviour
 
     [Header("UI")]
     public Button button;
-    public GameObject lockIcon; // Un icono de candado
+    public Image lockIcon; // Un icono de candado
     public TextMeshProUGUI requirementsText; // Texto para mostrar requisitos
 
     // Awake() o Start() se usa para cosas que solo pasan una vez,
@@ -68,14 +68,14 @@ public class LevelButton : MonoBehaviour
         {
             // ¡Desbloqueado!
             button.interactable = true;
-            if (lockIcon != null) lockIcon.SetActive(false);
+            if (lockIcon != null) lockIcon.gameObject.SetActive(false);
             if (requirementsText != null) requirementsText.gameObject.SetActive(false);
         }
         else
         {
             // Bloqueado
             button.interactable = false;
-            if (lockIcon != null) lockIcon.SetActive(true);
+            if (lockIcon != null) lockIcon.gameObject.SetActive(true);
 
             // Mostrar requisitos
             if (requirementsText != null)

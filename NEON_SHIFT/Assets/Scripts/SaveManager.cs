@@ -128,6 +128,12 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, newTotal);
         PlayerPrefs.Save();
         Debug.Log("¡MONEDAS GUARDADAS! Nuevo total en PlayerPrefs: " + newTotal);
+
+        MostrarMonedasGlobales display = FindObjectOfType<MostrarMonedasGlobales>();
+        if (display != null)
+        {
+            display.UpdateCoinDisplay();
+        }
     }
 
     public int GetNormalCoins()
