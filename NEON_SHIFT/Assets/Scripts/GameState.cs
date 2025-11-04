@@ -19,15 +19,39 @@ public class GameState : MonoBehaviour
     [Header("Objetos recogidos/destruidos desde el último checkpoint")]
     public List<GameObject> collectedSinceCheckpoint = new List<GameObject>();
 
+    [Header("Paneles de instrucciones mostrados")]
+    public HashSet<string> shownInstructionTriggers = new HashSet<string>();
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // ? mantiene el estado entre recargas
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+    }
+    /// <summary>
+    /// Marca un trigger como mostrado para no volver a mostrarlo tras respawn.
+    /// </summary>
+    public void MarkTriggerShown(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return;
+
+        if (!shownInstructionTriggers.Contains(id))
+            shownInstructionTriggers.Add(id);
+    }
+
+    /// <summary>
+    /// Devuelve true si el trigger ya fue mostrado antes.
+    /// </summary>
+    public bool IsTriggerShown(string id)
+    {
+        if (string.IsNullOrEmpty(id)) return true; // si no tiene ID, lo considera mostrado
+        return shownInstructionTriggers.Contains(id);
     }
 }

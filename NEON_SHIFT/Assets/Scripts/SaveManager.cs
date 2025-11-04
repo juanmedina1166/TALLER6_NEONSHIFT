@@ -67,6 +67,8 @@ public class SaveManager : MonoBehaviour
             GameState.Instance.checkpointReached = false;
             GameState.Instance.collectedSinceCheckpoint.Clear();
             GameState.Instance.coins = 0;
+
+            GameState.Instance.shownInstructionTriggers.Clear();
         }
 
         // 4. Ponemos los valores por defecto (igual que antes)
@@ -99,6 +101,8 @@ public class SaveManager : MonoBehaviour
             GameState.Instance.checkpointReached = false;
             GameState.Instance.collectedSinceCheckpoint.Clear();
             GameState.Instance.coins = 0;
+
+            GameState.Instance.shownInstructionTriggers.Clear();
         }
 
         // 4. Ponemos los valores por defecto

@@ -118,6 +118,10 @@ public class RespawnManager : MonoBehaviour
 
             if (GameState.Instance != null)
             {
+
+                var shownTriggers = new System.Collections.Generic.HashSet<string>(GameState.Instance.shownInstructionTriggers);
+
+
                 GameState.Instance.coins = 0;
                 GameState.Instance.checkpointReached = false;
                 GameState.Instance.lastCheckpoint = Vector3.zero;
@@ -126,6 +130,7 @@ public class RespawnManager : MonoBehaviour
                     GameState.Instance.specialCoins[i] = false;
 
                 GameState.Instance.destroyedObjects.Clear();
+                GameState.Instance.shownInstructionTriggers = shownTriggers;
             }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
