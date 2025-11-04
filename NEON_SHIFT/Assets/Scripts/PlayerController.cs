@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-
-    
     private CharacterController controller;
     private Animator animator;
     private TransformationManager transformationManager;
@@ -23,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float gravity = -20f;
     private float verticalVelocity;
+    private bool wasGrounded = true; // ? Nuevo: para detectar aterrizaje
 
     [Header("Slide")]
     private bool isSliding = false;
@@ -40,13 +39,13 @@ public class PlayerController : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip jumpClip;
     public AudioClip slideClip;
-    public AudioClip wallHitClip;  
+    public AudioClip wallHitClip;
 
     private AudioSource audioSource;
 
     void Start()
     {
-        transformationManager =GetComponent<TransformationManager>();
+        transformationManager = GetComponent<TransformationManager>();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -76,25 +75,44 @@ public class PlayerController : MonoBehaviour
         float deltaX = targetX - transform.position.x;
         move.x = deltaX * laneChangeSpeed;
 
+        bool isGroundedNow = controller.isGrounded;
+
         if (!allowCustomY)
         {
-            if (controller.isGrounded)
+            if (isGroundedNow)
             {
                 verticalVelocity = -1f;
 
+                // ?? Detectar aterrizaje (pasó de estar en el aire a tocar el suelo)
+                if (!wasGrounded)
+                {
+                    wasGrounded = true;
+
+                    if (animator != null && !isSliding)
+                    {
+                        animator.ResetTrigger("Jump");
+                        animator.SetBool("IsRunning", true);
+                    }
+                }
+
+                // --- Saltar ---
                 if (jumpBufferCounter > 0)
                 {
                     verticalVelocity = jumpForce;
                     jumpBufferCounter = 0f;
+                    wasGrounded = false;
 
                     if (animator != null)
                     {
+                        animator.ResetTrigger("Slide");
                         animator.SetTrigger("Jump");
                         animator.SetBool("IsRunning", false);
                     }
+
                     PlaySound(jumpClip);
                 }
 
+                // --- Slide ---
                 if (swipeDown && !isSliding)
                 {
                     StartCoroutine(Slide());
@@ -103,9 +121,25 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                // --- En el aire ---
                 verticalVelocity += gravity * Time.deltaTime;
+                wasGrounded = false;
+
+                // ? Si el jugador hace swipe hacia abajo mientras salta
                 if (swipeDown)
+                {
                     verticalVelocity = gravity * 2f;
+
+                    if (animator != null)
+                    {
+                        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+                        if (state.IsName("Jump"))
+                        {
+                            animator.ResetTrigger("Jump");
+                            animator.SetBool("IsRunning", true);
+                        }
+                    }
+                }
             }
 
             move.y = verticalVelocity;
@@ -156,13 +190,10 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(clip);
     }
 
-    //  Detecta choque con paredes
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //  Detecta si el objeto está en el layer "Wall"
         if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            // Reproducir sonido solo si el jugador no está muerto (evita spam tras morir)
             if (!isDead && transformationManager != null && !transformationManager.IsTransformed())
             {
                 PlaySound(wallHitClip);
