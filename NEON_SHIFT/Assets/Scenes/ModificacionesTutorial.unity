@@ -25702,7 +25702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 109
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30735,7 +30735,7 @@ PrefabInstance:
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4679143694641333277}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: flyDuration
       value: 13.3
@@ -30764,6 +30764,22 @@ PrefabInstance:
       propertyPath: wallBreakSound
       value: 
       objectReference: {fileID: 8300000, guid: c7b4e581c5d54344aaa93e86b935b631, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: wallBreakSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: 'wallBreakSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c7b4e581c5d54344aaa93e86b935b631, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: 'wallBreakSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: db377ed5b3d46cf488541d421d715e18, type: 3}
+    - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      propertyPath: 'wallBreakSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c827a101dc88694aa7ef29df25fd4be, type: 3}
     - target: {fileID: 2491779207414421320, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -30879,6 +30895,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fb2ee1a41b0a64091756831475fae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &4679143694641333277 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7868809414278817977, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+  m_PrefabInstance: {fileID: 4679143694641333274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4843709071678688930
 PrefabInstance:
   m_ObjectHideFlags: 0

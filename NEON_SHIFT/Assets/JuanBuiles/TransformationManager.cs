@@ -44,7 +44,9 @@ public class TransformationManager : MonoBehaviour
     public AudioClip GorillaSound;
     public AudioClip fastSound;
     public AudioClip CheetahSound;
-    public AudioClip wallBreakSound;
+
+    [Header("Wall Break Sounds")]
+    public AudioClip[] wallBreakSounds;
 
     private bool isFlying = false;
     private bool isStrong = false;
@@ -304,8 +306,12 @@ public class TransformationManager : MonoBehaviour
     {
         if ((isStrong || isFast) && hit.collider.CompareTag("Wall"))
         {
-            if (wallBreakSound != null && audioSource != null)
-                audioSource.PlayOneShot(wallBreakSound);
+            if (audioSource != null && wallBreakSounds != null && wallBreakSounds.Length > 0)
+            {
+                // Escoge un sonido aleatorio
+                AudioClip randomClip = wallBreakSounds[Random.Range(0, wallBreakSounds.Length)];
+                audioSource.PlayOneShot(randomClip);
+            }
 
             // Sacudir cámara al romper el muro
             if (isStrong && CameraShake.Instance != null)
