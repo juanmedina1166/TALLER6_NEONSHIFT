@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class Checkpoint : MonoBehaviour
         {
             GameState.Instance.lastCheckpoint = transform.position;
             GameState.Instance.checkpointReached = true;
+            GameState.Instance.lastCheckpointScene = SceneManager.GetActiveScene().name;
 
             //  Guardar cantidad de monedas actual como la del checkpoint
             if (PlayerCoins.Instance != null)
                 PlayerCoins.Instance.SaveCheckpointCoins();
+
 
             // ?? Reproducir sonido
             if (checkpointSound != null)

@@ -140,6 +140,14 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    public void SetTotalNormalCoins(int total)
+    {
+        PlayerPrefs.SetInt(KEY_NORMAL_COINS, total);
+        PlayerPrefs.Save();
+        Debug.Log("? Total de monedas actualizado a " + total);
+    }
+
+
     public int GetNormalCoins()
     {
         // Devuelve las monedas guardadas. Si no hay, devuelve 0.

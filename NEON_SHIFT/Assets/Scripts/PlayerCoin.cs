@@ -19,6 +19,16 @@ public class PlayerCoins : MonoBehaviour
             Destroy(this);
         }
     }
+    private void Start()
+    {
+        // Restaurar las monedas globales guardadas al inicio del nivel
+        if (SaveManager.Instance != null)
+        {
+            coins = SaveManager.Instance.GetNormalCoins();
+            UICoinManager.Instance.UpdateCoins(coins);
+            Debug.Log("?? Monedas restauradas al iniciar nivel: " + coins);
+        }
+    }
 
     public void AddCoins(int amount)
     {

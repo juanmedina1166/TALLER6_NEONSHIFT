@@ -12,6 +12,7 @@ public class GameState : MonoBehaviour
     [Header("Checkpoint")]
     public Vector3 lastCheckpoint;
     public bool checkpointReached = false;
+    public string lastCheckpointScene = ""; // NUEVO
 
     [Header("Objetos destruidos")]
     public HashSet<string> destroyedObjects = new HashSet<string>();

@@ -27,10 +27,11 @@ public class VictoryTrigger : MonoBehaviour
             if (SaveManager.Instance != null)
             {
                 // 1. (¡RESTAURADO!) Guarda las monedas de esta sesión
-                if (PlayerCoins.Instance != null)
+                if (PlayerCoins.Instance != null && GameState.Instance != null)
                 {
-                    SaveManager.Instance.AddNormalCoins(PlayerCoins.Instance.coins);
+                    GameState.Instance.coins = PlayerCoins.Instance.coins;
                 }
+                SaveManager.Instance.SetTotalNormalCoins(PlayerCoins.Instance.coins);
 
                 // 2. Desbloquea el SIGUIENTE nivel
                 SaveManager.Instance.UnlockLevel(currentLevelIndex + 1);

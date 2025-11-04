@@ -20,12 +20,37 @@ public class RespawnManager : MonoBehaviour
     }
     void Start()
     {
-        // ? Restaurar monedas normales desde GameState
+
+        //  Verifica si el checkpoint pertenece a otra escena
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (GameState.Instance != null && GameState.Instance.checkpointReached)
+        {
+            // Si el checkpoint fue guardado en otra escena, se limpia
+            if (GameState.Instance.lastCheckpointScene != currentScene)
+            {
+                GameState.Instance.checkpointReached = false;
+                GameState.Instance.lastCheckpoint = Vector3.zero;
+            }
+        }
+        //  Solo restaurar monedas si es un respawn dentro de la MISMA escena
         if (PlayerCoins.Instance != null)
         {
-            PlayerCoins.Instance.coins = GameState.Instance.coins;
-            UICoinManager.Instance.UpdateCoins(GameState.Instance.coins);
+            if (GameState.Instance != null && GameState.Instance.lastCheckpointScene == SceneManager.GetActiveScene().name)
+            {
+                PlayerCoins.Instance.coins = GameState.Instance.coins;
+                UICoinManager.Instance.UpdateCoins(GameState.Instance.coins);
+                Debug.Log(" Monedas restauradas del checkpoint en la misma escena: " + GameState.Instance.coins);
+            }
+            else
+            {
+                // ?? Si es una nueva escena, restauramos las monedas globales
+                int globalCoins = SaveManager.Instance != null ? SaveManager.Instance.GetNormalCoins() : 0;
+                PlayerCoins.Instance.coins = globalCoins;
+                UICoinManager.Instance.UpdateCoins(globalCoins);
+                Debug.Log(" Monedas globales restauradas al iniciar nuevo nivel: " + globalCoins);
+            }
         }
+
 
         // ? Restaurar monedas especiales en la UI
         if (SpecialCoinTracker.Instance != null)
