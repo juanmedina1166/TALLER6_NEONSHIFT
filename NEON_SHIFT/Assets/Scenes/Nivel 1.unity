@@ -43586,14 +43586,17 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9066165523662137554, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2102523769}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7001187786421539084, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 4679143694641333286}
   m_SourcePrefab: {fileID: 100100000, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
 --- !u!114 &4679143694641333275 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd780f425386ba48a9699de7838e54a, type: 3}
@@ -43604,17 +43607,35 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7868809414278817977, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4679143694641333277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7001187786421539084, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+  m_PrefabInstance: {fileID: 4679143694641333274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4679143694641333285 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2538687738891699521, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8fb2ee1a41b0a64091756831475fae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4679143694641333286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ee60be131416144a29e6e129087ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
 --- !u!1001 &4709068097433536085
 PrefabInstance:
   m_ObjectHideFlags: 0

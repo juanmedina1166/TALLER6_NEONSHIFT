@@ -50,8 +50,16 @@ public class VictoryTrigger : MonoBehaviour
                 // 2. Desbloquea el SIGUIENTE nivel
                 SaveManager.Instance.UnlockLevel(currentLevelIndex + 1);
             }
-            // -------------------------------------
 
+            // ¡¡AÑADE ESTO!! Resetea el puntaje de la sesión
+            if (PlayerScore.Instance != null && LeaderboardManager.Instance != null)
+            {
+                string playerName = LeaderboardManager.Instance.GetCurrentPlayerName();
+                int sessionScore = PlayerScore.Instance.currentScore;
+
+                // ¡Enviamos el puntaje al manager!
+                LeaderboardManager.Instance.SubmitScore(currentLevelIndex, playerName, sessionScore);
+            }
             // Ahora llamamos a la función que mostrará el panel
             // Y también comprobará los requisitos.
             ShowVictoryPanel();

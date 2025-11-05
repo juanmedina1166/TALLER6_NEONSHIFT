@@ -4,6 +4,7 @@ public class SpecialCoin : MonoBehaviour
 {
     public int levelIndex;
     public int coinIndex; // 0, 1, 2 según el orden de la moneda en el nivel
+    public int scoreValue = 50;
     public AudioClip pickupSound;
     public float volume = 1f;
 
@@ -23,6 +24,11 @@ public class SpecialCoin : MonoBehaviour
 
         if (player != null)
         {
+
+            if (PlayerScore.Instance != null)
+            {
+                PlayerScore.Instance.AddScore(scoreValue);
+            }
             if (SaveManager.Instance != null)
             {
                 // CollectSpecialCoin devuelve 'true' si es la primera vez que se recoge

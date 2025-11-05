@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // ¡Asegúrate de tener esto!
+using TMPro; // ¡Asegúrate de tener esto!
 
 public class MainMenuController : MonoBehaviour
 {
@@ -7,64 +9,90 @@ public class MainMenuController : MonoBehaviour
     public Button jugarButton;
     public Button nuevaPartidaButton;
     public Button salirDeNivelesButton;
-    // (Añade aquí tus botones de Creditos, Salir, etc. si quieres)
+    public Button confirmNameButton; // ¡NUEVO! Arrastra tu botón "Confirmar" aquí
+    public Button puntajesButton; // El botón "Puntajes" en el menú principal
+    public Button cerrarPuntajesButton; // El botón "Volver" DENTRO del panel de puntajes
 
     [Header("Paneles")]
-    public GameObject mainMenuPanel; // El panel con "Jugar", "Creditos", etc.
-    public GameObject escogerNivelPanel; // El panel "Escoger Nivel pro"
+    public GameObject mainMenuPanel;
+    public GameObject escogerNivelPanel;
+    public GameObject nameInputPanel; // ¡NUEVO! Arrastra tu panel de nombre aquí
+    public GameObject leaderboardPanel;
 
+    [Header("Entrada de Nombre")]
+    public TMP_InputField nameInputField; // ¡NUEVO! Arrastra tu InputField aquí
 
     void Start()
     {
-        // Asignamos las funciones a los clics de los botones
         jugarButton.onClick.AddListener(OnJugarClicked);
         nuevaPartidaButton.onClick.AddListener(OnNuevaPartidaClicked);
         salirDeNivelesButton.onClick.AddListener(OnSalirDeNivelesClicked);
+        confirmNameButton.onClick.AddListener(OnConfirmNameClicked); // ¡NUEVO!
 
-        // Asegurarnos de que empezamos en el menú principal
+        puntajesButton.onClick.AddListener(OnPuntajesClicked);
+        cerrarPuntajesButton.onClick.AddListener(OnCerrarPuntajesClicked);
+
         mainMenuPanel.SetActive(true);
         escogerNivelPanel.SetActive(false);
+        nameInputPanel.SetActive(false); // ¡NUEVO!
+
+        leaderboardPanel.SetActive(false);
     }
 
-    // Esta función es para el botón "JUGAR"
     void OnJugarClicked()
     {
-        // NO borramos nada.
-        // Simplemente mostramos el panel de niveles.
         mainMenuPanel.SetActive(false);
         escogerNivelPanel.SetActive(true);
-
-        // Los scripts "LevelButton" se ejecutarán y mostrarán el progreso actual
     }
 
-    // Esta función es para el botón "NUEVA PARTIDA"
+    // ¡MODIFICADO!
     void OnNuevaPartidaClicked()
     {
-        // 1. Borramos el progreso llamando a la función del SaveManager
+        // Ya no resetea. Solo abre el panel de nombre.
+        mainMenuPanel.SetActive(false);
+        nameInputPanel.SetActive(true);
+    }
+
+    // ¡NUEVO!
+    void OnConfirmNameClicked()
+    {
+        // 1. Guardar el nombre
+        string playerName = nameInputField.text;
+        if (string.IsNullOrWhiteSpace(playerName))
+        {
+            playerName = "Player"; // Nombre por defecto
+        }
+        LeaderboardManager.Instance.SetCurrentPlayerName(playerName);
+
+        // 2. Resetear el progreso del jugador (monedas/niveles)
         if (SaveManager.Instance != null)
         {
-            // ¡Usamos ResetProgress, que NO carga una escena!
             SaveManager.Instance.ResetProgress();
-
-            if (PlayerCoins.Instance != null)
-            {
-                PlayerCoins.Instance.ResetSession();
-            }
         }
 
-        // 2. Ahora, mostramos el panel de niveles
-        mainMenuPanel.SetActive(false);
+        nameInputPanel.SetActive(false);
         escogerNivelPanel.SetActive(true);
 
-        // Los scripts "LevelButton" se ejecutarán y verán que el progreso
-        // se acaba de reiniciar, por lo que solo mostrarán el Tutorial.
+
     }
+
+    void OnPuntajesClicked()
+    {
+        // Oculta el menú principal y muestra los puntajes
+        mainMenuPanel.SetActive(false);
+        leaderboardPanel.SetActive(true);
+    }
+
+    void OnCerrarPuntajesClicked()
+    {
+        // Oculta los puntajes y regresa al menú principal
+        leaderboardPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+
     void OnSalirDeNivelesClicked()
     {
-        // Ocultamos el panel de selección de niveles
         escogerNivelPanel.SetActive(false);
-
-        // Mostramos el menú principal
         mainMenuPanel.SetActive(true);
     }
 }

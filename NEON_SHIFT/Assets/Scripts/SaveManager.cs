@@ -120,6 +120,11 @@ public class SaveManager : MonoBehaviour
             PlayerCoins.Instance.ResetSession();
         }
 
+        // ¡¡AÑADE ESTO!! Resetea el puntaje de la sesión
+        if (PlayerScore.Instance != null)
+        {
+            PlayerScore.Instance.ResetSessionScore();
+        }
         // 4. Ponemos los valores por defecto
         PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0);

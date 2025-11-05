@@ -3,6 +3,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public int coinValue = 1;
+    public int scoreValue = 10; // ¡NUEVO! Puntos que da esta moneda
     public AudioClip pickupSound;
 
     private void OnTriggerEnter(Collider other)
@@ -14,6 +15,11 @@ public class Coin : MonoBehaviour
         if (player != null)
         {
             player.AddCoins(coinValue);
+
+            if (PlayerScore.Instance != null)
+            {
+                PlayerScore.Instance.AddScore(scoreValue);
+            }
 
             if (pickupSound != null)
                 AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position, 1f);
