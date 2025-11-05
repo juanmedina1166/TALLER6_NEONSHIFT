@@ -45,6 +45,11 @@ public class MainMenuController : MonoBehaviour
         {
             // ¡Usamos ResetProgress, que NO carga una escena!
             SaveManager.Instance.ResetProgress();
+
+            if (PlayerCoins.Instance != null)
+            {
+                PlayerCoins.Instance.ResetSession();
+            }
         }
 
         // 2. Ahora, mostramos el panel de niveles

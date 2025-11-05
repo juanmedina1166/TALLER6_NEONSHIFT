@@ -16,7 +16,17 @@ public class LevelButton : MonoBehaviour
     [Header("UI")]
     public Button button;
     public Image lockIcon; // Un icono de candado
-    public TextMeshProUGUI requirementsText; // Texto para mostrar requisitos
+
+    [Header("UI de Requisitos (Nuevo)")]
+    // Objeto "padre" que contiene todos los elementos de requisitos
+    // (los 2 iconos de moneda y los 2 textos)
+    public GameObject requirementsContainer;
+
+    // Texto para las monedas normales
+    public TextMeshProUGUI normalCoinReqText;
+
+    // Texto para las monedas especiales
+    public TextMeshProUGUI specialCoinReqText;
 
     // Awake() o Start() se usa para cosas que solo pasan una vez,
     // como asignar el listener del botón.
@@ -69,7 +79,10 @@ public class LevelButton : MonoBehaviour
             // ¡Desbloqueado!
             button.interactable = true;
             if (lockIcon != null) lockIcon.gameObject.SetActive(false);
-            if (requirementsText != null) requirementsText.gameObject.SetActive(false);
+
+            // Ocultamos el contenedor de requisitos
+            if (requirementsContainer != null)
+                requirementsContainer.SetActive(false);
         }
         else
         {
@@ -77,17 +90,37 @@ public class LevelButton : MonoBehaviour
             button.interactable = false;
             if (lockIcon != null) lockIcon.gameObject.SetActive(true);
 
-            // Mostrar requisitos
-            if (requirementsText != null)
+            // Mostramos el contenedor de requisitos
+            if (requirementsContainer != null)
             {
-                requirementsText.gameObject.SetActive(true);
-                requirementsText.text = $"Necesitas:\n{specialCoinsRequired} Monedas Esp.\n{normalCoinsRequired} Monedas";
+                requirementsContainer.SetActive(true);
+
+                // Actualizamos los textos de requisitos
+                if (normalCoinReqText != null)
+                    normalCoinReqText.text = normalCoinsRequired.ToString();
+
+                if (specialCoinReqText != null)
+                    specialCoinReqText.text = specialCoinsRequired.ToString();
             }
         }
     }
 
     void LoadLevel()
     {
+        if (PlayerCoins.Instance != null)
+        {
+            PlayerCoins.Instance.ResetSession();
+        }
+
+        // Resetea también el estado del checkpoint, por si acaso.
+        if (GameState.Instance != null)
+        {
+            GameState.Instance.checkpointReached = false;
+            GameState.Instance.lastCheckpoint = Vector3.zero;
+            GameState.Instance.collectedSinceCheckpoint.Clear();
+            GameState.Instance.destroyedObjects.Clear();
+            GameState.Instance.coins = 0;
+        }
         SceneManager.LoadScene(sceneToLoad);
     }
 }

@@ -4,7 +4,8 @@ using TMPro; // ¡Necesitas esta línea para usar TextMeshPro!
 public class MostrarMonedasGlobales : MonoBehaviour
 {
     // Arrastra el componente TextMeshPro que creaste en el inspector
-    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI normalCoinText;
+    public TextMeshProUGUI specialCoinText;
 
     void OnEnable()
     {
@@ -16,16 +17,28 @@ public class MostrarMonedasGlobales : MonoBehaviour
     public void UpdateCoinDisplay()
     {
         // 1. Obtener la cantidad de monedas usando tu SaveManager
-        if (SaveManager.Instance != null && coinText != null)
+        if (SaveManager.Instance == null)
         {
-            int currentCoins = SaveManager.Instance.GetNormalCoins();
+            Debug.LogWarning("SaveManager no encontrado. No se puede actualizar UI de monedas.");
+            return;
+        }
 
-            // 2. Formatear y asignar el texto.
-            // Puedes usar un emoji o un icono de moneda al principio.
-            coinText.text = currentCoins.ToString();
+        // --- 1. Actualizar Monedas Normales ---
+        if (normalCoinText != null)
+        {
+            int currentNormalCoins = SaveManager.Instance.GetNormalCoins();
+            normalCoinText.text = currentNormalCoins.ToString();
+        }
 
-            // O con formato:
-            // coinText.text = "💰 " + currentCoins.ToString("N0"); // "N0" para separadores de miles
+        // --- 2. Actualizar Monedas Especiales ---
+        if (specialCoinText != null)
+        {
+            // Obtenemos los totales del SaveManager
+            int totalLevels = SaveManager.Instance.totalLevelsInGame;
+            int coinsPerLevel = SaveManager.Instance.specialCoinsPerLevel;
+
+            int currentSpecialCoins = SaveManager.Instance.GetTotalSpecialCoins(totalLevels, coinsPerLevel);
+            specialCoinText.text = currentSpecialCoins.ToString();
         }
     }
 }

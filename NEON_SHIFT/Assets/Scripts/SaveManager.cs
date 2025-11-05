@@ -31,6 +31,13 @@ public class SaveManager : MonoBehaviour
         }
         // -------------------------------------
     }
+    /// <summary>
+    /// Método público para forzar la inicialización/resolución del Singleton.
+    /// </summary>
+    public void EnsureInitialized()
+    {
+        // No necesita hacer nada. Solo ser llamado.
+    }
 
 
     // =================================================
@@ -70,6 +77,10 @@ public class SaveManager : MonoBehaviour
 
             GameState.Instance.shownInstructionTriggers.Clear();
         }
+        if (PlayerCoins.Instance != null)
+        {
+            PlayerCoins.Instance.ResetSession();
+        }
 
         // 4. Ponemos los valores por defecto (igual que antes)
         PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
@@ -103,6 +114,10 @@ public class SaveManager : MonoBehaviour
             GameState.Instance.coins = 0;
 
             GameState.Instance.shownInstructionTriggers.Clear();
+        }
+        if (PlayerCoins.Instance != null)
+        {
+            PlayerCoins.Instance.ResetSession();
         }
 
         // 4. Ponemos los valores por defecto

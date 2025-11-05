@@ -56,6 +56,11 @@ public class PauseManager : MonoBehaviour
             GameState.Instance.collectedSinceCheckpoint.Clear(); // Asegúrate de limpiar esto también
         }
 
+        if (PlayerCoins.Instance != null)
+        {
+            PlayerCoins.Instance.ResetSession();
+        }
+
         // Cargar desde el inicio
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -63,9 +68,9 @@ public class PauseManager : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
-        if (SaveManager.Instance != null && PlayerCoins.Instance != null)
+        if (PlayerCoins.Instance != null)
         {
-            SaveManager.Instance.AddNormalCoins(PlayerCoins.Instance.coins);
+            PlayerCoins.Instance.ResetSession();
         }
         SceneManager.LoadScene("MainMenu");
     }
