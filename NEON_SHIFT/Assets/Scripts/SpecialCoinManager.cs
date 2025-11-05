@@ -15,15 +15,24 @@ public class SpecialCoinManager : MonoBehaviour
         Instance = this;
     }
 
-    public void UpdateUI()
+    // --- ¡¡INICIO DEL CAMBIO!! ---
+    // Ahora aceptamos el índice del nivel como parámetro
+    public void UpdateUI(int levelIndex)
     {
-        if (SpecialCoinTracker.Instance == null) return;
+        // Leemos desde SaveManager (persistente) en lugar de SpecialCoinTracker (sesión)
+        if (SaveManager.Instance == null)
+        {
+            Debug.LogWarning("SaveManager no encontrado. No se puede actualizar UI de monedas especiales.");
+            return;
+        }
 
         for (int i = 0; i < coinIcons.Length; i++)
         {
-            bool collected = SpecialCoinTracker.Instance.IsCoinCollected(i);
+            // Comprobamos si la moneda 'i' del nivel 'levelIndex' está guardada
+            bool collected = SaveManager.Instance.IsSpecialCoinCollected(levelIndex, i);
             coinIcons[i].sprite = collected ? filledSprite : emptySprite;
             coinIcons[i].color = Color.white;
         }
     }
+    // --- ¡¡FIN DEL CAMBIO!! ---
 }

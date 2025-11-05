@@ -64,7 +64,7 @@ public class VictoryTrigger : MonoBehaviour
             victoryPanel.SetActive(true);
 
         if (coinManager != null)
-            coinManager.UpdateUI(); // actualizar las monedas recogidas
+            coinManager.UpdateUI(currentLevelIndex); ; // actualizar las monedas recogidas
 
         // --- INICIO DE LÓGICA DE REQUISITOS ---
 
