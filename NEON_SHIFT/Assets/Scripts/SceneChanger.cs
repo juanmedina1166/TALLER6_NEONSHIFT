@@ -13,6 +13,10 @@ public class SceneChanger : MonoBehaviour
     // Método para cargar una escena por índice (en el Build Settings)
     public void LoadSceneByIndex(int sceneIndex)
     {
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.SaveAllData();
+        }
         SceneManager.LoadScene(sceneIndex);
     }
 

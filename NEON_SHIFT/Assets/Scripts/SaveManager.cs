@@ -84,14 +84,14 @@ public class SaveManager : MonoBehaviour
 
         // 4. Ponemos los valores por defecto (igual que antes)
         PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
-        PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0);
-        PlayerPrefs.Save(); // Aplica los cambios
+        PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0); // Aplica los cambios
 
         // 5. ¡¡AÑADE ESTA LÍNEA!!
         SceneManager.LoadScene("Level_1"); // (O el nombre de tu escena Tutorial)
     }
     public void ResetProgress()
     {
+        Debug.LogWarning("¡¡¡FUNCIÓN RESETPROGRESS EJECUTADA!!!");
         // 1. Borramos el progreso de nivel y monedas normales
         PlayerPrefs.DeleteKey(KEY_NORMAL_COINS);
         PlayerPrefs.DeleteKey(KEY_HIGHEST_LEVEL);
@@ -128,7 +128,6 @@ public class SaveManager : MonoBehaviour
         // 4. Ponemos los valores por defecto
         PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0);
-        PlayerPrefs.Save();
 
         // 5. ¡¡NO CARGAMOS ESCENA!!
     }
@@ -163,7 +162,6 @@ public class SaveManager : MonoBehaviour
     public void SetTotalNormalCoins(int total)
     {
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, total);
-        PlayerPrefs.Save();
         Debug.Log("? Total de monedas actualizado a " + total);
     }
 
@@ -191,7 +189,6 @@ public class SaveManager : MonoBehaviour
 
         // Si no la teníamos, la marcamos como recogida
         PlayerPrefs.SetInt(coinKey, 1);
-        PlayerPrefs.Save();
         return true; // ¡Es una moneda nueva!
     }
 
@@ -224,10 +221,25 @@ public class SaveManager : MonoBehaviour
 
     public void UnlockLevel(int levelIndex)
     {
-        if (levelIndex > GetHighestUnlockedLevel())
+        int currentHighest = GetHighestUnlockedLevel();
+
+        // --- DEBUG ---
+        Debug.Log($"[SaveManager] Intentando desbloquear Nivel: {levelIndex}");
+        Debug.Log($"[SaveManager] Nivel más alto actual: {currentHighest}");
+        // --- FIN DEBUG ---
+
+        if (levelIndex >= currentHighest)
         {
+            // --- DEBUG ---
+            Debug.LogWarning($"[SaveManager] ¡CONDICIÓN CUMPLIDA! Guardando nuevo nivel: {levelIndex}");
+            // --- FIN DEBUG ---
             PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, levelIndex);
-            PlayerPrefs.Save();
+        }
+        else
+        {
+            // --- DEBUG ---
+            Debug.LogError($"[SaveManager] ¡CONDICIÓN NO CUMPLIDA! (levelIndex {levelIndex} no es mayor que {currentHighest}). No se guardará.");
+            // --- FIN DEBUG ---
         }
     }
 
@@ -235,5 +247,17 @@ public class SaveManager : MonoBehaviour
     {
         // Devuelve el nivel más alto. Si no hay, devuelve 1 (Nivel 1).
         return PlayerPrefs.GetInt(KEY_HIGHEST_LEVEL, 1);
+    }
+
+    // ... al final de la clase SaveManager ...
+
+    /// <summary>
+    /// Guarda todos los cambios pendientes en el disco.
+    /// Llamar a esto ANTES de cambiar de escena.
+    /// </summary>
+    public void SaveAllData()
+    {
+        PlayerPrefs.Save();
+        Debug.LogWarning("¡¡DATOS GUARDADOS MANUALMENTE EN DISCO!!");
     }
 }

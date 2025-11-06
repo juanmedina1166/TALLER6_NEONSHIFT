@@ -540,7 +540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &39356818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3135,8 +3135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: 3
   sceneToLoad: Nivel 2
-  specialCoinsRequired: 5
-  normalCoinsRequired: 300
+  specialCoinsRequired: 4
+  normalCoinsRequired: 220
   button: {fileID: 297445234}
   lockIcon: {fileID: 124961688}
   requirementsContainer: {fileID: 474560932}
@@ -6873,10 +6873,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72e858f34baed6459d080a554fbd076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 5
-  sceneToLoad: Nivel 4
+  levelToLoad: 4
+  sceneToLoad: Nivel 3
   specialCoinsRequired: 7
-  normalCoinsRequired: 800
+  normalCoinsRequired: 500
   button: {fileID: 656145229}
   lockIcon: {fileID: 1079973412}
   requirementsContainer: {fileID: 1323727010}
@@ -7509,7 +7509,7 @@ MonoBehaviour:
   levelToLoad: 2
   sceneToLoad: Nivel 1
   specialCoinsRequired: 0
-  normalCoinsRequired: 10
+  normalCoinsRequired: 1
   button: {fileID: 703690795}
   lockIcon: {fileID: 1131835897}
   requirementsContainer: {fileID: 0}
@@ -16474,10 +16474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72e858f34baed6459d080a554fbd076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 4
-  sceneToLoad: Nivel 3
+  levelToLoad: 5
+  sceneToLoad: Nivel 4
   specialCoinsRequired: 10
-  normalCoinsRequired: 1200
+  normalCoinsRequired: 1000
   button: {fileID: 1683938217}
   lockIcon: {fileID: 663191831}
   requirementsContainer: {fileID: 1472656836}

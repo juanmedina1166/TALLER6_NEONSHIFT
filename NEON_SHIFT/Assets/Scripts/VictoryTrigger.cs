@@ -138,6 +138,10 @@ public class VictoryTrigger : MonoBehaviour
     // (Esta función no cambia, el botón la llamará si está activo)
     public void LoadNextLevel()
     {
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.SaveAllData();
+        }
         Time.timeScale = 1f;
 
         // Resetea el estado para el nuevo nivel
