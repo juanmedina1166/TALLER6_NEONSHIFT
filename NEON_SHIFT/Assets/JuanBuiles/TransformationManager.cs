@@ -52,6 +52,7 @@ public class TransformationManager : MonoBehaviour
     private bool isStrong = false;
     private bool isFast = false;
     private bool isTransforming = false;
+    public int scoreValue = 25;
 
     void Start()
     {
@@ -326,6 +327,11 @@ public class TransformationManager : MonoBehaviour
             if (GameState.Instance != null && !GameState.Instance.collectedSinceCheckpoint.Contains(wall))
             {
                 GameState.Instance.collectedSinceCheckpoint.Add(wall);
+            }
+
+            if (PlayerScore.Instance != null)
+            {
+                PlayerScore.Instance.AddScore(scoreValue);
             }
 
         }
