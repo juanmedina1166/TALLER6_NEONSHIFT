@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &19961066
 BoxCollider:
@@ -1322,6 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &36277970
 BoxCollider:
@@ -1557,6 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &36888251
 BoxCollider:
@@ -2244,6 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &74411065
 BoxCollider:
@@ -2554,6 +2558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &77530944
 BoxCollider:
@@ -2855,6 +2860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &87441316
 BoxCollider:
@@ -3090,6 +3096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &104456160
 BoxCollider:
@@ -3325,6 +3332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &116962937
 BoxCollider:
@@ -3560,6 +3568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &119390009
 BoxCollider:
@@ -3931,6 +3940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &149200767
 BoxCollider:
@@ -4166,6 +4176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &152889137
 BoxCollider:
@@ -4406,6 +4417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &155846726
 BoxCollider:
@@ -4873,6 +4885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &170122353
 BoxCollider:
@@ -5479,6 +5492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &187134168
 BoxCollider:
@@ -5714,6 +5728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &195511687
 BoxCollider:
@@ -5954,6 +5969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &204224883
 BoxCollider:
@@ -6436,6 +6452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &217490797
 BoxCollider:
@@ -6895,6 +6912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &223813708
 BoxCollider:
@@ -7507,6 +7525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &229087910
 BoxCollider:
@@ -7742,6 +7761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &234310951
 BoxCollider:
@@ -7982,6 +8002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &241283652
 BoxCollider:
@@ -8355,6 +8376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &251769482
 BoxCollider:
@@ -8590,6 +8612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &252745569
 BoxCollider:
@@ -8970,6 +8993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &255967571
 BoxCollider:
@@ -9205,6 +9229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &271058797
 BoxCollider:
@@ -9875,6 +9900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &292794681
 BoxCollider:
@@ -10248,6 +10274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &304027842
 BoxCollider:
@@ -10847,6 +10874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &347463386
 BoxCollider:
@@ -11082,6 +11110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &356844685
 BoxCollider:
@@ -11317,6 +11346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &359738035
 BoxCollider:
@@ -11624,6 +11654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &361694855
 BoxCollider:
@@ -11859,6 +11890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &374415954
 BoxCollider:
@@ -12143,6 +12175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &398217906
 BoxCollider:
@@ -12378,6 +12411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &405649190
 BoxCollider:
@@ -12613,6 +12647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &406927843
 BoxCollider:
@@ -12848,6 +12883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &408526458
 BoxCollider:
@@ -13083,6 +13119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &412559603
 BoxCollider:
@@ -13318,6 +13355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &415363582
 BoxCollider:
@@ -13689,6 +13727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &420554964
 BoxCollider:
@@ -13995,6 +14034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &441355270
 BoxCollider:
@@ -14230,6 +14270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &443139156
 BoxCollider:
@@ -14465,6 +14506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &445747883
 BoxCollider:
@@ -14700,6 +14742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &451585211
 BoxCollider:
@@ -15053,6 +15096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &502898314
 BoxCollider:
@@ -15396,6 +15440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &504893313
 BoxCollider:
@@ -15676,6 +15721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &509725231
 BoxCollider:
@@ -15947,6 +15993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &559197192
 BoxCollider:
@@ -16182,6 +16229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &573237569
 BoxCollider:
@@ -16505,6 +16553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &588151382
 BoxCollider:
@@ -16809,6 +16858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &600145040
 BoxCollider:
@@ -17152,6 +17202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &608727112
 BoxCollider:
@@ -17562,6 +17613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &662743198
 BoxCollider:
@@ -17968,6 +18020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &675342270
 BoxCollider:
@@ -18203,6 +18256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &680439571
 BoxCollider:
@@ -18842,6 +18896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &720678562
 BoxCollider:
@@ -19191,6 +19246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &744449755
 BoxCollider:
@@ -20007,6 +20063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &783305779
 BoxCollider:
@@ -20961,6 +21018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &833491798
 BoxCollider:
@@ -21262,6 +21320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &872905005
 BoxCollider:
@@ -26404,6 +26463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &891078713
 BoxCollider:
@@ -26639,6 +26699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &894041034
 BoxCollider:
@@ -26874,6 +26935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &897465235
 BoxCollider:
@@ -27109,6 +27171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &898615527
 BoxCollider:
@@ -27772,6 +27835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &919393596
 BoxCollider:
@@ -28249,6 +28313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &932626736
 BoxCollider:
@@ -28741,6 +28806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &957834166
 BoxCollider:
@@ -28976,6 +29042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &968065650
 BoxCollider:
@@ -29211,6 +29278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &980523870
 BoxCollider:
@@ -29644,6 +29712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &998642850
 BoxCollider:
@@ -29879,6 +29948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1001892256
 BoxCollider:
@@ -30114,6 +30184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1013756180
 BoxCollider:
@@ -30429,6 +30500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1024985688
 BoxCollider:
@@ -30740,6 +30812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1037345470
 BoxCollider:
@@ -31273,6 +31346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1078259306
 BoxCollider:
@@ -31931,6 +32005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1111727223
 BoxCollider:
@@ -32545,6 +32620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1162497179
 BoxCollider:
@@ -32780,6 +32856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1176665519
 BoxCollider:
@@ -33090,6 +33167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1195566459
 BoxCollider:
@@ -33433,6 +33511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1200419602
 BoxCollider:
@@ -33668,6 +33747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1219358696
 BoxCollider:
@@ -34115,6 +34195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1235534944
 BoxCollider:
@@ -34550,6 +34631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1255122592
 BoxCollider:
@@ -34907,6 +34989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1276053891
 BoxCollider:
@@ -35142,6 +35225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1285444632
 BoxCollider:
@@ -35377,6 +35461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1287456295
 BoxCollider:
@@ -35612,6 +35697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1298019326
 BoxCollider:
@@ -35921,6 +36007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1317757126
 BoxCollider:
@@ -36156,6 +36243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1318373224
 BoxCollider:
@@ -36391,6 +36479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1320453150
 BoxCollider:
@@ -37101,6 +37190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1335193511
 BoxCollider:
@@ -37464,6 +37554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1342719140
 BoxCollider:
@@ -38530,6 +38621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1362762523
 BoxCollider:
@@ -38927,6 +39019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1373843028
 BoxCollider:
@@ -39162,6 +39255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1379630339
 BoxCollider:
@@ -39397,6 +39491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1388499520
 BoxCollider:
@@ -39632,6 +39727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1397690396
 BoxCollider:
@@ -39867,6 +39963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1405734823
 BoxCollider:
@@ -40180,6 +40277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1414799769
 BoxCollider:
@@ -40489,6 +40587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1428232665
 BoxCollider:
@@ -40724,6 +40823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1434805978
 BoxCollider:
@@ -41349,6 +41449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1465902780
 BoxCollider:
@@ -41924,6 +42025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1493493142
 BoxCollider:
@@ -42316,6 +42418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1509714652
 BoxCollider:
@@ -42879,6 +42982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1532135748
 BoxCollider:
@@ -43114,6 +43218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1533638485
 BoxCollider:
@@ -43447,6 +43552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1538835147
 BoxCollider:
@@ -43682,6 +43788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1538851859
 BoxCollider:
@@ -44095,6 +44202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1552425679
 BoxCollider:
@@ -44558,6 +44666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1570644944
 BoxCollider:
@@ -44922,6 +45031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1586927488
 BoxCollider:
@@ -45333,6 +45443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1607338559
 BoxCollider:
@@ -45748,6 +45859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1627289665
 BoxCollider:
@@ -45988,6 +46100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1633400451
 BoxCollider:
@@ -46331,6 +46444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1641914803
 BoxCollider:
@@ -46566,6 +46680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1648291204
 BoxCollider:
@@ -46867,6 +46982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1650257199
 BoxCollider:
@@ -47308,6 +47424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1662616598
 BoxCollider:
@@ -47543,6 +47660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1666538708
 BoxCollider:
@@ -47914,6 +48032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1685948322
 BoxCollider:
@@ -48149,6 +48268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1686553666
 BoxCollider:
@@ -48453,6 +48573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1694582354
 BoxCollider:
@@ -48821,6 +48942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1720699015
 BoxCollider:
@@ -49056,6 +49178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1732225022
 BoxCollider:
@@ -49779,6 +49902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1772747450
 BoxCollider:
@@ -50500,6 +50624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1789595467
 BoxCollider:
@@ -50885,6 +51010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1806511396
 BoxCollider:
@@ -51120,6 +51246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1812362150
 BoxCollider:
@@ -51355,6 +51482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1826759167
 BoxCollider:
@@ -51590,6 +51718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1828021409
 BoxCollider:
@@ -51825,6 +51954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1834380488
 BoxCollider:
@@ -52098,6 +52228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1839169751
 BoxCollider:
@@ -52333,6 +52464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1843090666
 BoxCollider:
@@ -52568,6 +52700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1847260198
 BoxCollider:
@@ -52896,6 +53029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1858149479
 BoxCollider:
@@ -53131,6 +53265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1867288360
 BoxCollider:
@@ -53366,6 +53501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1873829011
 BoxCollider:
@@ -54152,6 +54288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1911644038
 BoxCollider:
@@ -54426,6 +54563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1915898461
 BoxCollider:
@@ -54924,6 +55062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1937649711
 BoxCollider:
@@ -55009,7 +55148,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd780f425386ba48a9699de7838e54a, type: 3}
@@ -55257,6 +55396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1945135796
 BoxCollider:
@@ -55492,6 +55632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1948575183
 BoxCollider:
@@ -55732,6 +55873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1949959672
 BoxCollider:
@@ -55967,6 +56109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1958330987
 BoxCollider:
@@ -56517,6 +56660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1982665774
 BoxCollider:
@@ -56752,6 +56896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1983400083
 BoxCollider:
@@ -56987,6 +57132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1993187855
 BoxCollider:
@@ -57222,6 +57368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &1995285703
 BoxCollider:
@@ -57457,6 +57604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2000325332
 BoxCollider:
@@ -57937,6 +58085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2013940922
 BoxCollider:
@@ -58218,6 +58367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2025134795
 BoxCollider:
@@ -58589,6 +58739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2027032688
 BoxCollider:
@@ -59525,6 +59676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2058472617
 BoxCollider:
@@ -60163,6 +60315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2076448420
 BoxCollider:
@@ -60398,6 +60551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2081823492
 BoxCollider:
@@ -60770,6 +60924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2090932942
 BoxCollider:
@@ -61278,6 +61433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2097128432
 BoxCollider:
@@ -61513,6 +61669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2098125016
 BoxCollider:
@@ -62162,6 +62319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 1
+  scoreValue: 10
   pickupSound: {fileID: 8300000, guid: 42a728ccfb0d0994b873950abc45575d, type: 3}
 --- !u!65 &2138976445
 BoxCollider:
@@ -62463,14 +62621,17 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9066165523662137554, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2102523769}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7001187786421539084, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+      insertIndex: 8
+      addedObject: {fileID: 4679143694641333278}
   m_SourcePrefab: {fileID: 100100000, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
 --- !u!114 &4679143694641333275 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2538687738891699521, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8fb2ee1a41b0a64091756831475fae0, type: 3}
@@ -62481,6 +62642,24 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7868809414278817977, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
   m_PrefabInstance: {fileID: 4679143694641333274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4679143694641333277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7001187786421539084, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
+  m_PrefabInstance: {fileID: 4679143694641333274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4679143694641333278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679143694641333277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ee60be131416144a29e6e129087ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
 --- !u!1001 &5921694372805203365
 PrefabInstance:
   m_ObjectHideFlags: 0
