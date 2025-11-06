@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
     public static PlayerScore Instance;
+    public static event Action<int> OnScoreChanged;
 
     // El puntaje de esta sesión/intento
     public int currentScore = 0;
@@ -27,12 +29,17 @@ public class PlayerScore : MonoBehaviour
     {
         currentScore += amount;
         // if (scoreText != null) scoreText.text = currentScore.ToString();
+
+        OnScoreChanged?.Invoke(currentScore);
     }
+   
 
     // Método para resetear el puntaje de la sesión
     public void ResetSessionScore()
     {
         currentScore = 0;
         // if (scoreText != null) scoreText.text = "0";
+
+        OnScoreChanged?.Invoke(currentScore);
     }
 }
