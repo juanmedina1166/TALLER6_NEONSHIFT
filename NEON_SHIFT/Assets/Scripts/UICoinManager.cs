@@ -16,6 +16,6 @@ public class UICoinManager : MonoBehaviour
 
     public void UpdateCoins(int coins)
     {
-        Moneda.text = "Monedas: " + coins;
+        Moneda.text = coins.ToString();
     }
 }
