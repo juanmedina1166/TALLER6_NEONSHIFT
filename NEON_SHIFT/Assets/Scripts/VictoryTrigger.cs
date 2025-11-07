@@ -148,6 +148,9 @@ public class VictoryTrigger : MonoBehaviour
         if (PlayerCoins.Instance != null)
             PlayerCoins.Instance.ResetSession();
 
+        if (PlayerScore.Instance != null)
+            PlayerScore.Instance.ResetSessionScore();
+
         if (GameState.Instance != null)
         {
             GameState.Instance.checkpointReached = false;

@@ -6,8 +6,12 @@ public class PlayerScore : MonoBehaviour
     public static PlayerScore Instance;
     public static event Action<int> OnScoreChanged;
 
-    // El puntaje de esta sesión/intento
+    [Header("Puntaje")]
+    [Tooltip("El puntaje actual en esta sesión/intento")]
     public int currentScore = 0;
+
+    [Tooltip("El puntaje guardado en el último checkpoint")]
+    private int checkpointScore = 0;
 
     // (Opcional) Referencia a la UI de puntaje
     // public TextMeshProUGUI scoreText; 
@@ -38,8 +42,24 @@ public class PlayerScore : MonoBehaviour
     public void ResetSessionScore()
     {
         currentScore = 0;
-        // if (scoreText != null) scoreText.text = "0";
+        checkpointScore = 0;
 
         OnScoreChanged?.Invoke(currentScore);
+    }
+
+    public void SaveCheckpointScore()
+    {
+        checkpointScore = currentScore;
+        Debug.Log($"[PlayerScore] Puntaje guardado en Checkpoint: {checkpointScore}");
+    }
+
+    
+    /// Restaura el puntaje al valor guardado en el último checkpoint.
+    
+    public void RestoreCheckpointScore()
+    {
+        currentScore = checkpointScore;
+        OnScoreChanged?.Invoke(currentScore); // Actualiza la UI
+        Debug.Log($"[PlayerScore] Puntaje restaurado a: {currentScore}");
     }
 }

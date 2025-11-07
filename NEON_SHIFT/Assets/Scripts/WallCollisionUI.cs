@@ -96,6 +96,8 @@ public class WallCollisionUI : MonoBehaviour
 
     public void OnRetryButton()
     {
+
+
         if (respawnManager != null)
             respawnManager.Respawn();
         else

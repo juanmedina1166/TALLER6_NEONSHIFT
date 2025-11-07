@@ -20,6 +20,9 @@ public class Checkpoint : MonoBehaviour
             if (PlayerCoins.Instance != null)
                 PlayerCoins.Instance.SaveCheckpointCoins();
 
+            if (PlayerScore.Instance != null)
+                PlayerScore.Instance.SaveCheckpointScore();
+
 
             // ?? Reproducir sonido
             if (checkpointSound != null)

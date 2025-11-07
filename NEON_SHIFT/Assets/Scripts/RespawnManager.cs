@@ -77,6 +77,11 @@ public class RespawnManager : MonoBehaviour
 
         if (GameState.Instance != null && GameState.Instance.checkpointReached)
         {
+
+            if (PlayerScore.Instance != null)
+            {
+                PlayerScore.Instance.RestoreCheckpointScore();
+            }
             // ¡¡CAMBIO!! Usamos la nueva función
             if (PlayerCoins.Instance != null)
             {
@@ -118,6 +123,7 @@ public class RespawnManager : MonoBehaviour
         }
         else
         {
+            
 
             if (GameState.Instance != null)
             {
