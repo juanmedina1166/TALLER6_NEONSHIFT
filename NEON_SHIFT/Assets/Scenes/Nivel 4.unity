@@ -21953,7 +21953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 212.61552}
+  m_AnchoredPosition: {x: -0.000012398, y: 230}
   m_SizeDelta: {x: 324.3589, y: 68.8727}
   m_Pivot: {x: 0.49999994, y: 0.49999994}
 --- !u!114 &802842063
@@ -21976,8 +21976,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Esta pista es la m\xE1s dif\xEDcil del simulador.\nSuperarla significa
-    que est\xE1s listo para el despliegue."
+  m_text: "Pen\xFAltima fase de la prueba. Los datos que recojamos aqu\xED determinar\xE1n
+    los par\xE1metros de tu evaluaci\xF3n final. \xA1Haz que cuente!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -53185,7 +53185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Prueba final iniciada
+  m_text: Estas cerca de lograrlo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 457e295b15b75af48b93280618da212d, type: 2}
   m_sharedMaterial: {fileID: -3635887299521738653, guid: 457e295b15b75af48b93280618da212d, type: 2}
@@ -67115,7 +67115,7 @@ Transform:
   m_GameObject: {fileID: 2102259777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 14.4, z: 24}
+  m_LocalPosition: {x: -0.06, y: 14.4, z: 35}
   m_LocalScale: {x: 1, y: 1, z: 0.35728}
   m_ConstrainProportionsScale: 0
   m_Children: []
