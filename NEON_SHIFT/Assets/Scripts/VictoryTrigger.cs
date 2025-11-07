@@ -11,7 +11,9 @@ public class VictoryTrigger : MonoBehaviour
     public GameObject victoryPanel; // Panel de victoria en el Canvas
     public SpecialCoinManager coinManager;
 
-    // --- INICIO DE CAMBIOS ---
+   
+    [Tooltip("Texto para mostrar la posición final. Ej: 'Posición: #1'")]
+    public TextMeshProUGUI rankText; // ¡Arrastra tu nuevo texto aquí!
 
     [Header("Botón Siguiente Nivel")]
     public Button nextLevelButton; // Arrastra tu botón "Siguiente Nivel" aquí
@@ -21,7 +23,7 @@ public class VictoryTrigger : MonoBehaviour
     public int specialCoinsRequired; // Requisitos de monedas especiales para el PRÓXIMO nivel
     public int normalCoinsRequired; // Requisitos de monedas normales para el PRÓXIMO nivel
 
-    // --- FIN DE CAMBIOS ---
+    
 
     private bool isActive = false;
 
@@ -50,23 +52,24 @@ public class VictoryTrigger : MonoBehaviour
                 // 2. Desbloquea el SIGUIENTE nivel
                 SaveManager.Instance.UnlockLevel(currentLevelIndex + 1);
             }
-
+            string playerName = "Player"; // Default
+            int sessionScore = 0;
             // ¡¡AÑADE ESTO!! Resetea el puntaje de la sesión
             if (PlayerScore.Instance != null && LeaderboardManager.Instance != null)
             {
-                string playerName = LeaderboardManager.Instance.GetCurrentPlayerName();
-                int sessionScore = PlayerScore.Instance.currentScore;
+                 playerName = LeaderboardManager.Instance.GetCurrentPlayerName();
+                 sessionScore = PlayerScore.Instance.currentScore;
 
                 // ¡Enviamos el puntaje al manager!
                 LeaderboardManager.Instance.SubmitScore(currentLevelIndex, playerName, sessionScore);
             }
             // Ahora llamamos a la función que mostrará el panel
             // Y también comprobará los requisitos.
-            ShowVictoryPanel();
+            ShowVictoryPanel(playerName, sessionScore);
         }
     }
 
-    private void ShowVictoryPanel()
+    private void ShowVictoryPanel(string playerName, int sessionScore)
     {
         if (victoryPanel != null)
             victoryPanel.SetActive(true);
@@ -74,7 +77,38 @@ public class VictoryTrigger : MonoBehaviour
         if (coinManager != null)
             coinManager.UpdateUI(currentLevelIndex); ; // actualizar las monedas recogidas
 
-        // --- INICIO DE LÓGICA DE REQUISITOS ---
+        // --- LÓGICA PARA MOSTRAR EL RANKING ---
+        if (rankText != null && LeaderboardManager.Instance != null)
+        {
+            // 1. Obtenemos la tabla de posiciones (que se acaba de actualizar)
+            Leaderboard lb = LeaderboardManager.Instance.GetLeaderboard(currentLevelIndex);
+
+            // 2. Buscamos nuestro índice (posición)
+            // Usamos FindIndex para encontrar la PRIMERA entrada que coincida
+            // (por si el jugador ya estaba en la tabla)
+            int rankIndex = lb.entries.FindIndex(entry =>
+                entry.score == sessionScore && entry.playerName == playerName
+            );
+
+            // 3. Actualizamos el texto
+            if (rankIndex != -1) // ¡Encontrado en el Top 10!
+            {
+                int rank = rankIndex + 1; // El índice 0 es la posición 1
+                if (rank == 1)
+                {
+                    rankText.text = "¡NUEVO RÉCORD! #1";
+                }
+                else
+                {
+                    rankText.text = $"Ocupas la posición: #{rank}";
+                }
+            }
+            else // No entró en el Top 10
+            {
+                rankText.text = "Posición: Fuera del Top 10";
+            }
+        }
+        // --- FIN DE LÓGICA DE RANKING ---
 
         // Asegurarnos de que el SaveManager existe
         if (SaveManager.Instance == null)

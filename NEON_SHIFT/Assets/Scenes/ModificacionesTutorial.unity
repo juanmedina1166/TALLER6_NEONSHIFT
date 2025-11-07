@@ -34312,6 +34312,7 @@ MonoBehaviour:
   currentLevelIndex: 1
   victoryPanel: {fileID: 1526475884}
   coinManager: {fileID: 0}
+  rankText: {fileID: 0}
   nextLevelButton: {fileID: 0}
   requirementsText: {fileID: 0}
   specialCoinsRequired: 0
