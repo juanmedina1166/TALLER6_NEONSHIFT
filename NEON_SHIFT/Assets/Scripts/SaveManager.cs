@@ -5,93 +5,56 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
 
-    // --- ¡NUEVAS VARIABLES! ---
-    // Define aquí los totales de tu juego para poder limpiar las monedas
-    // (Asegúrate de que coincidan con los valores que usas en GetTotalSpecialCoins)
     [Header("Configuración del Juego")]
-    public int totalLevelsInGame = 10; // (Ej: 10 niveles)
-    public int specialCoinsPerLevel = 3; // (3 monedas por nivel)
+    public int totalLevelsInGame = 10;
+    public int specialCoinsPerLevel = 3;
 
-    // --- Claves para PlayerPrefs ---
     private const string KEY_NORMAL_COINS = "TotalNormalCoins";
     private const string KEY_HIGHEST_LEVEL = "HighestLevelUnlocked";
     private const string KEY_SPECIAL_COIN_PREFIX = "SpecialCoin_";
 
     void Awake()
     {
-        // ----- Configuración del Singleton -----
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // ¡Importante!
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-        // -------------------------------------
-    }
-    /// <summary>
-    /// Método público para forzar la inicialización/resolución del Singleton.
-    /// </summary>
-    public void EnsureInitialized()
-    {
-        // No necesita hacer nada. Solo ser llamado.
     }
 
+    public void EnsureInitialized() { }
 
     // =================================================
     // MÉTODOS DE PARTIDA ("Continuar" / "Nueva Partida")
     // =================================================
 
+    // --- ¡MÉTODO MODIFICADO! ---
     public bool HasSaveData()
     {
-        return PlayerPrefs.HasKey(KEY_HIGHEST_LEVEL);
+        // Una partida "existe" si el nivel más alto desbloqueado es al menos 1.
+        // Si devuelve 0 (el nuevo default), no hay partida guardada.
+        return GetHighestUnlockedLevel() > 0;
     }
 
-    // ----- ¡MÉTODO MODIFICADO! -----
     public void NewGame()
     {
-        // ¡¡YA NO USAMOS PlayerPrefs.DeleteAll();!!
+        // (Tu lógica de NewGame está bien, pero usa ResetProgress que es lo importante)
+        // ...
+        // Por consistencia, la lógica de borrado debe estar en ResetProgress
+        ResetProgress();
 
-        // 1. Borramos el progreso de nivel y monedas normales
-        PlayerPrefs.DeleteKey(KEY_NORMAL_COINS);
-        PlayerPrefs.DeleteKey(KEY_HIGHEST_LEVEL);
-
-        // 2. Borramos TODAS las monedas especiales recogidas, una por una
-        for (int i = 1; i <= totalLevelsInGame; i++) // Para cada nivel
-        {
-            for (int j = 0; j < specialCoinsPerLevel; j++) // Para cada moneda
-            {
-                string coinKey = KEY_SPECIAL_COIN_PREFIX + i + "_" + j;
-                PlayerPrefs.DeleteKey(coinKey);
-            }
-        }
-
-        // 3. (Opcional) Borramos el progreso del GameState por si acaso
-        if (GameState.Instance != null)
-        {
-            GameState.Instance.checkpointReached = false;
-            GameState.Instance.collectedSinceCheckpoint.Clear();
-            GameState.Instance.coins = 0;
-
-            GameState.Instance.shownInstructionTriggers.Clear();
-        }
-        if (PlayerCoins.Instance != null)
-        {
-            PlayerCoins.Instance.ResetSession();
-        }
-
-        // 4. Ponemos los valores por defecto (igual que antes)
-        PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
-        PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0); // Aplica los cambios
-
-        // 5. ¡¡AÑADE ESTA LÍNEA!!
+        // Cargar el primer nivel después de crear la partida
         SceneManager.LoadScene("Level_1"); // (O el nombre de tu escena Tutorial)
     }
+
     public void ResetProgress()
     {
         Debug.LogWarning("¡¡¡FUNCIÓN RESETPROGRESS EJECUTADA!!!");
+
         // 1. Borramos el progreso de nivel y monedas normales
         PlayerPrefs.DeleteKey(KEY_NORMAL_COINS);
         PlayerPrefs.DeleteKey(KEY_HIGHEST_LEVEL);
@@ -107,36 +70,19 @@ public class SaveManager : MonoBehaviour
         }
 
         // 3. (Opcional) Borramos el progreso del GameState
-        if (GameState.Instance != null)
-        {
-            GameState.Instance.checkpointReached = false;
-            GameState.Instance.collectedSinceCheckpoint.Clear();
-            GameState.Instance.coins = 0;
+        // (Tu lógica aquí está bien)
 
-            GameState.Instance.shownInstructionTriggers.Clear();
-        }
-        if (PlayerCoins.Instance != null)
-        {
-            PlayerCoins.Instance.ResetSession();
-        }
-
-        // ¡¡AÑADE ESTO!! Resetea el puntaje de la sesión
-        if (PlayerScore.Instance != null)
-        {
-            PlayerScore.Instance.ResetSessionScore();
-        }
         // 4. Ponemos los valores por defecto
         PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, 1); // Desbloquea el Nivel 1
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, 0);
 
-        // 5. ¡¡NO CARGAMOS ESCENA!!
+        // 5. Guardar cambios
+        PlayerPrefs.Save();
     }
 
     public void ContinueGame()
     {
-        // Carga la escena del menú de selección de niveles
-        // o carga el último nivel desbloqueado.
-        SceneManager.LoadScene("LevelSelectMenu"); // (Recomiendo un menú de niveles)
+        SceneManager.LoadScene("LevelSelectMenu");
     }
 
     // ============================
@@ -147,10 +93,7 @@ public class SaveManager : MonoBehaviour
     {
         int currentCoins = GetNormalCoins();
         int newTotal = currentCoins + amount;
-
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, newTotal);
-        PlayerPrefs.Save();
-        Debug.Log("¡MONEDAS GUARDADAS! Nuevo total en PlayerPrefs: " + newTotal);
 
         MostrarMonedasGlobales display = FindObjectOfType<MostrarMonedasGlobales>();
         if (display != null)
@@ -162,13 +105,10 @@ public class SaveManager : MonoBehaviour
     public void SetTotalNormalCoins(int total)
     {
         PlayerPrefs.SetInt(KEY_NORMAL_COINS, total);
-        Debug.Log("? Total de monedas actualizado a " + total);
     }
-
 
     public int GetNormalCoins()
     {
-        // Devuelve las monedas guardadas. Si no hay, devuelve 0.
         return PlayerPrefs.GetInt(KEY_NORMAL_COINS, 0);
     }
 
@@ -178,18 +118,10 @@ public class SaveManager : MonoBehaviour
 
     public bool CollectSpecialCoin(int levelIndex, int coinIndex)
     {
-        // Genera una clave única para esta moneda, ej: "SpecialCoin_1_0"
         string coinKey = KEY_SPECIAL_COIN_PREFIX + levelIndex + "_" + coinIndex;
-
-        // Comprueba si ya la teníamos
-        if (PlayerPrefs.GetInt(coinKey, 0) == 1)
-        {
-            return false; // Ya la teníamos, no es nueva
-        }
-
-        // Si no la teníamos, la marcamos como recogida
+        if (PlayerPrefs.GetInt(coinKey, 0) == 1) return false;
         PlayerPrefs.SetInt(coinKey, 1);
-        return true; // ¡Es una moneda nueva!
+        return true;
     }
 
     public bool IsSpecialCoinCollected(int levelIndex, int coinIndex)
@@ -200,11 +132,10 @@ public class SaveManager : MonoBehaviour
 
     public int GetTotalSpecialCoins(int totalLevels, int coinsPerLevel)
     {
-        // Este método cuenta cuántas monedas tenemos en total
         int totalCount = 0;
-        for (int i = 1; i <= totalLevels; i++) // Asumiendo que Nivel 1 es índice 1
+        for (int i = 1; i <= totalLevels; i++)
         {
-            for (int j = 0; j < coinsPerLevel; j++) // Asumiendo que moneda 0, 1, 2
+            for (int j = 0; j < coinsPerLevel; j++)
             {
                 if (IsSpecialCoinCollected(i, j))
                 {
@@ -222,39 +153,19 @@ public class SaveManager : MonoBehaviour
     public void UnlockLevel(int levelIndex)
     {
         int currentHighest = GetHighestUnlockedLevel();
-
-        // --- DEBUG ---
-        Debug.Log($"[SaveManager] Intentando desbloquear Nivel: {levelIndex}");
-        Debug.Log($"[SaveManager] Nivel más alto actual: {currentHighest}");
-        // --- FIN DEBUG ---
-
         if (levelIndex >= currentHighest)
         {
-            // --- DEBUG ---
-            Debug.LogWarning($"[SaveManager] ¡CONDICIÓN CUMPLIDA! Guardando nuevo nivel: {levelIndex}");
-            // --- FIN DEBUG ---
             PlayerPrefs.SetInt(KEY_HIGHEST_LEVEL, levelIndex);
         }
-        else
-        {
-            // --- DEBUG ---
-            Debug.LogError($"[SaveManager] ¡CONDICIÓN NO CUMPLIDA! (levelIndex {levelIndex} no es mayor que {currentHighest}). No se guardará.");
-            // --- FIN DEBUG ---
-        }
     }
 
+    // --- ¡MÉTODO MODIFICADO! ---
     public int GetHighestUnlockedLevel()
     {
-        // Devuelve el nivel más alto. Si no hay, devuelve 1 (Nivel 1).
-        return PlayerPrefs.GetInt(KEY_HIGHEST_LEVEL, 1);
+        // Devuelve el nivel más alto. Si no hay (default), devuelve 0.
+        return PlayerPrefs.GetInt(KEY_HIGHEST_LEVEL, 0);
     }
 
-    // ... al final de la clase SaveManager ...
-
-    /// <summary>
-    /// Guarda todos los cambios pendientes en el disco.
-    /// Llamar a esto ANTES de cambiar de escena.
-    /// </summary>
     public void SaveAllData()
     {
         PlayerPrefs.Save();
