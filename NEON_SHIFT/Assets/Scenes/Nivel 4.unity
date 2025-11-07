@@ -8391,7 +8391,7 @@ GameObject:
   - component: {fileID: 253114338}
   - component: {fileID: 253114337}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: VolverMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23389,7 +23389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35813,7 +35813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1158082566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45733,7 +45733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -63786,7 +63786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788794511336166182, guid: 17ba9a21fecdf7f4a8eeb0834db0f896, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -64766,10 +64766,10 @@ MonoBehaviour:
   currentLevelIndex: 5
   victoryPanel: {fileID: 1158082565}
   coinManager: {fileID: 644330693}
-  nextLevelButton: {fileID: 0}
+  nextLevelButton: {fileID: 2104928821}
   requirementsText: {fileID: 0}
-  specialCoinsRequired: 0
-  normalCoinsRequired: 0
+  specialCoinsRequired: 13
+  normalCoinsRequired: 1300
 --- !u!1 &2058472612
 GameObject:
   m_ObjectHideFlags: 0
@@ -67148,7 +67148,7 @@ GameObject:
   - component: {fileID: 2104928822}
   - component: {fileID: 2104928821}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: SiguienteNivel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
