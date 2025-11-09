@@ -41161,9 +41161,9 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2057682233}
-        m_TargetAssemblyTypeName: VictoryTrigger, Assembly-CSharp
-        m_MethodName: HideVictoryPanel
+      - m_Target: {fileID: 2014221910}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
