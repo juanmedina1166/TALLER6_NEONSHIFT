@@ -57,7 +57,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (SaveManager.Instance == null)
         {
-            Debug.LogError("SaveManager no encontrado. Asegúrate de que esté en la escena.");
+            
             return;
         }
 

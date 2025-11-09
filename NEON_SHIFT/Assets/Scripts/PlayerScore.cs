@@ -50,7 +50,7 @@ public class PlayerScore : MonoBehaviour
     public void SaveCheckpointScore()
     {
         checkpointScore = currentScore;
-        Debug.Log($"[PlayerScore] Puntaje guardado en Checkpoint: {checkpointScore}");
+        
     }
 
     
@@ -60,6 +60,6 @@ public class PlayerScore : MonoBehaviour
     {
         currentScore = checkpointScore;
         OnScoreChanged?.Invoke(currentScore); // Actualiza la UI
-        Debug.Log($"[PlayerScore] Puntaje restaurado a: {currentScore}");
+       
     }
 }

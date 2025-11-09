@@ -70,9 +70,7 @@ public class InstructionTrigger : MonoBehaviour
         {
             instructionPanel.HidePanel(() =>
             {
-                // Este código se ejecuta CUANDO la animación termina:
-
-                // Tu misma lógica para no reanudar si está en pausa
+                
                 PauseManager pauseManager = Object.FindFirstObjectByType<PauseManager>();
                 bool isPauseActive = (pauseManager != null && pauseManager.pausePanel.gameObject.activeSelf);
 
@@ -81,9 +79,7 @@ public class InstructionTrigger : MonoBehaviour
                     Time.timeScale = 1f;
                 }
 
-                // A diferencia del OneTimeTrigger, este script
-                // controla 'isActive' con el OnTriggerExit,
-                // así que no lo ponemos en 'false' aquí.
+               
             });
         }
 

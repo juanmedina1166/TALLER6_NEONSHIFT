@@ -19,9 +19,7 @@ public class ReiniciarTodo : MonoBehaviour
     {
         if (SaveManager.Instance != null)
         {
-            // Opcional: Añadir un panel de confirmación aquí
-
-            // Llama a la función que borra el progreso y carga el primer nivel
+            
             SaveManager.Instance.NewGame();
         }
     }

@@ -12,15 +12,13 @@ public class UIButtonSound : MonoBehaviour
     {
         button = GetComponent<Button>();
 
-        // Añade un "listener" al botón.
-        // Esto es lo mismo que configurar el "OnClick()" en el Inspector,
-        // pero lo hacemos por código.
+       
         button.onClick.AddListener(OnButtonClick);
     }
 
     private void OnButtonClick()
     {
-        // Si el SoundManager existe, reproduce el sonido
+        
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.PlayClickSound();

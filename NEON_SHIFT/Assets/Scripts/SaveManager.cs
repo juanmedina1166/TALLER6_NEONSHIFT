@@ -53,7 +53,7 @@ public class SaveManager : MonoBehaviour
 
     public void ResetProgress()
     {
-        Debug.LogWarning("¡¡¡FUNCIÓN RESETPROGRESS EJECUTADA!!!");
+        
 
         // 1. Borramos el progreso de nivel y monedas normales
         PlayerPrefs.DeleteKey(KEY_NORMAL_COINS);

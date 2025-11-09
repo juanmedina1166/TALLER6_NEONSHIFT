@@ -55,9 +55,7 @@ public class LeaderboardManager : MonoBehaviour
         return new Leaderboard(); // Devuelve una tabla vacía
     }
 
-    /// <summary>
-    /// Intenta registrar un nuevo puntaje.
-    /// </summary>
+   
     public void SubmitScore(int levelIndex, string playerName, int score)
     {
         // 1. Obtener la tabla actual
@@ -82,9 +80,7 @@ public class LeaderboardManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    /// <summary>
-    /// (Opcional) Un método para borrar todas las tablas si lo necesitas.
-    /// </summary>
+    
     public void ClearAllLeaderboards(int totalLevels)
     {
         for (int i = 1; i <= totalLevels; i++)

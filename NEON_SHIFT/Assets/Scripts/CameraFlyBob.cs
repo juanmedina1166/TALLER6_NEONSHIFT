@@ -66,7 +66,7 @@ public class CameraFlyBob : MonoBehaviour
     public void SetFlying(bool value)
     {
         isFlying = value;
-        Debug.Log("CameraFlyBob.SetFlying: " + value);
+        
     }
 
     // ?? Método opcional para restaurar instantáneamente
