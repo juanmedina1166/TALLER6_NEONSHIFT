@@ -118,8 +118,8 @@ MonoBehaviour:
     y: 0
     width: 249
     height: 933
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -294,8 +294,8 @@ MonoBehaviour:
     y: 0
     width: 995
     height: 653
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -322,8 +322,8 @@ MonoBehaviour:
     y: 0
     width: 366
     height: 653
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -405,8 +405,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Build Profiles\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 478
-    y: 314
+    x: 0
+    y: 26
     width: 725
     height: 550
   m_SerializedDataModeController:
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 248
     height: 907
   m_SerializedDataModeController:
@@ -1817,8 +1817,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -21167.334
-    y: -21309.334
+    x: 1
+    y: 24
     width: 993
     height: 627
   m_SerializedDataModeController:
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.090780005, y: 0.7194148, z: -0.09572852, w: -0.68198234}
     speed: 2
-    m_Value: {x: -0.090777166, y: 0.7193923, z: -0.09572553, w: -0.68196106}
+    m_Value: {x: -0.090780005, y: 0.71941483, z: -0.09572852, w: -0.68198234}
   m_Size:
     m_Target: 38.964344
     speed: 2
@@ -2756,8 +2756,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Simulator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1244
-    y: 79
+    x: 996
+    y: 24
     width: 364
     height: 627
   m_SerializedDataModeController:
@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: 0
+    controlPanelWidth: NaN
     controlPanelFoldoutKeys:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     controlPanelFoldoutValues: 00
@@ -2826,8 +2826,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 249
-    y: 732
+    x: 1
+    y: 677
     width: 1359
     height: 254
   m_SerializedDataModeController:
@@ -2871,7 +2871,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 134}
     m_SelectedIDs: 40ca0000
     m_LastClickedID: 51776
-    m_ExpandedIDs: 00000000bac900001eca000000ca9a3b
+    m_ExpandedIDs: 00000000fac90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2900,7 +2900,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bac90000
+    m_ExpandedIDs: 00000000fac90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2979,8 +2979,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1610
-    y: 79
+    x: 1611
+    y: 24
     width: 309
     height: 907
   m_SerializedDataModeController:
