@@ -14,23 +14,23 @@ public class MainMenuController : MonoBehaviour
     public Button cerrarPuntajesButton;
 
     [Header("Paneles")]
-    public GameObject mainMenuPanel;
-    public GameObject escogerNivelPanel;
-    public GameObject nameInputPanel;
-    public GameObject leaderboardPanel;
+    public PanelAnimator mainMenuPanel;        
+    public PanelAnimator escogerNivelPanel;    
+    public PanelAnimator nameInputPanel;       
+    public PanelAnimator leaderboardPanel;
 
     [Header("Entrada de Nombre")]
     public TMP_InputField nameInputField;
 
-    // --- ¡NUEVO! ---
+    
     [Header("Confirmación Nueva Partida")]
     [Tooltip("Arrastra el panel que pregunta '¿Estás seguro?'")]
-    public GameObject newGameConfirmPanel;
+    public PanelAnimator newGameConfirmPanel;
     [Tooltip("El botón 'SÍ' dentro del panel de confirmación")]
     public Button confirmNewGameButton;
     [Tooltip("El botón 'NO' dentro del panel de confirmación")]
     public Button cancelNewGameButton;
-    // --- FIN DE LO NUEVO ---
+   
 
     void Start()
     {
@@ -41,26 +41,18 @@ public class MainMenuController : MonoBehaviour
         confirmNameButton.onClick.AddListener(OnConfirmNameClicked);
         puntajesButton.onClick.AddListener(OnPuntajesClicked);
         cerrarPuntajesButton.onClick.AddListener(OnCerrarPuntajesClicked);
-
-        // --- ¡NUEVO! Listeners para el panel de confirmación ---
         confirmNewGameButton.onClick.AddListener(OnConfirmNewGame);
         cancelNewGameButton.onClick.AddListener(OnCancelNewGame);
 
-        // --- Configuración Inicial de Paneles ---
-        mainMenuPanel.SetActive(true);
-        escogerNivelPanel.SetActive(false);
-        nameInputPanel.SetActive(false);
-        leaderboardPanel.SetActive(false);
-        newGameConfirmPanel.SetActive(false); // ¡NUEVO! Ocultar panel al inicio
+       
+        mainMenuPanel.ShowPanel();
+        
 
-        // --- ¡NUEVO! Comprobar estado de botones ---
+        
         UpdateMainMenuButtons();
     }
 
-    /// <summary>
-    /// ¡NUEVO! Revisa si hay datos guardados y actualiza
-    /// la interactividad del botón "Jugar".
-    /// </summary>
+   
     void UpdateMainMenuButtons()
     {
         if (SaveManager.Instance == null)
@@ -79,24 +71,22 @@ public class MainMenuController : MonoBehaviour
 
     void OnJugarClicked()
     {
-        mainMenuPanel.SetActive(false);
-        escogerNivelPanel.SetActive(true);
+        mainMenuPanel.HidePanel();        
+        escogerNivelPanel.ShowPanel();
     }
 
     // --- ¡MÉTODO MODIFICADO! ---
     void OnNuevaPartidaClicked()
     {
+        mainMenuPanel.HidePanel(); 
+
         if (SaveManager.Instance.HasSaveData())
         {
-            // GOAL 3: Si SÍ hay partida, mostrar panel de confirmación
-            mainMenuPanel.SetActive(false);
-            newGameConfirmPanel.SetActive(true);
+            newGameConfirmPanel.ShowPanel();
         }
         else
         {
-            // GOAL 4: Si NO hay partida, ir directo a poner el nombre
-            mainMenuPanel.SetActive(false);
-            nameInputPanel.SetActive(true);
+            nameInputPanel.ShowPanel(); 
         }
     }
 
@@ -124,51 +114,42 @@ public class MainMenuController : MonoBehaviour
         UpdateMainMenuButtons();
 
         // 4. Ir a la selección de nivel
-        nameInputPanel.SetActive(false);
-        escogerNivelPanel.SetActive(true);
+        nameInputPanel.HidePanel();      
+        escogerNivelPanel.ShowPanel();
     }
 
     void OnPuntajesClicked()
     {
-        mainMenuPanel.SetActive(false);
-        leaderboardPanel.SetActive(true);
+        mainMenuPanel.HidePanel();      
+        leaderboardPanel.ShowPanel();
     }
 
     void OnCerrarPuntajesClicked()
     {
-        leaderboardPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
+        leaderboardPanel.HidePanel(); 
+        mainMenuPanel.ShowPanel();
     }
 
     void OnSalirDeNivelesClicked()
     {
-        escogerNivelPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
-
-        // ¡NUEVO! Actualizar botones por si acaso
+        escogerNivelPanel.HidePanel(); 
+        mainMenuPanel.ShowPanel();       
         UpdateMainMenuButtons();
     }
 
-    // --- ¡NUEVOS MÉTODOS PARA EL PANEL DE CONFIRMACIÓN! ---
-
-    /// <summary>
-    /// Se llama al presionar "SÍ" en el panel de confirmación de nueva partida.
-    /// </summary>
+   
     void OnConfirmNewGame()
     {
-        // El usuario está seguro. Lo mandamos a la pantalla de nombre.
-        // El borrado real ocurrirá en 'OnConfirmNameClicked'.
-        newGameConfirmPanel.SetActive(false);
-        nameInputPanel.SetActive(true);
+
+        newGameConfirmPanel.HidePanel(); 
+        nameInputPanel.ShowPanel();
     }
 
-    /// <summary>
-    /// Se llama al presionar "NO" en el panel de confirmación.
-    /// </summary>
+   
     void OnCancelNewGame()
     {
-        // El usuario canceló. Volvemos al menú principal.
-        newGameConfirmPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
+        
+        newGameConfirmPanel.HidePanel(); 
+        mainMenuPanel.ShowPanel();
     }
 }
