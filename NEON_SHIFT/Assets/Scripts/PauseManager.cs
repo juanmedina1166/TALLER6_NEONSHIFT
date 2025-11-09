@@ -1,17 +1,17 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
 public class PauseManager : MonoBehaviour
 {
     [Header("UI del Menú de Pausa")]
-    public GameObject pausePanel; // arrastra el panel del Canvas
+    public PanelAnimator pausePanel; // arrastra el panel del Canvas
     public GameObject pauseButton;
     private bool gameEnded = false;
 
     private void Start()
     {
-        if (pausePanel != null)
-            pausePanel.SetActive(false); // empieza oculto
+        
     }
 
     public void PauseGame()
@@ -19,14 +19,21 @@ public class PauseManager : MonoBehaviour
         if (gameEnded) return; // si ya terminó, no permitir pausar
 
         if (pausePanel != null)
-            pausePanel.SetActive(true);
+        {
+            // Llamamos a ShowPanel y le pasamos todo lo que
+            // debe pasar DESPUÉS de que la animación termine.
+            pausePanel.ShowPanel(() =>
+            {
+                // -- INICIO DEL CÓDIGO DEL CALLBACK --
+                Time.timeScale = 0f;
 
-        Time.timeScale = 0f;
-
-        // Pausar todos los animators
-        Animator[] animators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
-        foreach (var anim in animators)
-            anim.speed = 0f;
+                // Pausar todos los animators
+                Animator[] animators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
+                foreach (var anim in animators)
+                    anim.speed = 0f;
+                // -- FIN DEL CÓDIGO DEL CALLBACK --
+            });
+        }
     }
 
     public void ResumeGame()
@@ -34,14 +41,20 @@ public class PauseManager : MonoBehaviour
         if (gameEnded) return; // si ya terminó, no permitir reanudar
 
         if (pausePanel != null)
-            pausePanel.SetActive(false);
+        {
+            // Hacemos lo mismo para reanudar
+            pausePanel.HidePanel(() =>
+            {
+                // -- INICIO DEL CÓDIGO DEL CALLBACK --
+                Time.timeScale = 1f;
 
-        Time.timeScale = 1f;
-
-        // Reanudar todos los animators
-        Animator[] animators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
-        foreach (var anim in animators)
-            anim.speed = 1f;
+                // Reanudar todos los animators
+                Animator[] animators = Object.FindObjectsByType<Animator>(FindObjectsSortMode.None);
+                foreach (var anim in animators)
+                    anim.speed = 1f;
+                // -- FIN DEL CÓDIGO DEL CALLBACK --
+            });
+        }
     }
 
     public void RestartGame()
@@ -83,7 +96,7 @@ public class PauseManager : MonoBehaviour
 
         // opcional: desactivar panel de pausa si estaba abierto
         if (pausePanel != null)
-            pausePanel.SetActive(false);
+            pausePanel.HidePanel();
         // asegurarse que el tiempo quede en 0 si así lo manejas
         Time.timeScale = 0f;
     }

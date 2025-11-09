@@ -8,7 +8,7 @@ public class VictoryTrigger : MonoBehaviour
     public int currentLevelIndex;
 
     [Header("UI de Victoria")]
-    public GameObject victoryPanel; // Panel de victoria en el Canvas
+    public PanelAnimator victoryPanel; // Panel de victoria en el Canvas
     public SpecialCoinManager coinManager;
 
    
@@ -29,8 +29,7 @@ public class VictoryTrigger : MonoBehaviour
 
     private void Start()
     {
-        if (victoryPanel != null)
-            victoryPanel.SetActive(false); // arranca oculto
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,7 +71,13 @@ public class VictoryTrigger : MonoBehaviour
     private void ShowVictoryPanel(string playerName, int sessionScore)
     {
         if (victoryPanel != null)
-            victoryPanel.SetActive(true);
+            // Llama a ShowPanel y le pasa el callback para pausar
+            victoryPanel.ShowPanel(() =>
+            {
+                // ESTE CÓDIGO SE EJECUTA CUANDO LA ANIMACIÓN TERMINA:
+                Time.timeScale = 0f; // Pausa el juego
+                isActive = true;
+            });
 
         if (coinManager != null)
             coinManager.UpdateUI(currentLevelIndex); ; // actualizar las monedas recogidas
@@ -154,8 +159,7 @@ public class VictoryTrigger : MonoBehaviour
 
         // --- FIN DE LÓGICA DE REQUISITOS ---
 
-        Time.timeScale = 0f; // Pausa el juego
-        isActive = true;
+        
     }
 
     // (Esta función no cambia)
@@ -163,9 +167,12 @@ public class VictoryTrigger : MonoBehaviour
     {
         if (victoryPanel != null)
         {
-            victoryPanel.SetActive(false);
-            Time.timeScale = 1f; // Reanuda el juego
-            isActive = false;
+            victoryPanel.HidePanel(() =>
+            {
+                // ESTE CÓDIGO SE EJECUTA CUANDO LA ANIMACIÓN TERMINA:
+                Time.timeScale = 1f; // Reanuda el juego
+                isActive = false;
+            });
         }
     }
 

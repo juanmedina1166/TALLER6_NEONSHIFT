@@ -3,7 +3,7 @@ using UnityEngine;
 public class WallCollisionUI : MonoBehaviour
 {
     [Header("UI al chocar con muro")]
-    public GameObject wallPanel;
+    public PanelAnimator wallPanel;
 
     private RespawnManager respawnManager;
     private PlayerController player;
@@ -13,8 +13,7 @@ public class WallCollisionUI : MonoBehaviour
 
     private void Start()
     {
-        if (wallPanel != null)
-            wallPanel.SetActive(false);
+       
 
         respawnManager = GetComponent<RespawnManager>();
         player = GetComponent<PlayerController>();
@@ -75,23 +74,33 @@ public class WallCollisionUI : MonoBehaviour
     private void ShowPanelImmediate()
     {
         if (wallPanel != null)
-            wallPanel.SetActive(true);
+        {
+            // Llama a ShowPanel y le pasa una función (lambda) como callback
+            wallPanel.ShowPanel(() =>
+            {
+                // ESTE CÓDIGO SE EJECUTA CUANDO LA ANIMACIÓN TERMINA:
+                if (pauseManager != null && pauseManager.pauseButton != null)
+                    pauseManager.pauseButton.SetActive(false);
 
-        if (pauseManager != null && pauseManager.pauseButton != null)
-            pauseManager.pauseButton.SetActive(false);
-
-        Time.timeScale = 0f;
+                Time.timeScale = 0f;
+            });
+        }
     }
 
     public void HidePanel()
     {
         if (wallPanel != null)
-            wallPanel.SetActive(false);
+        {
+            // También al ocultar, reanudamos el juego DESPUÉS de ocultar
+            wallPanel.HidePanel(() =>
+            {
+                // ESTE CÓDIGO SE EJECUTA CUANDO LA ANIMACIÓN TERMINA:
+                if (pauseManager != null && pauseManager.pauseButton != null)
+                    pauseManager.pauseButton.SetActive(true);
 
-        if (pauseManager != null && pauseManager.pauseButton != null)
-            pauseManager.pauseButton.SetActive(true);
-
-        Time.timeScale = 1f;
+                Time.timeScale = 1f;
+            });
+        }
     }
 
     public void OnRetryButton()

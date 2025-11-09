@@ -3,7 +3,7 @@ using UnityEngine;
 public class OneTimeInstructionTrigger : MonoBehaviour
 {
     [Header("UI de instrucciones")]
-    public GameObject instructionPanel;
+    public PanelAnimator instructionPanel;
 
     [Header("ID único del trigger")]
     public string triggerID; // Ejemplo: "IntroPanel_01"
@@ -13,8 +13,7 @@ public class OneTimeInstructionTrigger : MonoBehaviour
 
     void Start()
     {
-        if (instructionPanel != null)
-            instructionPanel.SetActive(false);
+       
 
         // Si ya se mostró antes, no volver a mostrar
         if (GameState.Instance != null && GameState.Instance.IsTriggerShown(triggerID))
@@ -32,9 +31,12 @@ public class OneTimeInstructionTrigger : MonoBehaviour
     {
         if (instructionPanel != null)
         {
-            instructionPanel.SetActive(true);
-            Time.timeScale = 0f;
-            isActive = true;
+            instructionPanel.ShowPanel(() =>
+            {
+                // Este código se ejecuta CUANDO la animación termina:
+                Time.timeScale = 0f;
+                isActive = true;
+            });
         }
 
         hasShown = true;
@@ -51,19 +53,26 @@ public class OneTimeInstructionTrigger : MonoBehaviour
 
     public void HidePanel()
     {
-        if (instructionPanel != null)
+        if (instructionPanel != null && isActive)
         {
-            instructionPanel.SetActive(false);
+            instructionPanel.HidePanel(() =>
+            {
+                // Este código se ejecuta CUANDO la animación termina:
 
-            // Solo reanuda si el panel de pausa NO está activo
-            PauseManager pauseManager = Object.FindFirstObjectByType<PauseManager>();
-            bool isPauseActive = (pauseManager != null && pauseManager.pausePanel.activeSelf);
+                // Tu lógica inteligente para no reanudar si está en pausa:
+                PauseManager pauseManager = Object.FindFirstObjectByType<PauseManager>();
 
-            if (!isPauseActive)
-                Time.timeScale = 1f;
+                // ¡Esta línea es correcta! Comprueba si el PanelAnimator de pausa está activo
+                bool isPauseActive = (pauseManager != null && pauseManager.pausePanel.gameObject.activeSelf);
+
+                if (!isPauseActive)
+                    Time.timeScale = 1f;
+
+                isActive = false;
+            });
         }
 
-        isActive = false;
+        
     }
 
     private void OnEnable()
