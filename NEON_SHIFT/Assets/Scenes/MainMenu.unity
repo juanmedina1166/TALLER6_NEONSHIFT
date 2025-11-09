@@ -27517,7 +27517,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d2ac369d36678c24196e95d573f0f9c5, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -40804,7 +40804,7 @@ MonoBehaviour:
   levelToLoad: 5
   sceneToLoad: Nivel 4
   specialCoinsRequired: 10
-  normalCoinsRequired: 1000
+  normalCoinsRequired: 700
   button: {fileID: 1683938217}
   lockIcon: {fileID: 663191831}
   requirementsContainer: {fileID: 1472656836}
@@ -51008,7 +51008,7 @@ MonoBehaviour:
   levelToLoad: 6
   sceneToLoad: Nivel 5
   specialCoinsRequired: 13
-  normalCoinsRequired: 1200
+  normalCoinsRequired: 1000
   button: {fileID: 2123315046}
   lockIcon: {fileID: 181736168}
   requirementsContainer: {fileID: 764101743}

@@ -64646,7 +64646,7 @@ MonoBehaviour:
   nextLevelButton: {fileID: 2104928821}
   requirementsText: {fileID: 0}
   specialCoinsRequired: 13
-  normalCoinsRequired: 1200
+  normalCoinsRequired: 1000
 --- !u!1 &2058472612
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class PanelCreditControl : MonoBehaviour
 
         if (creditsAnimator != null)
         {
+            creditsAnimator.Rebind();
+            creditsAnimator.Update(0f);
             // Reinicia la posición del contenedor a la inicial
             // (Esto asume que el contenedor está en un objeto padre con un RectTransform)
             // Esto es crucial si vas a abrir los créditos más de una vez.
