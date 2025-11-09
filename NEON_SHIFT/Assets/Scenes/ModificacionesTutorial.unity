@@ -37717,11 +37717,11 @@ PrefabInstance:
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: flySound
       value: 
-      objectReference: {fileID: 8300000, guid: fa11ce70c5d72f04398fd9fdfce934dc, type: 3}
+      objectReference: {fileID: 8300000, guid: 760eccfcf9215de4e8762b30f89c4ec4, type: 3}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: fastSound
       value: 
-      objectReference: {fileID: 8300000, guid: fa11ce70c5d72f04398fd9fdfce934dc, type: 3}
+      objectReference: {fileID: 8300000, guid: 760eccfcf9215de4e8762b30f89c4ec4, type: 3}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: flyButton
       value: 
@@ -37753,7 +37753,7 @@ PrefabInstance:
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: strongSound
       value: 
-      objectReference: {fileID: 8300000, guid: fa11ce70c5d72f04398fd9fdfce934dc, type: 3}
+      objectReference: {fileID: 8300000, guid: 760eccfcf9215de4e8762b30f89c4ec4, type: 3}
     - target: {fileID: 1960492887987290888, guid: aef4cc3c1afc5774baf5895c0fecfabf, type: 3}
       propertyPath: CheetahSound
       value: 
