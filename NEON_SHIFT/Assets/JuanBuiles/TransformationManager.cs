@@ -35,6 +35,10 @@ public class TransformationManager : MonoBehaviour
 
     [Header("VFX")]
     public GameObject speedLines;
+    public Animator FlytransformationVFX;
+    public Animator StrongTransformationVFX;
+    public Animator FastTransformationVFX;
+
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -87,7 +91,29 @@ public class TransformationManager : MonoBehaviour
         if (audioSource != null && clip != null)
             audioSource.PlayOneShot(clip);
     }
+    private void PlayFlyTransformationVFX()
+    {
+        if (FlytransformationVFX != null)
+        {
+            FlytransformationVFX.SetTrigger("Explode");
+        }
+    }
 
+    private void PlayStrongTransformationVFX()
+    {
+        if (StrongTransformationVFX != null)
+        {
+            StrongTransformationVFX.SetTrigger("Explode");
+        }
+    }
+
+    private void PlayFastTransformationVFX()
+    {
+        if (FastTransformationVFX != null)
+        {
+            FastTransformationVFX.SetTrigger("Explode");
+        }
+    }
     // ----- NUEVOS MÉTODOS -----
     public bool IsTransformed()
     {
@@ -136,6 +162,7 @@ public class TransformationManager : MonoBehaviour
         if (hasFlyPowerUp && !isFlying && !isTransforming)
         {
             PlaySound(flySound);
+            PlayFlyTransformationVFX();
 
             if (audioSource != null && EagleSound != null)
             {
@@ -199,6 +226,7 @@ public class TransformationManager : MonoBehaviour
         if (hasStrongPowerUp && !isStrong && !isTransforming)
         {
             PlaySound(strongSound);
+            PlayStrongTransformationVFX();
 
             if (audioSource != null && GorillaSound != null)
             {
@@ -250,6 +278,8 @@ public class TransformationManager : MonoBehaviour
         if (hasFastPowerUp && !isFast && !isTransforming)
         {
             PlaySound(fastSound);
+            PlayFastTransformationVFX();
+
             if (audioSource != null && CheetahSound != null)
             {
                 audioSource.clip = CheetahSound;
