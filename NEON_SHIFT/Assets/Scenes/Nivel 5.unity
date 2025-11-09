@@ -65207,7 +65207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b15a363a4e6f24fa63de3cfa4c4c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevelIndex: 5
+  currentLevelIndex: 6
   victoryPanel: {fileID: 1158082567}
   coinManager: {fileID: 644330693}
   rankText: {fileID: 1837645881}
