@@ -2841,6 +2841,7 @@ GameObject:
   - component: {fileID: 112850873}
   - component: {fileID: 112850872}
   - component: {fileID: 112850871}
+  - component: {fileID: 112850874}
   m_Layer: 5
   m_Name: Si
   m_TagString: Untagged
@@ -2950,6 +2951,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112850869}
   m_CullTransparentMesh: 1
+--- !u!114 &112850874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112850869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &123157689
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,6 +5699,7 @@ GameObject:
   - component: {fileID: 258318952}
   - component: {fileID: 258318951}
   - component: {fileID: 258318950}
+  - component: {fileID: 258318953}
   m_Layer: 5
   m_Name: LB Nivel 2
   m_TagString: Untagged
@@ -5819,6 +5833,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258318948}
   m_CullTransparentMesh: 1
+--- !u!114 &258318953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258318948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &276213552
 GameObject:
   m_ObjectHideFlags: 0
@@ -6584,6 +6610,7 @@ GameObject:
   - component: {fileID: 297445235}
   - component: {fileID: 297445234}
   - component: {fileID: 297445237}
+  - component: {fileID: 297445238}
   m_Layer: 5
   m_Name: Nivel2
   m_TagString: Untagged
@@ -6741,6 +6768,18 @@ MonoBehaviour:
   requirementsContainer: {fileID: 474560932}
   normalCoinReqText: {fileID: 1932043005}
   specialCoinReqText: {fileID: 913308610}
+--- !u!114 &297445238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297445232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &300958719
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,6 +9379,7 @@ GameObject:
   - component: {fileID: 396646712}
   - component: {fileID: 396646711}
   - component: {fileID: 396646710}
+  - component: {fileID: 396646713}
   m_Layer: 5
   m_Name: LB Nivel 4
   m_TagString: Untagged
@@ -9473,6 +9513,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396646708}
   m_CullTransparentMesh: 1
+--- !u!114 &396646713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396646708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403626735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,6 +10424,7 @@ GameObject:
   - component: {fileID: 451718705}
   - component: {fileID: 451718704}
   - component: {fileID: 451718703}
+  - component: {fileID: 451718706}
   m_Layer: 5
   m_Name: LB Nivel 1
   m_TagString: Untagged
@@ -10505,6 +10558,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451718701}
   m_CullTransparentMesh: 1
+--- !u!114 &451718706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &458976771
 GameObject:
   m_ObjectHideFlags: 0
@@ -10868,6 +10933,7 @@ GameObject:
   - component: {fileID: 467283331}
   - component: {fileID: 467283330}
   - component: {fileID: 467283329}
+  - component: {fileID: 467283332}
   m_Layer: 5
   m_Name: Jugar
   m_TagString: Untagged
@@ -10977,6 +11043,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467283327}
   m_CullTransparentMesh: 1
+--- !u!114 &467283332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467283327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469498122
 GameObject:
   m_ObjectHideFlags: 0
@@ -12818,6 +12896,7 @@ GameObject:
   - component: {fileID: 548266343}
   - component: {fileID: 548266342}
   - component: {fileID: 548266341}
+  - component: {fileID: 548266344}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -12950,6 +13029,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548266339}
   m_CullTransparentMesh: 1
+--- !u!114 &548266344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548266339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553177823
 GameObject:
   m_ObjectHideFlags: 0
@@ -14717,6 +14808,7 @@ GameObject:
   - component: {fileID: 635827251}
   - component: {fileID: 635827250}
   - component: {fileID: 635827249}
+  - component: {fileID: 635827252}
   m_Layer: 5
   m_Name: NuevaPartida
   m_TagString: Untagged
@@ -14838,6 +14930,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635827247}
   m_CullTransparentMesh: 1
+--- !u!114 &635827252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635827247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &639761954
 GameObject:
   m_ObjectHideFlags: 0
@@ -15472,6 +15576,7 @@ GameObject:
   - component: {fileID: 656145230}
   - component: {fileID: 656145229}
   - component: {fileID: 656145232}
+  - component: {fileID: 656145233}
   m_Layer: 5
   m_Name: Nivel3
   m_TagString: Untagged
@@ -15629,6 +15734,18 @@ MonoBehaviour:
   requirementsContainer: {fileID: 1323727010}
   normalCoinReqText: {fileID: 945935927}
   specialCoinReqText: {fileID: 2093094171}
+--- !u!114 &656145233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656145227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656337560
 GameObject:
   m_ObjectHideFlags: 0
@@ -16976,6 +17093,7 @@ GameObject:
   - component: {fileID: 703690796}
   - component: {fileID: 703690795}
   - component: {fileID: 703690798}
+  - component: {fileID: 703690799}
   m_Layer: 5
   m_Name: Nivel1
   m_TagString: Untagged
@@ -17108,6 +17226,18 @@ MonoBehaviour:
   requirementsContainer: {fileID: 0}
   normalCoinReqText: {fileID: 0}
   specialCoinReqText: {fileID: 0}
+--- !u!114 &703690799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703690793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704058096
 GameObject:
   m_ObjectHideFlags: 0
@@ -17715,6 +17845,7 @@ GameObject:
   - component: {fileID: 733822129}
   - component: {fileID: 733822128}
   - component: {fileID: 733822127}
+  - component: {fileID: 733822130}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -17847,6 +17978,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733822125}
   m_CullTransparentMesh: 1
+--- !u!114 &733822130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733822125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744892640
 GameObject:
   m_ObjectHideFlags: 0
@@ -19690,6 +19833,7 @@ GameObject:
   - component: {fileID: 817345649}
   - component: {fileID: 817345648}
   - component: {fileID: 817345647}
+  - component: {fileID: 817345650}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -19822,6 +19966,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817345645}
   m_CullTransparentMesh: 1
+--- !u!114 &817345650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817345645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829035089
 GameObject:
   m_ObjectHideFlags: 0
@@ -20424,6 +20580,7 @@ GameObject:
   - component: {fileID: 839071251}
   - component: {fileID: 839071250}
   - component: {fileID: 839071249}
+  - component: {fileID: 839071252}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -20545,6 +20702,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839071247}
   m_CullTransparentMesh: 1
+--- !u!114 &839071252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839071247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &847872505
 GameObject:
   m_ObjectHideFlags: 0
@@ -28767,6 +28936,7 @@ GameObject:
   - component: {fileID: 1239090877}
   - component: {fileID: 1239090876}
   - component: {fileID: 1239090875}
+  - component: {fileID: 1239090878}
   m_Layer: 5
   m_Name: No
   m_TagString: Untagged
@@ -28876,6 +29046,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239090873}
   m_CullTransparentMesh: 1
+--- !u!114 &1239090878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239090873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244117451
 GameObject:
   m_ObjectHideFlags: 0
@@ -29722,6 +29904,7 @@ GameObject:
   - component: {fileID: 1273744454}
   - component: {fileID: 1273744453}
   - component: {fileID: 1273744456}
+  - component: {fileID: 1273744457}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -29852,6 +30035,18 @@ MonoBehaviour:
   requirementsContainer: {fileID: 0}
   normalCoinReqText: {fileID: 0}
   specialCoinReqText: {fileID: 0}
+--- !u!114 &1273744457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273744451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275493113
 GameObject:
   m_ObjectHideFlags: 0
@@ -33221,6 +33416,7 @@ GameObject:
   - component: {fileID: 1394547505}
   - component: {fileID: 1394547504}
   - component: {fileID: 1394547503}
+  - component: {fileID: 1394547506}
   m_Layer: 5
   m_Name: LB Nivel 3
   m_TagString: Untagged
@@ -33354,6 +33550,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394547501}
   m_CullTransparentMesh: 1
+--- !u!114 &1394547506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394547501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1397439110
 GameObject:
   m_ObjectHideFlags: 0
@@ -33568,6 +33776,151 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397693145}
   m_CullTransparentMesh: 1
+--- !u!1 &1400363566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400363569}
+  - component: {fileID: 1400363568}
+  - component: {fileID: 1400363567}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1400363567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400363566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2b4eeb847c230458ab0ae3be109099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiAudioSource: {fileID: 1400363568}
+  uiClickSound: {fileID: 8300000, guid: 135382f95d71d1d418af5d68e424598c, type: 3}
+  uiHoverSound: {fileID: 0}
+--- !u!82 &1400363568
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400363566}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1400363569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400363566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06000042, y: 14.4, z: 35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400974891
 GameObject:
   m_ObjectHideFlags: 0
@@ -36558,6 +36911,7 @@ GameObject:
   - component: {fileID: 1519069871}
   - component: {fileID: 1519069870}
   - component: {fileID: 1519069869}
+  - component: {fileID: 1519069872}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -36690,6 +37044,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519069867}
   m_CullTransparentMesh: 1
+--- !u!114 &1519069872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519069867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1521702471
 GameObject:
   m_ObjectHideFlags: 0
@@ -38066,6 +38432,7 @@ GameObject:
   - component: {fileID: 1603897062}
   - component: {fileID: 1603897061}
   - component: {fileID: 1603897060}
+  - component: {fileID: 1603897063}
   m_Layer: 5
   m_Name: ConfirmNameButton
   m_TagString: Untagged
@@ -38187,6 +38554,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603897058}
   m_CullTransparentMesh: 1
+--- !u!114 &1603897063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603897058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1608092518
 GameObject:
   m_ObjectHideFlags: 0
@@ -39026,6 +39405,7 @@ GameObject:
   - component: {fileID: 1636632774}
   - component: {fileID: 1636632773}
   - component: {fileID: 1636632772}
+  - component: {fileID: 1636632775}
   m_Layer: 5
   m_Name: Creditos
   m_TagString: Untagged
@@ -39147,6 +39527,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636632770}
   m_CullTransparentMesh: 1
+--- !u!114 &1636632775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636632770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1637808599
 GameObject:
   m_ObjectHideFlags: 0
@@ -39297,6 +39689,7 @@ GameObject:
   - component: {fileID: 1644120594}
   - component: {fileID: 1644120593}
   - component: {fileID: 1644120592}
+  - component: {fileID: 1644120595}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -39405,6 +39798,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644120590}
   m_CullTransparentMesh: 1
+--- !u!114 &1644120595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644120590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655952076
 GameObject:
   m_ObjectHideFlags: 0
@@ -39971,6 +40376,7 @@ GameObject:
   - component: {fileID: 1683938218}
   - component: {fileID: 1683938217}
   - component: {fileID: 1683938220}
+  - component: {fileID: 1683938221}
   m_Layer: 5
   m_Name: Nivel4
   m_TagString: Untagged
@@ -40128,6 +40534,18 @@ MonoBehaviour:
   requirementsContainer: {fileID: 1472656836}
   normalCoinReqText: {fileID: 159663458}
   specialCoinReqText: {fileID: 1608092520}
+--- !u!114 &1683938221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683938215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1684799172
 GameObject:
   m_ObjectHideFlags: 0
@@ -40410,6 +40828,7 @@ GameObject:
   - component: {fileID: 1693974858}
   - component: {fileID: 1693974857}
   - component: {fileID: 1693974856}
+  - component: {fileID: 1693974859}
   m_Layer: 5
   m_Name: LB Nivel 5
   m_TagString: Untagged
@@ -40543,6 +40962,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693974854}
   m_CullTransparentMesh: 1
+--- !u!114 &1693974859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693974854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706319141
 GameObject:
   m_ObjectHideFlags: 0
@@ -43801,6 +44232,7 @@ GameObject:
   - component: {fileID: 1860378215}
   - component: {fileID: 1860378214}
   - component: {fileID: 1860378213}
+  - component: {fileID: 1860378216}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -43933,6 +44365,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860378211}
   m_CullTransparentMesh: 1
+--- !u!114 &1860378216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860378211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860784039
 GameObject:
   m_ObjectHideFlags: 0
@@ -44574,6 +45018,7 @@ GameObject:
   - component: {fileID: 1890739491}
   - component: {fileID: 1890739490}
   - component: {fileID: 1890739489}
+  - component: {fileID: 1890739492}
   m_Layer: 5
   m_Name: Puntajes
   m_TagString: Untagged
@@ -44683,6 +45128,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890739487}
   m_CullTransparentMesh: 1
+--- !u!114 &1890739492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890739487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1892699018
 GameObject:
   m_ObjectHideFlags: 0
@@ -45179,6 +45636,7 @@ GameObject:
   - component: {fileID: 1927640109}
   - component: {fileID: 1927640108}
   - component: {fileID: 1927640107}
+  - component: {fileID: 1927640110}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -45288,6 +45746,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927640105}
   m_CullTransparentMesh: 1
+--- !u!114 &1927640110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927640105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932043003
 GameObject:
   m_ObjectHideFlags: 0
@@ -49944,6 +50414,7 @@ GameObject:
   - component: {fileID: 2123315047}
   - component: {fileID: 2123315046}
   - component: {fileID: 2123315045}
+  - component: {fileID: 2123315049}
   m_Layer: 5
   m_Name: Nivel5
   m_TagString: Untagged
@@ -50101,6 +50572,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123315043}
   m_CullTransparentMesh: 1
+--- !u!114 &2123315049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123315043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a958e4c95472fe541aa1770e63341454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2125195886
 GameObject:
   m_ObjectHideFlags: 0
@@ -50562,3 +51045,4 @@ SceneRoots:
   - {fileID: 1798629660}
   - {fileID: 151016232}
   - {fileID: 1898367680}
+  - {fileID: 1400363569}
