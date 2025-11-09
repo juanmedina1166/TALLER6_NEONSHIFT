@@ -22,7 +22,9 @@ public class MainMenuController : MonoBehaviour
     [Header("Entrada de Nombre")]
     public TMP_InputField nameInputField;
 
-    
+    [Tooltip("Arrastra el botón que tiene el script 'ClearLeaderboardButton'")]
+    public GameObject clearLeaderboardButtonObject; 
+
     [Header("Confirmación Nueva Partida")]
     [Tooltip("Arrastra el panel que pregunta '¿Estás seguro?'")]
     public PanelAnimator newGameConfirmPanel;
@@ -46,9 +48,12 @@ public class MainMenuController : MonoBehaviour
 
        
         mainMenuPanel.ShowPanel();
-        
 
-        
+        if (clearLeaderboardButtonObject != null)
+        {
+            clearLeaderboardButtonObject.SetActive(false);
+        }
+
         UpdateMainMenuButtons();
     }
 
@@ -94,6 +99,19 @@ public class MainMenuController : MonoBehaviour
     {
         // 1. Guardar el nombre
         string playerName = nameInputField.text;
+
+        bool isDevMode = (playerName == "dev$$$");
+
+        if (clearLeaderboardButtonObject != null)
+        {
+            clearLeaderboardButtonObject.SetActive(isDevMode);
+
+            if (isDevMode)
+            {
+                Debug.Log("MODO DESARROLLADOR ACTIVADO: Botón de borrar puntajes ahora visible.");
+            }
+        }
+
         if (string.IsNullOrWhiteSpace(playerName))
         {
             playerName = "Player"; // Nombre por defecto
