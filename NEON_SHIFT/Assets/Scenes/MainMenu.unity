@@ -17302,7 +17302,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 703690796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1798629659}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &703690796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17356,7 +17368,7 @@ MonoBehaviour:
   levelToLoad: 2
   sceneToLoad: Nivel 1
   specialCoinsRequired: 0
-  normalCoinsRequired: 1
+  normalCoinsRequired: 0
   button: {fileID: 703690795}
   lockIcon: {fileID: 1131835897}
   requirementsContainer: {fileID: 0}
@@ -30115,7 +30127,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1273744454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1798629659}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1273744454
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -107,6 +107,8 @@ public class LevelButton : MonoBehaviour
 
     void LoadLevel()
     {
+
+        Time.timeScale = 1f;
         if (PlayerCoins.Instance != null)
         {
             PlayerCoins.Instance.ResetSession();
