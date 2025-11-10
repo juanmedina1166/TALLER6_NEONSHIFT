@@ -55,4 +55,22 @@ public class GameState : MonoBehaviour
         if (string.IsNullOrEmpty(id)) return true; // si no tiene ID, lo considera mostrado
         return shownInstructionTriggers.Contains(id);
     }
+
+    public void ResetSessionState()
+    {
+        Debug.Log("Reseteando GameState (Sesión)...");
+
+        coins = 0;
+        specialCoins = new bool[3]; // Reinicia el array
+
+        checkpointReached = false;
+        lastCheckpoint = Vector3.zero;
+        lastCheckpointScene = "";
+
+        destroyedObjects.Clear();
+        collectedSinceCheckpoint.Clear();
+
+        
+        shownInstructionTriggers.Clear();
+    }
 }

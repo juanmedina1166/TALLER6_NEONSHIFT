@@ -128,6 +128,11 @@ public class MainMenuController : MonoBehaviour
             SaveManager.Instance.ResetProgress(); // Esto crea el Nivel 1
         }
 
+        if (GameState.Instance != null)
+        {
+            GameState.Instance.ResetSessionState();
+        }
+
         // 3. Actualizar estado de botones (ahora sí se puede "Jugar")
         UpdateMainMenuButtons();
 
